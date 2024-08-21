@@ -1,10 +1,3 @@
----
-title: Daniel Gorbe
-description: "My awesome website"
-params:
-    hero: "img/hero.webp"
-    heroAlt: "Hero"
----
 Personalized IT Solutions, Data Protection, Server Protection, IT Infrastructure Operation and Other IT Services in and around Győr.
 
 <!-- System administrator service and Cybersecurity for small and medium-sized businesses in and around Győr. -->
