@@ -1,0 +1,6 @@
+label: "MinIO"
+link:
+  type: generated-index
+  title: "MinIO | S3 & Kubernetes Native Object Storage for AI"
+  description: >
+    MinIO's High Performance Object Storage is Open Source, Amazon S3 compatible, Kubernetes Native and is designed for cloud native workloads like AI.

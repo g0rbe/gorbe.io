@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Marketing on G⌬RBE</title>
+    <link>http://localhost:1313/tags/marketing/</link>
+    <description>Recent content in Marketing on G⌬RBE</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/tags/marketing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Mautic 5 with Composer on Debian 12</title>
+      <link>http://localhost:1313/posts/mautic/install-with-composer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mautic/install-with-composer/</guid>
+      <description>Install repository for PHP 8.</description>
+    </item>
+    <item>
+      <title>Install Mautic using the Production Package on Debian 12</title>
+      <link>http://localhost:1313/posts/mautic/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mautic/install/</guid>
+      <description>Install repository for PHP 8.</description>
+    </item>
+  </channel>
+</rss>

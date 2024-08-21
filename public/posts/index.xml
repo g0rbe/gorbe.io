@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on G⌬RBE</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on G⌬RBE</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Caddy on Linux</title>
+      <link>http://localhost:1313/posts/caddy/install/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/caddy/install/</guid>
+      <description>How to install Caddy on Debian Linux server.</description>
+    </item>
+    <item>
+      <title>Install Certbot</title>
+      <link>http://localhost:1313/posts/certbot/install/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/certbot/install/</guid>
+      <description>Install Certbot to obtain free TLS certificate from Let&amp;rsquo;s Encrypt.</description>
+    </item>
+    <item>
+      <title>Obtain SSL Certificate(s) with Certbot</title>
+      <link>http://localhost:1313/posts/certbot/certificate/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/certbot/certificate/</guid>
+      <description>Use Certbot to obtain free TLS certificate from Let&amp;rsquo;s Encrypt.</description>
+    </item>
+    <item>
+      <title>How to Install Redmine 5 on Debian 12</title>
+      <link>http://localhost:1313/posts/redmine/install-redmine-5/</link>
+      <pubDate>Tue, 06 Feb 2024 04:05:06 +0100</pubDate>
+      <guid>http://localhost:1313/posts/redmine/install-redmine-5/</guid>
+      <description>Redmine is a flexible project management web application.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/regex/learn-regex-the-easy-way/</link>
+      <pubDate>Thu, 01 Feb 2024 11:45:57 +0100</pubDate>
+      <guid>http://localhost:1313/posts/regex/learn-regex-the-easy-way/</guid>
+      <description>Learn Regex the Easy Way # What is Regular Expression?</description>
+    </item>
+    <item>
+      <title>Install PHP on Debian</title>
+      <link>http://localhost:1313/posts/php/install/</link>
+      <pubDate>Sat, 16 Dec 2023 01:01:11 +0100</pubDate>
+      <guid>http://localhost:1313/posts/php/install/</guid>
+      <description>PHP is a crucial component for web development, and having the latest version ensures access to the newest features and security updates.</description>
+    </item>
+    <item>
+      <title>Configure SFTP with Chroot Jail on Debian</title>
+      <link>http://localhost:1313/posts/openssh/sftp-chroot/</link>
+      <pubDate>Wed, 15 Nov 2023 12:32:06 +0100</pubDate>
+      <guid>http://localhost:1313/posts/openssh/sftp-chroot/</guid>
+      <description>Setting up a chroot jail for SFTP (Secure File Transfer Protocol) on a Debian server enhances security by restricting users&amp;rsquo; access to a specific directory.</description>
+    </item>
+    <item>
+      <title>PHP-FPM Configurations</title>
+      <link>http://localhost:1313/posts/php/php-fpm-configurations/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/php/php-fpm-configurations/</guid>
+      <description>PHP-FPM (FastCGI Process Manager) is an alternative PHP FastCGI implementation with some additional features useful for sites of any size, especially busier sites.</description>
+    </item>
+    <item>
+      <title>How to Install Redmine 4 on Debian 10</title>
+      <link>http://localhost:1313/posts/redmine/install-redmine-4/</link>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/redmine/install-redmine-4/</guid>
+      <description>Install #Instal Requirements #Passenger #Passenger will be the the application server to run Ruby on Rails app.</description>
+    </item>
+    <item>
+      <title>CEH v10: 19 Cloud Computing</title>
+      <link>http://localhost:1313/posts/ceh/cloud-computing/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ceh/cloud-computing/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 19: Cloud Computing</description>
+    </item>
+    <item>
+      <title>CEH v10: 00 Readme</title>
+      <link>http://localhost:1313/posts/ceh/readme/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/readme/</guid>
+      <description>Certified Ethical Hacker v10 learning material. Chapter 00: Readme.</description>
+    </item>
+    <item>
+      <title>CEH v10: 01 Introduction</title>
+      <link>http://localhost:1313/posts/ceh/introduction/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/introduction/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 01: Introduction</description>
+    </item>
+    <item>
+      <title>CEH v10: 02 Footprinting</title>
+      <link>http://localhost:1313/posts/ceh/footprinting/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/footprinting/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 02: Footprinting</description>
+    </item>
+    <item>
+      <title>CEH v10: 03 Scanning Networks</title>
+      <link>http://localhost:1313/posts/ceh/scanning-networks/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/scanning-networks/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 03: Scanning Networks</description>
+    </item>
+    <item>
+      <title>CEH v10: 04 Enumeration</title>
+      <link>http://localhost:1313/posts/ceh/enumeration/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/enumeration/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 04: Enumeration</description>
+    </item>
+    <item>
+      <title>CEH v10: 05 Vulnerability Analysis</title>
+      <link>http://localhost:1313/posts/ceh/vulnerability-analysis/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/vulnerability-analysis/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 05: Vulnerability Analysis</description>
+    </item>
+    <item>
+      <title>CEH v10: 06 System Hacking</title>
+      <link>http://localhost:1313/posts/ceh/system-hacking/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/system-hacking/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 06: System Hacking</description>
+    </item>
+    <item>
+      <title>CEH v10: 07 Malware Threats</title>
+      <link>http://localhost:1313/posts/ceh/malware-threats/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/malware-threats/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 07: Malware Threats</description>
+    </item>
+    <item>
+      <title>CEH v10: 08 Sniffing</title>
+      <link>http://localhost:1313/posts/ceh/sniffing/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/sniffing/</guid>
+      <description>Certified Ethical Hacker learning material. Chapter 08: Sniffing.</description>
+    </item>
+    <item>
+      <title>CEH v10: 09 Social Engineering</title>
+      <link>http://localhost:1313/posts/ceh/social-engineering/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/social-engineering/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 09: Social Engineering.</description>
+    </item>
+    <item>
+      <title>CEH v10: 10 Denial of Service</title>
+      <link>http://localhost:1313/posts/ceh/denial-of-services/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/denial-of-services/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 10: Denial of Service</description>
+    </item>
+    <item>
+      <title>CEH v10: 13 Hacking Web Servers</title>
+      <link>http://localhost:1313/posts/ceh/hacking-web-servers/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/hacking-web-servers/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 13: Hacking Web Servers</description>
+    </item>
+    <item>
+      <title>CEH v10: 14 Hacking Web Applications</title>
+      <link>http://localhost:1313/posts/ceh/hacking-web-applications/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/hacking-web-applications/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 14: Hacking Web Applications</description>
+    </item>
+    <item>
+      <title>CEH v10: 15 SQL Injection</title>
+      <link>http://localhost:1313/posts/ceh/sql-injection/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/sql-injection/</guid>
+      <description>Certified Ethical Hacker learning material. Chapter 15: SQL Injection.</description>
+    </item>
+    <item>
+      <title>CEH v10: 16 Hacking Wireless Networks</title>
+      <link>http://localhost:1313/posts/ceh/hacking-wireless-networks/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/hacking-wireless-networks/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 16: Hacking Wireless Networks</description>
+    </item>
+    <item>
+      <title>CEH v10: 17 Hacking Mobile Platforms</title>
+      <link>http://localhost:1313/posts/ceh/hacking-mobile-platforms/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/hacking-mobile-platforms/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 17: Hacking Mobile Platforms.</description>
+    </item>
+    <item>
+      <title>CEH v10: 18 IoT Hacking</title>
+      <link>http://localhost:1313/posts/ceh/iot-hacking/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/iot-hacking/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 18: IoT Hacking</description>
+    </item>
+    <item>
+      <title>CEH v10: 20 Cryptography</title>
+      <link>http://localhost:1313/posts/ceh/cryptography/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/cryptography/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 20: Cryptography</description>
+    </item>
+    <item>
+      <title>Common Nginx Issues and Misconfigurations</title>
+      <link>http://localhost:1313/posts/nginx/common-issues-and-misconfigurations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nginx/common-issues-and-misconfigurations/</guid>
+      <description>Nginx is a popular web server known for its performance, stability, and rich feature set.</description>
+    </item>
+    <item>
+      <title>Create a database in MariaDB</title>
+      <link>http://localhost:1313/posts/mariadb/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mariadb/setup/</guid>
+      <description>Install #sudo apt install mariadb-server sudo mysql_secure_installation Create database and user #sudo mysql create database my_database; GRANT ALL PRIVILEGES ON my_database.</description>
+    </item>
+    <item>
+      <title>Create RAID0 with mdadm</title>
+      <link>http://localhost:1313/posts/mdadm/raid0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mdadm/raid0/</guid>
+      <description>RAID (Redundant Array of Inexpensive Disks) is a data storage virtualization technology that combines multiple physical disk drive components into one or more logical units for the purposes of data redundancy, performance improvement, or both.</description>
+    </item>
+    <item>
+      <title>Default Server Settings for Nginx</title>
+      <link>http://localhost:1313/posts/nginx/default-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nginx/default-server/</guid>
+      <description>Create a self-sgined certificate #openssl req -x509 -nodes -newkey rsa:4096 -keyout /etc/ssl/private/nginx-key.</description>
+    </item>
+    <item>
+      <title>Domain Names: Implementation and Specification</title>
+      <link>http://localhost:1313/posts/protocols/dns/implementation-and-specification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/protocols/dns/implementation-and-specification/</guid>
+      <description>This RFC describes the details of the domain system and protocol, and assumes that the reader is familiar with the concepts discussed in a companion RFC, &amp;ldquo;Domain Names - Concepts and Facilities&amp;rdquo; [RFC-1034].</description>
+    </item>
+    <item>
+      <title>Install and Configure Fail2Ban for SSH on Debian</title>
+      <link>http://localhost:1313/posts/fail2ban/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/fail2ban/install/</guid>
+      <description>Fail2Ban is a vital security tool for Linux servers, particularly useful in protecting SSH services against brute-force attacks.</description>
+    </item>
+    <item>
+      <title>Install CoreDNS from Binary on Debian 12</title>
+      <link>http://localhost:1313/posts/coredns/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/coredns/install/</guid>
+      <description>Install CoreDNS from Binary on Debian 12 server.</description>
+    </item>
+    <item>
+      <title>Install Docker Engine on Debian 12</title>
+      <link>http://localhost:1313/posts/docker/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/docker/install/</guid>
+      <description>Docker has become an essential tool in the world of modern software development.</description>
+    </item>
+    <item>
+      <title>Install Ghost CMS on Debian 10</title>
+      <link>http://localhost:1313/posts/ghost/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ghost/install/</guid>
+      <description>Create user for Ghost #adduser [GHOSTUSER] usermod -aG sudo [GHOSTUSER] Requirements #Nginx #Install nginx:</description>
+    </item>
+    <item>
+      <title>Install Gitea on Debian 10</title>
+      <link>http://localhost:1313/posts/gitea/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/gitea/install/</guid>
+      <description>MariaDB #Install MariaDB:</description>
+    </item>
+    <item>
+      <title>Install Mautic 5 with Composer on Debian 12</title>
+      <link>http://localhost:1313/posts/mautic/install-with-composer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mautic/install-with-composer/</guid>
+      <description>Install repository for PHP 8.</description>
+    </item>
+    <item>
+      <title>Install Mautic using the Production Package on Debian 12</title>
+      <link>http://localhost:1313/posts/mautic/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mautic/install/</guid>
+      <description>Install repository for PHP 8.</description>
+    </item>
+    <item>
+      <title>Install MongoDB Community Edition</title>
+      <link>http://localhost:1313/posts/mongodb/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mongodb/install/</guid>
+      <description>import Tabs from &amp;lsquo;@theme/Tabs&amp;rsquo;; import TabItem from &amp;lsquo;@theme/TabItem&amp;rsquo;;</description>
+    </item>
+    <item>
+      <title>Install n8n</title>
+      <link>http://localhost:1313/posts/n8n/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/n8n/install/</guid>
+      <description>Requirements #Install Node.</description>
+    </item>
+    <item>
+      <title>Install Uptime Kuma from Source on Debian 12</title>
+      <link>http://localhost:1313/posts/uptime-kuma/install-from-source/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/uptime-kuma/install-from-source/</guid>
+      <description>Source: https://github.</description>
+    </item>
+    <item>
+      <title>LFCS Commands</title>
+      <link>http://localhost:1313/posts/lfcs/commands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/lfcs/commands/</guid>
+      <description>Commands needed for Linux Foundation Certified Sysadmin.</description>
+    </item>
+    <item>
+      <title>Linux Filesystem Hierarchy</title>
+      <link>http://localhost:1313/posts/linux/filesystem-hierarchy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linux/filesystem-hierarchy/</guid>
+      <description>UNIX-based operating systems uses one big file system tree, started with the root (/) directory.</description>
+    </item>
+    <item>
+      <title>Linux processes and threads</title>
+      <link>http://localhost:1313/posts/linux/processes-and-threads/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linux/processes-and-threads/</guid>
+      <description>Program # a set of instructions that uses internal and/or external data internal data: strings, integers, etc&amp;hellip; external data: databases, files, etc&amp;hellip; Process vs thread #Process # an executing instance of a program each process has its own resource the same program maybe executing more than once simultaneously every process has one or more thread multi-threaded process: multiple flow of execution, every resources are shared between threads heavy weight process: a process with its own resources light weight process: a thread of a process with shared resources with other threads Thread # started from a process can share resources (eg.</description>
+    </item>
+    <item>
+      <title>Linux signals</title>
+      <link>http://localhost:1313/posts/linux/signals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/linux/signals/</guid>
+      <description>Signals # signals are used to notify processes about events in Inter Process Communication signal is an asynchronous event: not expected expected, but the time is not know signals are sent from the kernel or from a user process via system call with kill user can send signal to his own processes root can send signal to any process signals can be handled differently by the programmer or resbond acording to the system defaults two signal always use the system default: SIGKILL and SIGSTOP signal has a type and the type is indicate the meaning of the signal signals handle: exceptions detected by the hardware exceptions generated by the environment when signal sent from the kernel: the meaning attached to the signal The full list if signals is here SIGTERM: kills the process gracefully SIGKILL: kills the process immediately SIGRTMIN: no predefined purpose can be stacked, handled in FIFO Reference # LFS201 (this is just my note from LFS201, not meant to replace the original, which is explain better the above) </description>
+    </item>
+    <item>
+      <title>List of DNS Record Types</title>
+      <link>http://localhost:1313/posts/protocols/dns/record-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/protocols/dns/record-types/</guid>
+      <description>A Record # The Address record.</description>
+    </item>
+    <item>
+      <title>MAC Address Spoofing with Network Manager</title>
+      <link>http://localhost:1313/posts/network-manager/mac-address-spoofing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/network-manager/mac-address-spoofing/</guid>
+      <description>Spoofing MAC address is possible with Network Manager since 1.</description>
+    </item>
+    <item>
+      <title>Nginx Caching Configurations</title>
+      <link>http://localhost:1313/posts/nginx/caching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nginx/caching/</guid>
+      <description>Create directory for caching:</description>
+    </item>
+    <item>
+      <title>Nginx Configurations</title>
+      <link>http://localhost:1313/posts/nginx/configurations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nginx/configurations/</guid>
+      <description>Security configurations #TLS #Get a certificate from Let&amp;rsquo;s Encrypt:</description>
+    </item>
+    <item>
+      <title>Nginx Logging Configurations</title>
+      <link>http://localhost:1313/posts/nginx/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nginx/logging/</guid>
+      <description>Format #Combined #:::note This is the default log format in Nginx.</description>
+    </item>
+    <item>
+      <title>Node.js Release Schedule</title>
+      <link>http://localhost:1313/posts/nodejs/release-schedule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nodejs/release-schedule/</guid>
+      <description>Major Node.</description>
+    </item>
+    <item>
+      <title>Pinentry Documentation</title>
+      <link>http://localhost:1313/posts/gnupg/pinentry/documentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/gnupg/pinentry/documentation/</guid>
+      <description>Introduction #This manual documents how to use the PINENTRY and its protocol.</description>
+    </item>
+    <item>
+      <title>Service Unit Configuration</title>
+      <link>http://localhost:1313/posts/systemd/service-unit-configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/systemd/service-unit-configuration/</guid>
+      <description>TL;DR #nano /etc/systemd/system/&amp;lt;name&amp;gt;.</description>
+    </item>
+    <item>
+      <title>Set Default Assignee and Start Date in OpenProject</title>
+      <link>http://localhost:1313/posts/openproject/default-assignee-and-start-date/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/openproject/default-assignee-and-start-date/</guid>
+      <description>Default Assignee #Create a new category under Project -&amp;gt; Project setings -&amp;gt; Work package categories and assign a default Assignee to the category.</description>
+    </item>
+    <item>
+      <title>Setup a New Database and User in MySQL</title>
+      <link>http://localhost:1313/posts/mysql/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mysql/setup/</guid>
+      <description>sudo mysql create database my_database; CREATE USER &amp;#39;user&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;PASSWORD&amp;#39;; GRANT ALL PRIVILEGES ON db.</description>
+    </item>
+    <item>
+      <title>Setup a Remote Access VPN with WireGuard</title>
+      <link>http://localhost:1313/posts/wireguard/remote-access-vpn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wireguard/remote-access-vpn/</guid>
+      <description>Server #Create WireGuard server.</description>
+    </item>
+    <item>
+      <title>Setup an NSA-Proof OpenSSH server</title>
+      <link>http://localhost:1313/posts/openssh/nsa-proof-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/openssh/nsa-proof-server/</guid>
+      <description>The SSH protocol uses encryption to secure the connection between a client and a server.</description>
+    </item>
+    <item>
+      <title>Setup Nginx to host a Static Site</title>
+      <link>http://localhost:1313/posts/nginx/static-site/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nginx/static-site/</guid>
+      <description># https://www.</description>
+    </item>
+    <item>
+      <title>Setup PostgreSQL</title>
+      <link>http://localhost:1313/posts/postgresql/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/postgresql/setup/</guid>
+      <description>Connect #sudo -u postgres psql Create DB #CREATE DATABASE name; Create user #CREATE USER user WITH ENCRYPTED PASSWORD &amp;#39;password&amp;#39;; GRANT ALL PRIVILEGES ON DATABASE name TO user; :::info Change the database before configuring the schema:</description>
+    </item>
+    <item>
+      <title>Simple Stateful Firewall with nftables</title>
+      <link>http://localhost:1313/posts/nftables/stateful-firewall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/nftables/stateful-firewall/</guid>
+      <description>The nftables is a subsystem of the Linux kernel providing filtering and classification of network packets/datagrams/frames.</description>
+    </item>
+    <item>
+      <title>Stateful Firewall with iptables</title>
+      <link>http://localhost:1313/posts/iptables/stateful-firewall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/iptables/stateful-firewall/</guid>
+      <description>::::info iptables is replaced by nftables starting in Debian 10 (Buster) ::::</description>
+    </item>
+    <item>
+      <title>Update Uptime Kuma from Source on Debian 12</title>
+      <link>http://localhost:1313/posts/uptime-kuma/update-from-source/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/uptime-kuma/update-from-source/</guid>
+      <description>cd &amp;lt;uptime-kuma-directory&amp;gt; Update from git #git fetch --all git checkout $(curl -s &amp;#39;https://api.</description>
+    </item>
+    <item>
+      <title>Upgrade Debian release</title>
+      <link>http://localhost:1313/posts/debian/upgrade/index.en./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/debian/upgrade/index.en./</guid>
+      <description>A guide about how to upgrade to the Debian release</description>
+    </item>
+    <item>
+      <title>WireGuard: Next Generation Kernel Network Tunnel</title>
+      <link>http://localhost:1313/posts/wireguard/whitepaper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wireguard/whitepaper/</guid>
+      <description>http://www.wireguard.com</description>
+    </item>
+    <item>
+      <title>WireGuard&#39;s Security Features and Best Practices</title>
+      <link>http://localhost:1313/posts/wireguard/security-features-and-best-practices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wireguard/security-features-and-best-practices/</guid>
+      <description>WireGuard, a relatively new open-source VPN protocol introduced in 2016, has gained popularity due to its fast, efficient, and secure communication between online devices.</description>
+    </item>
+  </channel>
+</rss>

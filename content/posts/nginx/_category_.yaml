@@ -1,0 +1,8 @@
+label: "Nginx"
+link:
+  type: generated-index
+  title: "Nginx: Advanced Load Balancer, Web Server and Reverse Proxy"
+  description: >
+    nginx [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server, originally written by Igor Sysoev.
+    For a long time, it has been running on many heavily loaded Russian sites including Yandex, Mail.Ru, VK, and Rambler.
+    According to Netcraft, nginx served or proxied 20.63% busiest sites in March 2024.

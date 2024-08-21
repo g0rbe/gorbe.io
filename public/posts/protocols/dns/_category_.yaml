@@ -1,0 +1,8 @@
+label: "DNS"
+link:
+  type: generated-index
+  title: "DNS Protocol"
+  description: >
+    The Domain Name System (DNS) is the phonebook of the Internet.
+    Humans access website through domain names, like gorbe.io.
+    Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load website.

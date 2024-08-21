@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on G⌬RBE</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on G⌬RBE</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Caddy</title>
+      <link>http://localhost:1313/categories/caddy/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/caddy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Http</title>
+      <link>http://localhost:1313/categories/http/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/http/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>http://localhost:1313/categories/web/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webserver</title>
+      <link>http://localhost:1313/categories/webserver/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/webserver/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Encryption</title>
+      <link>http://localhost:1313/categories/encryption/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/encryption/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>http://localhost:1313/categories/security/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssl</title>
+      <link>http://localhost:1313/categories/ssl/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/ssl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tls</title>
+      <link>http://localhost:1313/categories/tls/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/tls/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ceh</title>
+      <link>http://localhost:1313/categories/ceh/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/ceh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debian</title>
+      <link>http://localhost:1313/categories/debian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/debian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dns</title>
+      <link>http://localhost:1313/categories/dns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/dns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Domain</title>
+      <link>http://localhost:1313/categories/domain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/domain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fail2ban</title>
+      <link>http://localhost:1313/categories/fail2ban/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/fail2ban/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hardening</title>
+      <link>http://localhost:1313/categories/hardening/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/hardening/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/categories/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/linux/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

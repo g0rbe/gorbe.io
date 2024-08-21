@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>G⌬RBE</title>
+    <link>http://localhost:1313/hu/</link>
+    <description>Recent content on G⌬RBE</description>
+    <generator>Hugo</generator>
+    <language>hu</language>
+    <lastBuildDate>Thu, 15 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/hu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Caddy Telepítése Linux Rendszeren</title>
+      <link>http://localhost:1313/hu/posts/caddy/install/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hu/posts/caddy/install/</guid>
+      <description>Hogyan telepítsük a Caddy-t Debian Linux szerverre.</description>
+    </item>
+    <item>
+      <title>Magamról</title>
+      <link>http://localhost:1313/hu/about/</link>
+      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hu/about/</guid>
+      <description>Több mint 5 éve foglalkozom kiberbiztonsággal és informatikai rendszerek üzemeltetésével, amiből az elmúlt három évben Győr és környéki vállalkozásnak biztosítottam rendszergazdai szolgáltatást.</description>
+    </item>
+    <item>
+      <title>Kapcsolat</title>
+      <link>http://localhost:1313/hu/contact/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hu/contact/</guid>
+      <description>Telefon/Signal: +36203323371</description>
+    </item>
+    <item>
+      <title>Szolgáltatások</title>
+      <link>http://localhost:1313/hu/services/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hu/services/</guid>
+      <description>Informatikai szolgáltatás kis- és középvállalatok számára az Te üzleti igényeidre szabva.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,100 @@
+# -- Theme Options --
+# These options control how the theme functions and allow you to
+# customise the display of your website.
+#
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/configuration/#theme-parameters
+
+colorScheme = "teal"
+defaultAppearance = "dark"   # valid options: light or dark
+autoSwitchAppearance = false
+
+defaultThemeColor = "#FFFFFF"
+
+enableSearch = true
+enableCodeCopy = true
+enableImageLazyLoading = true
+enableImageWebp = true
+
+robots = "all"
+fingerprintAlgorithm = "sha256"
+
+[header]
+layout = "hybrid"      # valid options: basic, hamburger, hybrid, custom
+logo = "img/logo.webp"
+# logoDark = "img/dark-logo.jpg"
+showTitle = false
+
+[footer]
+showCopyright = true
+showThemeAttribution = true
+showAppearanceSwitcher = false
+showScrollToTop = true
+
+[homepage]
+layout = "hero"    # valid options: page, profile, custom
+showRecent = false
+recentLimit = 5
+
+[article]
+showDate = true
+showDateUpdated = true
+showAuthor = true
+showBreadcrumbs = true
+showDraftLabel = true
+showEdit = true
+editURL = "https://github.com/g0rbe/gorbe.io/"
+editAppendPath = true
+showHeadingAnchors = true
+showPagination = true
+invertPagination = false
+showReadingTime = true
+showTableOfContents = true
+showTaxonomies = true
+showWordCount = true
+showComments = false
+sharingLinks = [
+    "facebook",
+    "x-twitter",
+    "mastodon",
+    "pinterest",
+    "reddit",
+    "linkedin",
+    "email",
+    "threads",
+    "telegram",
+    "line",
+    "weibo",
+]
+
+[list]
+showBreadcrumbs = true
+showSummary = true
+showTableOfContents = true
+showTaxonomies = true
+groupByYear = true
+paginationWidth = 1
+
+[sitemap]
+# excludedKinds = ["taxonomy", "term"]
+
+[taxonomy]
+showTermCount = true
+
+[fathomAnalytics]
+# site = "ABC12345"
+
+[plausibleAnalytics]
+domain = "gorbe.io"
+# event = ""
+script = "/js/script.js"
+
+#[umamiAnalytics]
+#  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+#  region = "eu"  # can be either "eu" or "us"
+
+[verification]
+# google = ""
+# bing = ""
+# pinterest = ""
+# yandex = ""

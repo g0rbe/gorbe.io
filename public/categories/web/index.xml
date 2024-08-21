@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on G⌬RBE</title>
+    <link>http://localhost:1313/categories/web/</link>
+    <description>Recent content in Web on G⌬RBE</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Caddy on Linux</title>
+      <link>http://localhost:1313/posts/caddy/install/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/caddy/install/</guid>
+      <description>How to install Caddy on Debian Linux server.</description>
+    </item>
+  </channel>
+</rss>

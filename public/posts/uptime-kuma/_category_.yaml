@@ -1,0 +1,6 @@
+label: "Uptime Kuma"
+link:
+  type: generated-index
+  title: "Uptime Kuma: A fancy self-hosted monitoring tool"
+  description: >
+    Uptime Kuma is an easy-to-use self-hosted monitoring tool.

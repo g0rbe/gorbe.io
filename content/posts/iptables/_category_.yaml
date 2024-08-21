@@ -1,0 +1,10 @@
+label: iptables
+link:
+  type: generated-index
+  title: "iptables: administration tool for packet filtering and NAT"
+  description: >
+    iptables is a command line utility for configuring Linux kernel firewall implemented within the Netfilter project.
+    The term iptables is also commonly used to refer to this kernel-level firewall.
+    It can be configured directly with iptables, or by using one of the many console and graphical front-ends.
+    iptables is used for IPv4 and ip6tables is used for IPv6.
+    Both iptables and ip6tables have the same syntax, but some options are specific to either IPv4 or IPv6. 

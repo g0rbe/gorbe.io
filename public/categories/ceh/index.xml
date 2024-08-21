@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ceh on G⌬RBE</title>
+    <link>http://localhost:1313/categories/ceh/</link>
+    <description>Recent content in Ceh on G⌬RBE</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 26 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/ceh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CEH v10: 19 Cloud Computing</title>
+      <link>http://localhost:1313/posts/ceh/cloud-computing/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ceh/cloud-computing/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 19: Cloud Computing</description>
+    </item>
+    <item>
+      <title>CEH v10: 00 Readme</title>
+      <link>http://localhost:1313/posts/ceh/readme/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/readme/</guid>
+      <description>Certified Ethical Hacker v10 learning material. Chapter 00: Readme.</description>
+    </item>
+    <item>
+      <title>CEH v10: 01 Introduction</title>
+      <link>http://localhost:1313/posts/ceh/introduction/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/introduction/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 01: Introduction</description>
+    </item>
+    <item>
+      <title>CEH v10: 02 Footprinting</title>
+      <link>http://localhost:1313/posts/ceh/footprinting/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/footprinting/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 02: Footprinting</description>
+    </item>
+    <item>
+      <title>CEH v10: 03 Scanning Networks</title>
+      <link>http://localhost:1313/posts/ceh/scanning-networks/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/scanning-networks/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 03: Scanning Networks</description>
+    </item>
+    <item>
+      <title>CEH v10: 04 Enumeration</title>
+      <link>http://localhost:1313/posts/ceh/enumeration/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/enumeration/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 04: Enumeration</description>
+    </item>
+    <item>
+      <title>CEH v10: 05 Vulnerability Analysis</title>
+      <link>http://localhost:1313/posts/ceh/vulnerability-analysis/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/vulnerability-analysis/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 05: Vulnerability Analysis</description>
+    </item>
+    <item>
+      <title>CEH v10: 06 System Hacking</title>
+      <link>http://localhost:1313/posts/ceh/system-hacking/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/system-hacking/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 06: System Hacking</description>
+    </item>
+    <item>
+      <title>CEH v10: 07 Malware Threats</title>
+      <link>http://localhost:1313/posts/ceh/malware-threats/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/malware-threats/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 07: Malware Threats</description>
+    </item>
+    <item>
+      <title>CEH v10: 08 Sniffing</title>
+      <link>http://localhost:1313/posts/ceh/sniffing/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/sniffing/</guid>
+      <description>Certified Ethical Hacker learning material. Chapter 08: Sniffing.</description>
+    </item>
+    <item>
+      <title>CEH v10: 09 Social Engineering</title>
+      <link>http://localhost:1313/posts/ceh/social-engineering/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/social-engineering/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 09: Social Engineering.</description>
+    </item>
+    <item>
+      <title>CEH v10: 10 Denial of Service</title>
+      <link>http://localhost:1313/posts/ceh/denial-of-services/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/denial-of-services/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 10: Denial of Service</description>
+    </item>
+    <item>
+      <title>CEH v10: 13 Hacking Web Servers</title>
+      <link>http://localhost:1313/posts/ceh/hacking-web-servers/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/hacking-web-servers/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 13: Hacking Web Servers</description>
+    </item>
+    <item>
+      <title>CEH v10: 14 Hacking Web Applications</title>
+      <link>http://localhost:1313/posts/ceh/hacking-web-applications/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/hacking-web-applications/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 14: Hacking Web Applications</description>
+    </item>
+    <item>
+      <title>CEH v10: 15 SQL Injection</title>
+      <link>http://localhost:1313/posts/ceh/sql-injection/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/sql-injection/</guid>
+      <description>Certified Ethical Hacker learning material. Chapter 15: SQL Injection.</description>
+    </item>
+    <item>
+      <title>CEH v10: 16 Hacking Wireless Networks</title>
+      <link>http://localhost:1313/posts/ceh/hacking-wireless-networks/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/hacking-wireless-networks/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 16: Hacking Wireless Networks</description>
+    </item>
+    <item>
+      <title>CEH v10: 17 Hacking Mobile Platforms</title>
+      <link>http://localhost:1313/posts/ceh/hacking-mobile-platforms/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/hacking-mobile-platforms/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 17: Hacking Mobile Platforms.</description>
+    </item>
+    <item>
+      <title>CEH v10: 18 IoT Hacking</title>
+      <link>http://localhost:1313/posts/ceh/iot-hacking/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/iot-hacking/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 18: IoT Hacking</description>
+    </item>
+    <item>
+      <title>CEH v10: 20 Cryptography</title>
+      <link>http://localhost:1313/posts/ceh/cryptography/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/ceh/cryptography/</guid>
+      <description>Certified Ethical Hacker v10 Chapter 20: Cryptography</description>
+    </item>
+  </channel>
+</rss>

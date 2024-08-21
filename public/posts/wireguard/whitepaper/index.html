@@ -1,0 +1,2273 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>WireGuard: Next Generation Kernel Network Tunnel &middot; G⌬RBE</title>
+    <meta name="title" content="WireGuard: Next Generation Kernel Network Tunnel &middot; G⌬RBE" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.74ad8406faea02f3e186ba5126249aaeed9073629e04b05037b903396b188724.js"
+    integrity="sha256-dK2EBvrqAvPhhrpRJiSaru2Qc2KeBLBQN7kDOWsYhyQ="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.a0e94815895a7857f65af652b4e983c04cbf01afd5aa424dd62951703fcd8306.css"
+    integrity="sha256-oOlIFYlaeFf2WvZStOmDwEy/Aa/VqkJN1ilRcD/NgwY="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bb487ad6073790cb02c354ee8c5f8822c42c5513e10bf7a86bbe8f82118cd1fc.js"
+      integrity="sha256-u0h61gc3kMsCw1TujF&#43;IIsQsVRPhC/eoa76PghGM0fw="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      Whitepaper of WireGuard, Next Generation Kernel Network Tunnel
+    "
+  />
+  
+  
+    <meta name="robots" content="all" />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/wireguard/whitepaper/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/wireguard/whitepaper/">
+  <meta property="og:site_name" content="G⌬RBE">
+  <meta property="og:title" content="WireGuard: Next Generation Kernel Network Tunnel">
+  <meta property="og:description" content="Whitepaper of WireGuard, Next Generation Kernel Network Tunnel">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:tag" content="Vpn">
+    <meta property="article:tag" content="Security">
+    <meta property="article:tag" content="WireGuard">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="WireGuard: Next Generation Kernel Network Tunnel">
+  <meta name="twitter:description" content="Whitepaper of WireGuard, Next Generation Kernel Network Tunnel">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "WireGuard: Next Generation Kernel Network Tunnel",
+    "headline": "WireGuard: Next Generation Kernel Network Tunnel",
+    "description": "Whitepaper of WireGuard, Next Generation Kernel Network Tunnel",
+    "abstract": "http:\/\/www.wireguard.com",
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/wireguard\/whitepaper\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Daniel Gorbe"
+    },
+    
+    
+    
+    
+    
+    
+    "keywords": ["vpn","security","WireGuard"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "11504"
+  }
+  </script>
+
+
+  
+  <meta name="author" content="Daniel Gorbe" />
+  
+    
+      <link href="#ZgotmplZ" rel="me" />
+    
+      <link href="mailto:daniel@gorbe.io" rel="me" />
+    
+      <link href="https://github.com/g0rbe" rel="me" />
+    
+      <link href="https://linkedin.com/in/g0rbe" rel="me" />
+    
+      <link href="https://mastodon.instance/@g0rbe" rel="me" />
+    
+      <link href="https://twitter.com/_g0rbe" rel="me" />
+    
+  
+  
+  
+
+
+
+  
+  
+  
+  
+  <script
+    defer
+    type="text/javascript"
+    src="/js/chart.bundle.02f385c14fa7dd8131d76dc45edbe6f7c5e55bf51c92d4b78c762ed612ab95d21cc8b3feef93f88211ecbdc727ab60df27f4e277f4b592ede049f6aedb8acfb1.js"
+    integrity="sha512-AvOFwU&#43;n3YEx123EXtvm98XlW/UcktS3jHYu1hKrldIcyLP&#43;75P4ghHsvccnq2DfJ/Tid/S1ku3gSfau24rPsQ=="
+  ></script>
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="z-40 flex flex-row items-center">
+      
+    <a href="/" class="mr-2">
+      
+      <img
+        src="/img/logo.webp"
+        width="125"
+        height="25"
+        class="max-h-[10rem] max-w-[10rem] object-scale-down object-left
+        "
+        alt="G⌬RBE"
+      />
+    </a>
+
+    </div>
+    
+      
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
+        <input type="checkbox" id="menu-controller" class="hidden" />
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
+        >
+          <ul
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+          >
+            <li class="mb-1">
+              <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+                ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span
+              >
+            </li>
+            
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/about/"
+                      title=""
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >About</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/services/"
+                      title=""
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Services</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/contact/"
+                      title=""
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Contact</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/posts/"
+                      title=""
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Blog</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    
+                      <button
+                        id="search-button-1"
+                        title="Search (/)"
+                      >
+                        
+                          <span
+                            class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                          ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                            class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                            ></span
+                          >
+                        
+                      </button>
+                    
+                  
+                </li>
+              
+                
+                  
+              
+            
+          </ul>
+        </div>
+      </label>
+      
+      <ul class="hidden list-none flex-row text-end sm:flex">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/about/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/services/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Services</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/contact/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Contact</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/posts/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Blog</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                
+                  <button
+                    id="search-button-2"
+                    title="Search (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </button>
+                
+              
+            </li>
+          
+            
+              
+          
+
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/"
+      >Daniel Gorbe</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class=" inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/posts/wireguard/whitepaper/"
+      >WireGuard: Next Generation Kernel Network Tunnel</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        WireGuard: Next Generation Kernel Network Tunnel
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>11504 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">55 mins</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+  
+  
+
+<span class="mb-[2px]">
+  <a
+    href="https://github.com/g0rbe/gorbe.io/posts/wireguard/whitepaper.md"
+    class="text-lg hover:text-primary-500"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="Edit content"
+    ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M490.3 40.4C512.2 62.27 512.2 97.73 490.3 119.6L460.3 149.7L362.3 51.72L392.4 21.66C414.3-.2135 449.7-.2135 471.6 21.66L490.3 40.4zM172.4 241.7L339.7 74.34L437.7 172.3L270.3 339.6C264.2 345.8 256.7 350.4 248.4 353.2L159.6 382.8C150.1 385.6 141.5 383.4 135 376.1C128.6 370.5 126.4 361 129.2 352.4L158.8 263.6C161.6 255.3 166.2 247.8 172.4 241.7V241.7zM192 63.1C209.7 63.1 224 78.33 224 95.1C224 113.7 209.7 127.1 192 127.1H96C78.33 127.1 64 142.3 64 159.1V416C64 433.7 78.33 448 96 448H352C369.7 448 384 433.7 384 416V319.1C384 302.3 398.3 287.1 416 287.1C433.7 287.1 448 302.3 448 319.1V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V159.1C0 106.1 42.98 63.1 96 63.1H192z"/></svg>
+</span></a
+  >
+</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+      
+        
+          
+            <a
+              href="/tags/vpn/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Vpn</a
+            >
+          
+            <a
+              href="/tags/security/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Security</a
+            >
+          
+            <a
+              href="/tags/wireguard/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >WireGuard</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#1-introduction--motivation">1 Introduction &amp; Motivation</a></li>
+    <li><a href="#2-cryptokey-routing">2 Cryptokey Routing</a>
+      <ul>
+        <li><a href="#21-endpoints--roaming">2.1 Endpoints &amp; Roaming</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-sendreceive-flow">3 Send/Receive Flow</a></li>
+    <li><a href="#4-basic-usage">4 Basic Usage</a></li>
+    <li><a href="#5-protocol--cryptography">5 Protocol &amp; Cryptography</a>
+      <ul>
+        <li><a href="#51-silence-is-a-virtue">5.1 Silence is a Virtue</a></li>
+        <li><a href="#52-optional-pre-shared-symmetric-key-mode">5.2 Optional Pre-shared Symmetric Key Mode</a></li>
+        <li><a href="#53-denial-of-service-mitigation--cookies">5.3 Denial of Service Mitigation &amp; Cookies</a></li>
+        <li><a href="#54-messages">5.4 Messages</a>
+          <ul>
+            <li><a href="#541-protocol-overview">5.4.1 Protocol Overview</a></li>
+            <li><a href="#542-first-message-initiator-to-responder">5.4.2 First Message: Initiator to Responder</a></li>
+            <li><a href="#543-second-message-responder-to-initiator">5.4.3 Second Message: Responder to Initiator</a></li>
+            <li><a href="#544-cookie-macs">5.4.4 Cookie MACs</a></li>
+            <li><a href="#545-transport-data-key-derivation">5.4.5 Transport Data Key Derivation</a></li>
+            <li><a href="#546-subsequent-messages-transport-data-messages">5.4.6 Subsequent Messages: Transport Data Messages</a></li>
+            <li><a href="#547-under-load-cookie-reply-message">5.4.7 Under Load: Cookie Reply Message</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#6-timers--stateless-ux">6 Timers &amp; Stateless UX</a>
+      <ul>
+        <li><a href="#61-preliminaries">6.1 Preliminaries</a></li>
+        <li><a href="#62-transport-message-limits">6.2 Transport Message Limits</a></li>
+        <li><a href="#63-key-rotation">6.3 Key Rotation</a></li>
+        <li><a href="#64-handshake-initiation-retransmission">6.4 Handshake Initiation Retransmission</a></li>
+        <li><a href="#65-passive-keepalive">6.5 Passive Keepalive</a></li>
+        <li><a href="#66-interaction-with-cookie-reply-system">6.6 Interaction with Cookie Reply System</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-linux-kernel-implementation">7 Linux Kernel Implementation</a>
+      <ul>
+        <li><a href="#71-queuing-system">7.1 Queuing System</a></li>
+        <li><a href="#72-softirq--parallelism">7.2 Softirq &amp; Parallelism</a></li>
+        <li><a href="#73-rtnl-based-virtual-interface--containerization">7.3 RTNL-based Virtual Interface &amp; Containerization</a></li>
+        <li><a href="#74-data-structures-and-primitives">7.4 Data Structures and Primitives</a></li>
+        <li><a href="#75-fib-considerations">7.5 FIB Considerations</a></li>
+        <li><a href="#76-potential-userspace-implementations">7.6 Potential Userspace Implementations</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-performance">8 Performance</a></li>
+    <li><a href="#9-conclusion">9 Conclusion</a></li>
+    <li><a href="#10-acknowledgments">10 Acknowledgments</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <p><a href="http://www.wireguard.com" target="_blank" rel="noreferrer">http://www.wireguard.com</a></p>
+<p>Jason A. Donenfeld</p>
+<p><a href="mailto:jason@zx2c4.com">jason@zx2c4.com</a></p>
+<p>Draft Revision</p>
+<h2 id="abstract" class="relative group">Abstract <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#abstract" aria-label="Anchor">#</a></span></h2><p>WireGuard is a secure network tunnel, operating at layer 3, implemented as a kernel virtual network
+interface for Linux, which aims to replace both IPsec for most use cases, as well as popular user space and/or
+TLS-based solutions like OpenVPN, while being more secure, more performant, and easier to use. The virtual
+tunnel interface is based on a proposed fundamental principle of secure tunnels: an association between a
+peer public key and a tunnel source IP address. It uses a single round trip key exchange, based on NoiseIK,
+and handles all session creation transparently to the user using a novel timer state machine mechanism. Short
+pre-shared static keys—Curve25519 points—are used for mutual authentication in the style of OpenSSH. The
+protocol provides strong perfect forward secrecy in addition to a high degree of identity hiding. Transport
+speed is accomplished using ChaCha20Poly1305 authenticated-encryption for encapsulation of packets in
+UDP. An improved take on IP-binding cookies is used for mitigating denial of service attacks, improving
+greatly on IKEv2 and DTLS’s cookie mechanisms to add encryption and authentication. The overall design
+allows for allocating no resources in response to received packets, and from a systems perspective, there are
+multiple interesting Linux implementation techniques for queues and parallelism. Finally, WireGuard can be
+simply implemented for Linux in less than 4,000 lines of code, making it easily audited and verified.</p>
+<p><em>Permanent ID of this document: <code>4846ada1492f5d92198df154f48c3d54205657bc</code>. Static link: <a href="https://www.wireguard.com/papers/wireguard.pdf" target="_blank" rel="noreferrer">https://www.wireguard.com/papers/wireguard.pdf</a>.
+Date: <code>June 1, 2020</code>. This is draft revision <code>e2da747</code>. A version of this paper appears in <em>Proceedings of the Network and
+Distributed System Security Symposium, NDSS 2017</em>.
+Copyright©2015–2020 Jason A. Donenfeld. All Rights Reserved.</em></p>
+<h2 id="1-introduction--motivation" class="relative group">1 Introduction &amp; Motivation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#1-introduction--motivation" aria-label="Anchor">#</a></span></h2><p>In Linux, the standard solution for encrypted tunnels is IPsec, which uses the Linux transform (“xfrm”) layer.
+Users fill in a kernel structure determining which ciphersuite and key, or other transforms such as compression,
+to use for which selector of packets traversing the subsystem. Generally a user space daemon is responsible for
+updating these data structures based on the results of a key exchange, generally done with IKEv2 [13], itself
+a complicated protocol with much choice and malleability. The complexity, as well as the sheer amount of
+code, of this solution is considerable. Administrators have a completely separate set of firewalling semantics
+and secure labeling for IPsec packets. While separating the key exchange layer from the transport encryption—
+or transformation—layer is a wise separation from a semantic viewpoint, and similarly while separating the
+transformation layer from the interface layer is correct from a networking viewpoint, this strictly correct layering
+approach increases complexity and makes correct implementation and deployment prohibitive.</p>
+<p>WireGuard does away with these layering separations. Instead of the complexity of IPsec and the xfrm layers,
+WireGuard simply gives a virtual interface—wg0for example—which can then be administered using the standard
+ip(8)andifconfig(8)utilities. After configuring the interface with a private key (and optionally a pre-shared
+symmetric key as explained in section 5.2) and the various public keys of peers with whom it will communicate
+securely, the tunnel simply works. Key exchanges, connections, disconnections, reconnections, discovery, and so
+forth happen behind the scenes transparently and reliably, and the administrator does not need to worry about
+these details. In other words, from the perspective of administration, the WireGuard interface appears to be
+<em>stateless</em>. Firewall rules can then be configured using the ordinary infrastructure for firewalling interfaces, with
+the guarantee that packets coming from a WireGuard interface will be authenticated and encrypted. Simple and
+straightforward, WireGuard is much less prone to catastrophic failure and misconfiguration than IPsec. It is
+important to stress, however, that <em>the layering of IPsec is correct and sound</em> ; everything is in the right place
+with IPsec, to academic perfection. But, as often happens with correctness of abstraction, there is a profound
+lack of usability, and a verifiably safe implementation is very difficult to achieve. WireGuard, in contrast, starts
+from the basis of flawed layering violations and then attempts to rectify the issues arising from this conflation
+using practical engineering solutions and cryptographic techniques that solve real world problems.</p>
+<p>On the other end of the spectrum is OpenVPN, a user space TUN/TAP based solution that uses TLS. By
+virtue of it being in user space, it has very poor performance—since packets must be copied multiple times
+between kernel space and user space—and a long-lived daemon is required; OpenVPN appears far from stateless
+to an administrator. While TUN/TAP interfaces (say,tun0) have similarwg0-like benefits as described above,
+OpenVPN is also enormously complex, supporting the entire plethora of TLS functionality, which exposes quite a
+bit of code to potential vulnerabilities. OpenVPN is right to be implemented in user space, since ASN.1 and x
+parsers in the kernel have historically been quite problematic (CVE-2008-1673, CVE-2016-2053), and adding a
+TLS stack would only make that issue worse. TLS also brings with it an enormous state machine, as well as a
+less clear association between source IP addresses and public keys.</p>
+<p>For key distribution, WireGuard draws inspiration from OpenSSH, for which common uses include a very
+simple approach toward key management. Through a diverse set of out-of-band mechanisms, two peers generally
+exchange their static public keys. Sometimes it is simple as PGP-signed email, and other times it is a complicated
+key distribution mechanism using LDAP and certificate authorities. Importantly, for the most part OpenSSH
+key distribution is entirely agnostic. WireGuard follows suit. Two WireGuard peers exchange their public keys
+through some unspecified mechanism, and afterward they are able to communicate. In other words, WireGuard’s
+attitude toward key distribution is that this is the wrong layer to address that particular problem, and so the
+interface is simple enough that any key distribution solution can be used with it. As an additional advantage,
+public keys are only 32 bytes long and can be easily represented in Base64 encoding in 44 characters, which is
+useful for transferring keys through a variety of different mediums.</p>
+<p>Finally, WireGuard is cryptographically opinionated. It intentionally lacks cipher and protocol agility. If
+holes are found in the underlying primitives, all endpoints will be required to update. As shown by the continuing
+torrent of SSL/TLS vulnerabilities, cipher agility increases complexity monumentally. WireGuard uses a variant
+of Trevor Perrin’s Noise [23]—which during its development received quite a bit of input from the authors of this
+paper for the purposes of being used in WireGuard—for a 1-RTT key exchange, with Curve25519 [5] for ECDH,
+HKDF [15] for expansion of ECDH results, RFC7539 [17]’s construction of ChaCha20 [3] and Poly1305 [8] for
+authenticated encryption, and BLAKE2s [2] for hashing. It has built-in protection against denial of service
+attacks, using a new crypto-cookie mechanism for IP address attributability.</p>
+<p>Similarly opinionated, WireGuard is layer 3-only; as explained below in section 2, this is the cleanest approach
+for ensuring authenticity and attributability of the packets. The authors believe that layer 3 is the correct way
+for bridging multiple IP networks, and the imposition of this onto WireGuard allows for many simplifications,
+resulting in a cleaner and more easily implemented protocol. It supports layer 3 for both IPv4 and IPv6, and
+can encapsulate v4-in-v6 as well as v6-in-v4.</p>
+<p>WireGuard puts together these principles, focusing on simplicity and an auditable codebase, while still being
+extremely high-speed and suitable for a modicum of environments. By combining the key exchange and the
+layer 3 transport encryption into one mechanism and using a virtual interface rather than a transform layer,
+WireGuard indeed breaks traditional layering principles, in pursuit of a solid <em>engineering</em> solution that is both
+more practical and more secure. Along the way, it employs several novel cryptographic and systems solutions to
+achieve its goals.</p>
+<h2 id="2-cryptokey-routing" class="relative group">2 Cryptokey Routing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#2-cryptokey-routing" aria-label="Anchor">#</a></span></h2><p>The fundamental principle of a secure VPN is an association between peers and the IP addresses each is allowed
+to use as source IPs. In WireGuard, peers are identified strictly by their public key, a 32-byte Curve25519 point.
+This means that there is a simple association mapping between public keys and a set of allowed IP addresses.
+Examine the following <em>cryptokey routing table</em> :</p>
+<p><em>Configuration 1a</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Interface Public Key</th>
+<th style="text-align:center">Interface Private Key</th>
+<th style="text-align:center">Listening UDP Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">HIgo&hellip;8ykw</td>
+<td style="text-align:center">yAnz&hellip;fBmk</td>
+<td style="text-align:center">41414</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Peer Public Key</th>
+<th style="text-align:center">Allowed Source IPs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">xTIB&hellip;p8Dg</td>
+<td style="text-align:center">10.192.122.3/32,10.192.124.0/24</td>
+</tr>
+<tr>
+<td style="text-align:center">TrMv&hellip;WXX0</td>
+<td style="text-align:center">10.192.122.4/32,192.168.0.0/16</td>
+</tr>
+<tr>
+<td style="text-align:center">gN65&hellip;z6EA</td>
+<td style="text-align:center">10.10.10.230/32</td>
+</tr>
+</tbody>
+</table>
+<p>The interface itself has a private key and a UDP port on which it listens (more on that later), followed by a
+list of peers. Each peer is identified by its public key. Each then has a list of allowed source IPs.</p>
+<p>When an outgoing packet is being transmitted on a WireGuard interface, <code>wg0</code>, this table is consulted to
+determine which public key to use for encryption. For example, a packet with a destination IP of <code>10.192.122.4</code>
+will be encrypted using the secure session derived from the public key <code>TrMv...WXX0</code>. Conversely, when <code>wg0</code>
+receives an encrypted packet, after decrypting and authenticating it, it will only accept it if its source IP resolves
+in the table to the public key used in the secure session for decrypting it. For example, if a packet is decrypted
+fromx <code>TIB...qp8D</code>, it will only be allowed if the decrypted packet has a source IP of <code>110.192.122.3</code> or in the range
+of <code>10.192.124.0</code> to <code>10.192.124.255</code>; otherwise it is dropped.</p>
+<p>With this very simple principle, administrators can rely on simple firewall rules. For example, an incoming
+packet on interface <code>wg0</code> with a source IP of <code>10.10.10.230</code> may be considered as authentically from the peer with
+a public key of <code>gN65...Bz6E</code>. More generally, any packets arriving on a WireGuard interface will have a reliably
+authentic source IP (in addition, of course, to guaranteed perfect forward secrecy of the transport). Do note
+that this is only possible because WireGuard is strictly layer 3 based. Unlike some common VPN protocols, like
+L2TP/IPsec, using authenticated identification of peers at a layer 3 level enforces a much cleaner network design.</p>
+<p>In the case of a WireGuard peer who wishes to route <em>all</em> traffic through another WireGuard peer, the
+cryptokey routing table could be configured more simply as:</p>
+<p><em>Configuration 2a</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Interface Public Key</th>
+<th style="text-align:center">Interface Private Key</th>
+<th style="text-align:center">Listening UDP Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">gN65&hellip;z6EA</td>
+<td style="text-align:center">gI6E&hellip;fWGE</td>
+<td style="text-align:center">21841</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Peer Public Key</th>
+<th style="text-align:center">Allowed Source IPs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">HIgo&hellip;8ykw</td>
+<td style="text-align:center">0.0.0.0/0</td>
+</tr>
+</tbody>
+</table>
+<p>Here, the peer authorizes <code>HIgo...f8yk</code> to put packets onto <code>wg0</code> with any source IP, and all packets that are
+outgoing on <code>wg0</code> will be encrypted using the secure session associated with that public key and sent to that
+peer’s endpoint.</p>
+<h3 id="21-endpoints--roaming" class="relative group">2.1 Endpoints &amp; Roaming <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#21-endpoints--roaming" aria-label="Anchor">#</a></span></h3><p>Of course, it is important that peers are able to send encrypted WireGuard UDP packets to each other at
+particular Internet endpoints. Each peer in the cryptokey routing table may optionally pre-specify a known
+external IP address and UDP port of that peer’s endpoint. The reason it is optional is that if it is not specified
+and WireGuard receives a correctly authenticated packet from a peer, it will use the outer external source IP
+address for determining the endpoint.</p>
+<p>Since a public key uniquely identifies a peer, the outer external source IP of an encrypted WireGuard packet
+is used to identify the remote endpoint of a peer, enabling peers to roam freely between different external IPs,
+between mobile networks for example, similar to what is allowed by Mosh [25]. For example, the prior cryptokey
+routing table could be augmented to have the initial endpoint of a peer:</p>
+<p><em>Configuration 2b</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Interface Public Key</th>
+<th style="text-align:center">Interface Private Key</th>
+<th style="text-align:center">Listening UDP Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">gN65&hellip;z6EA</td>
+<td style="text-align:center">gI6E&hellip;fWGE</td>
+<td style="text-align:center">21841</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Peer Public Key</th>
+<th style="text-align:center">Allowed Source IPs</th>
+<th style="text-align:center">Internet Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">HIgo&hellip;8ykw</td>
+<td style="text-align:center">0.0.0.0/0</td>
+<td style="text-align:center">192.95.5.69:41414</td>
+</tr>
+</tbody>
+</table>
+<p>Then, this host, <code>gN65...z6EA</code>, sends an encrypted packet to <code>HIgo...f8yk</code> at <code>192.95.5.69:41414</code>. After <code>HIgo...f8yk</code>
+receives a packet, it updates its table to learn that the endpoint for sending reply packets is, for example,
+<code>192.95.5.64:21841</code>:</p>
+<p><em>Configuration 1b</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Interface Public Key</th>
+<th style="text-align:center">Interface Private Key</th>
+<th style="text-align:center">Listening UDP Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">HIgo&hellip;8ykw</td>
+<td style="text-align:center">yAnz&hellip;fBmk</td>
+<td style="text-align:center">41414</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Peer Public Key</th>
+<th style="text-align:center">Allowed Source IPs</th>
+<th style="text-align:center">Internet Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">xTIB&hellip;p8Dg</td>
+<td style="text-align:center">10.192.122.3/32,10.192.124.0/</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">TrMv&hellip;WXX0</td>
+<td style="text-align:center">10.192.122.4/32,192.168.0.0/</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">gN65&hellip;z6EA</td>
+<td style="text-align:center">10.10.10.230/32</td>
+<td style="text-align:center">192.95.5.64:21841</td>
+</tr>
+</tbody>
+</table>
+<p>Note that the listen port of peers and the source port of packets sent are always the same, adding much
+simplicity, while also ensuring reliable traversal behind NAT. And since this roaming property ensures that peers
+will have the very latest external source IP and UDP port, there is no requirement for NAT to keep sessions
+open for long. (For use cases in which it is imperative to keep open a NAT session or stateful firewall indefinitely,
+the interface can be optionally configured to periodically send persistent authenticated keepalives.)</p>
+<p>This design allows for great convenience and minimal configuration. While an attacker with an active
+man-in-the-middle could, of course, modify these unauthenticated external source IPs, the attacker would not be
+able to decrypt or modify any payload, which merely amounts to a denial-of-service attack, which would already
+be trivially possible by just dropping the original packets from this presumed man-in-the-middle position. And,
+as explained in section <a href="#65-passive-keepalive">Passive Keepalive</a>, hosts that cannot decrypt and subsequently reply to packets will quickly be forgotten.</p>
+<h2 id="3-sendreceive-flow" class="relative group">3 Send/Receive Flow <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#3-sendreceive-flow" aria-label="Anchor">#</a></span></h2><p>The roaming design of section 
+      
+    <a href="/posts/wireguard/whitepaper/#21-endpoints--roaming">Endpoint &amp; Roaming</a>, put together with the cryptokey routing table of section 2, amounts to the
+following flows when receiving and sending a packet on interfacewg0using <em>Configuration 1</em> from above.</p>
+<p>A packet is locally generated (or forwarded) and is ready to be transmitted on the outgoing interfacewg0:</p>
+<ol>
+<li>
+<p>The plaintext packet reaches the WireGuard interface, <code>wg0</code>.</p>
+</li>
+<li>
+<p>The destination IP address of the packet, <code>192.168.87.21</code>, is inspected, which matches the peer <code>TrMv...WXX0</code>.
+(If it matches no peer, it is dropped, and the sender is informed by a standard ICMP “no route to host” packet, as well as returning <code>ENOKEY</code> to user space.)</p>
+</li>
+<li>
+<p>The symmetric sending encryption key and nonce counter of the secure session associated with peer <code>TrMv...WXX0</code> are used to encrypt the plaintext packet using <code>ChaCha20Poly1305</code>.</p>
+</li>
+<li>
+<p>A header containing various fields, explained in section 5.4, is prepended to the now encrypted packet.</p>
+</li>
+<li>
+<p>This header and encrypted packet, together, are sent as a UDP packet to the Internet UDP/IP endpoint
+associated with peer <code>TrMv...WXX0</code>, resulting in an outer UDP/IP packet containing as its payload a header
+and encrypted inner-packet. The peer’s endpoint is either pre-configured, or it is learned from the outer
+external source IP header field of the most recent correctly-authenticated packet received. (Otherwise, if no
+endpoint can be determined, the packet is dropped, an ICMP message is sent, and <code>EHOSTUNREACH</code> is
+returned to user space.)</p>
+</li>
+</ol>
+<p>A UDP/IP packet reaches UDP port 41414 of the host, which is the listening UDP port of interface <code>wg0</code>:</p>
+<ol>
+<li>
+<p>A UDP/IP packet containing a particular header and an encrypted payload is received on the correct port
+(in this particular case, port 41414).</p>
+</li>
+<li>
+<p>Using the header (described below in section 
+      
+    <a href="/posts/wireguard/whitepaper/#54-messages">Messages</a>), WireGuard determines that it is associated with peer
+<code>TrMv...WXX0</code>’s secure session, checks the validity of the message counter, and attempts to authenticate
+and decrypt it using the secure session’s receiving symmetric key. If it cannot determine a peer or if
+authentication fails, the packet is dropped.</p>
+</li>
+<li>
+<p>Since the packet has authenticated correctly, the source IP of the outer UDP/IP packet is used to update
+the endpoint for peer <code>TrMv...WXX0</code>.</p>
+</li>
+<li>
+<p>Once the packet payload is decrypted, the interface has a plaintext packet. If this is not an IP packet,
+it is dropped. Otherwise, WireGuard checks to see if the source IP address of the plaintext inner-packet
+routes correspondingly in the cryptokey routing table. For example, if the source IP of the decrypted
+plaintext packet is <code>192.168.31.28</code>, the packet correspondingly routes. But if the source IP is <code>10.192.122.3</code>,
+the packet does not route correspondingly for this peer, and is dropped.</p>
+</li>
+<li>
+<p>If the plaintext packet has not been dropped, it is inserted into the receive queue of the <code>wg0</code> interface.</p>
+</li>
+</ol>
+<p>It would be possible to separate the list of allowed IPs into two lists—one for checking the source address of
+incoming packets and one for choosing peer based on the destination address. But, by keeping these as part
+of the same list, it allows for something similar to reverse-path filtering. When sending a packet, the list is
+consulted based on the destination IP; when receiving a packet, that same list is consulted for determining if the
+source IP is allowed. However, rather than asking whether the received packet’s sending peer has that source IP
+as part of its allowed IPs list, it instead is able to ask a more global question—which peer would be chosen in
+the table for that source IP, and does that peer match that of the received packet. This enforces a one-to-one
+mapping of sending and receiving IP addresses, so that if a packet is received from a particular peer, replies to
+that IP will be guaranteed to go to that same peer.</p>
+<h2 id="4-basic-usage" class="relative group">4 Basic Usage <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#4-basic-usage" aria-label="Anchor">#</a></span></h2><p>Before going deep into the cryptography and implementation details, it may be useful to see a simple command
+line interface for using WireGuard, to bring concreteness to the concepts thus far presented.</p>
+<p>Consider a Linux environment with a single physical network interface,eth0, connecting it to the Internet
+with a public IP of <code>192.95.5.69</code>. A WireGuard interface, <code>wg0</code>, can be added and configured to have a tunnel
+IP address of <code>10.192.122.3</code> in a <code>/24</code> subnet with the standard <strong>ip(8)</strong> utilities, shown on the left. The cryptokey
+routing table can then be configured using the <strong>wg(8)</strong> tool in a variety of fashions, including reading from
+configuration files, shown on the right:</p>
+<p>Adding the <code>wg0</code> interface</p>
+<pre tabindex="0"><code>$ ip link add dev wg0 type wireguard
+$ ip address add dev wg0 10.192.122.3/
+$ ip route add 10.0.0.0/8 dev wg
+$ ip address show
+1: lo: &lt;LOOPBACK&gt; mtu 65536
+inet 127.0.0.1/8 scope host lo
+2: eth0: &lt;BROADCAST&gt; mtu 1500
+inet 192.95.5.69/24 scope global eth
+3: wg0: &lt;POINTOPOINT,NOARP&gt; mtu 1420
+inet 10.192.122.3/24 scope global wg
+</code></pre><p>Configuring the cryptokey routing table of <code>wg0</code></p>
+<pre tabindex="0"><code>$ wg setconf wg0 configuration-1.conf
+$ wg show wg
+interface: wg
+public key: HIgo...8ykw
+private key: yAnz...fBmk
+listening port: 41414
+peer: xTIB...p8Dg
+allowed ips: 10.192.124.0/24, 10.192.122.3/
+peer: TrMv...WXX
+allowed ips: 192.168.0.0/16, 10.192.122.4/
+peer: gN65...z6EA
+allowed ips: 10.10.10.230/
+endpoint: 192.95.5.70:
+$ ip link set wg0 up
+$ ping 10.10.10.
+PING 10.10.10.230 56(84) bytes of data.
+64 bytes: icmp_seq=1 ttl=49 time=0.01 ms
+</code></pre><p>At this point, sending a packet to <code>10.10.10.230</code> on that system will send the data through the <code>wg0</code> interface,
+which will encrypt the packet using a secure session associated with the public key <code>gN65...z6EA</code> and send that
+encrypted and encapsulated packet to <code>192.95.5.70:54421</code> over <code>UDP</code>. When receiving a packet from <code>10.10.10.230</code>
+on <code>wg0</code>, the administrator can be assured that it is authentically from <code>gN65...z6EA</code>.</p>
+<h2 id="5-protocol--cryptography" class="relative group">5 Protocol &amp; Cryptography <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#5-protocol--cryptography" aria-label="Anchor">#</a></span></h2><p>As mentioned prior, in order to begin sending encrypted encapsulated packets, a 1-RTT key exchange handshake
+must first take place. The initiator sends a message to the responder, and the responder sends a message back to
+the initiator. After this handshake, the initiator may send encrypted messages using a shared pair of symmetric
+keys, one for sending and one for receiving, to the responder, and following the first encrypted message from
+initiator to responder, the responder may begin to send encrypted messages to the initiator. This ordering
+restriction is to require confirmation as described for KEA+C [18], as well as allowing handshake message to be
+processed asynchronously to transport data messages. These messages use the “IK” pattern from Noise [23], in
+addition to a novel cookie construction to mitigate denial of service attacks. The net result of the protocol is a
+very robust security system, which achieves the requirements of authenticated key exchange (AKE) security [18],
+avoids key-compromise impersonation, avoids replay attacks, provides perfect forward secrecy, provides identity
+hiding of static public keys similar to SIGMA [16], and has resistance to denial of service attacks.</p>
+<h3 id="51-silence-is-a-virtue" class="relative group">5.1 Silence is a Virtue <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#51-silence-is-a-virtue" aria-label="Anchor">#</a></span></h3><p>One design goal of WireGuard is to avoid storing any state prior to authentication and to not send any responses
+to unauthenticated packets. With no state stored for unauthenticated packets, and with no response generated,
+WireGuard is invisible to illegitimate peers and network scanners. Several classes of attacks are avoided by
+not allowing unauthenticated packets to influence any state. And more generally, it is possible to implement
+WireGuard in a way that requires no dynamic memory allocation at all, even for authenticated packets, as
+explained in section 7. However, this property requires the very first message received by the responder to
+authenticate the initiator. Having authentication in the first packet like this potentially opens up the responder
+to a replay attack. An attacker could replay initial handshake messages to trick the responder into regenerating
+its ephemeral key, thereby invalidating the session of the legitimate initiator (though not affecting the secrecy
+or authenticity of any messages). To prevent this, a 12-byte TAI64N [7] timestamp is included, encrypted and
+authenticated, in the first message. The responder keeps track of the greatest timestamp received <em>per peer</em> and
+discards packets containing timestamps less than or equal to it. (In fact, it does not even have to be an accurate
+timestamp; it simply must be a per-peer monotonically increasing 96-bit number.) If the responder restarts
+and loses this state, that is not a problem: even though an initial packet from earlier can be replayed, it could
+not possibly disrupt any ongoing secure sessions, because the responder has just restarted and therefore has no
+active secure sessions to disrupt. Once the initiator reestablishes a secure session with the responder after its
+restart, the initiator will be using a greater timestamp, invalidating the previous one. This timestamp ensures
+that an attacker may not disrupt a current session between initiator and responder via replay attack. (This also
+means that two distinct peers should <em>not</em> share private keys, since in that situation a packet sent to one could be
+replayed to another, and the ensuing response would then cause the initiator to involuntarily roam from one
+peer to another. But one should not be sharing private keys in the first place, anyway.) From an implementation
+point of view, TAI64N [7] is very convenient because it is big-endian, allowing comparisons between two 12-byte
+timestamps to be done using standardmemcmp(). Since WireGuard does not use signatures, in order to gain
+a degree of deniability, the first message relies only on a Diffie-Hellman result of both peers’ static keys for
+authentication. This means that if either one of their static keys is compromised, an attacker would be able to
+forge an initiation message—though it would not be able to complete the full handshake—containing a maximum
+timestamp value, thereby preventing all future connections from succeeding. While this may seem similar to
+traditional key-compromise impersonation vulnerabilities—to which WireGuard is <em>not</em> vulnerable—it is in fact
+very different. For, if a key compromise enables an attacker to prevent peers from ever using their compromised
+keys again, the attacker has actually aided a proper response to such a compromise. If the precision of a TIA64N
+timestamp poses an unsuitable information leak, implementations may truncate 24 bits of the nanoseconds
+portion of the timestamp.</p>
+<h3 id="52-optional-pre-shared-symmetric-key-mode" class="relative group">5.2 Optional Pre-shared Symmetric Key Mode <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#52-optional-pre-shared-symmetric-key-mode" aria-label="Anchor">#</a></span></h3><p>WireGuard rests upon peers exchanging static public keys with each other <em>a priori</em> , as their static identities. The
+secrecy of all data sent relies on the security of the Curve25519 ECDH function. In order to mitigate any future
+advances in quantum computing, WireGuard also supports a mode in which any pair of peers might <em>additionally</em>
+pre-share a single 256-bit symmetric encryption key between themselves, in order to add an additional layer of
+symmetric encryption. The attack model here is that adversaries may be recording encrypted traffic on a long
+term basis, in hopes of someday being able to break Curve25519 and decrypt past traffic. While pre-sharing
+symmetric encryption keys is usually troublesome from a key management perspective and might be more likely
+stolen, the idea is that by the time quantum computing advances to break Curve25519, this pre-shared symmetric
+key has been long forgotten. And, more importantly, in the shorter term, if the pre-shared symmetric key is
+compromised, the Curve25519 keys still provide more than sufficient protection. In lieu of using a completely
+post-quantum crypto system, which as of writing are not practical for use here, this optional hybrid approach of
+a pre-shared symmetric key to complement the elliptic curve cryptography provides a sound and acceptable
+trade-off for the extremely paranoid. Furthermore, it allows for building on top of WireGuard sophisticated
+key-rotation schemes, in order to achieve varying types of post-compromise security.</p>
+<h3 id="53-denial-of-service-mitigation--cookies" class="relative group">5.3 Denial of Service Mitigation &amp; Cookies <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#53-denial-of-service-mitigation--cookies" aria-label="Anchor">#</a></span></h3><p>Computing Curve25519 point multiplication is CPU intensive, even if Curve25519 is an extremely fast curve on
+most processors. In order to determine the authenticity of a handshake message, a Curve25519 multiplication
+must be computed, which means there is a potential avenue for a denial-of-service attack. In order to fend off
+a CPU-exhaustion attack, if the responder—the recipient of a message—is under load, it may choose to not
+process a handshake message (either an initiation or a response handshake message), but instead to respond with
+a cookie reply message, containing a cookie. The initiator then uses this cookie in order to resend the message
+and have it be accepted the following time by the responder.</p>
+<p>The responder maintains a secret random value that changes every two minutes. A cookie is simply the
+result of computing a MAC of the initiator’s source IP address using this changing secret as the MAC key. The
+initiator, when resending its message, sends a MAC of its message using this cookie as the MAC key. When
+the responder receives the message, if it is under load, it may choose whether or not to accept and process the
+message based on whether or not there is a correct MAC that uses the cookie as the key. This mechanism ties
+messages sent from an initiator to its IP address, giving proof of IP ownership, allowing for rate limiting using
+classical IP rate limiting algorithms (token bucket, etc—see section 7.4 for implementation details).</p>
+<p>This is more or less the scheme used by DTLS [24] and IKEv2 [13]. However it suffers from three major flaws.
+First, as mentioned in section 5.1, we prefer to stay silent by not sending any reply to unauthenticated messages;
+indiscriminately sending a cookie reply message when under load would break this property. Second, the cookie
+should not be sent in clear text, because a man-in-the-middle could use this to then send fraudulent messages
+that are processed. And third, the initiator himself could be denial-of-service attacked by being sent fraudulent
+cookies, which it would then use with no success in computing a MAC of its message. The cookie mechanism
+of WireGuard, which uses two MACs (msg.mac1andmsg.mac2), fixes these problems, the computations for
+which will be shown in section 5.4.4 below.</p>
+<p>For the first problem, in order for the responder to remain silent, even while under load, all messages have a
+first MAC (msg.mac1) that uses the responder’s public key. This means that at the very least, a peer sending a
+message must know to whom it is talking (by virtue of knowing its public key), in order to elicit any kind of
+response. Under load or not under load, this first MAC (msg.mac1) always is required to be present and valid.
+While the public key of the responder itself is not secret, it is sufficiently secret within this attack model, in
+which the goal is to ensure stealthiness of services, and so knowing the responder’s public key is sufficient proof
+for already knowing of its existence. (It is worth noting that this first MAC allows a passive attacker to make
+guesses about for which public key the packet is intended, slightly weakening identity hiding properties, though
+a correct guess would not constitute cryptographic <em>proof</em> since no private material was used in generating the
+MAC.)</p>
+<p>Likewise, to solve the second problem—that of sending MACs in clear text—we apply an AEAD with an
+extended randomized nonce to the cookie in transit, again using as a symmetric encryption key the responder’s
+public key. Again, the mostly public values here are sufficient for our purposes within the denial-of-service attack
+threat model.</p>
+<p>Finally, to solve the third problem, we use the “additional data” field of the AEAD to encrypt the cookie in
+transit to additionally authenticate the first MAC (msg.mac1) of the initiating message that provoked a cookie
+reply message. This ensures that an attacker without a man-in-the-middle position cannot send torrents of
+invalid cookie replies to initiators to prevent them from authenticating with a correct cookie. (An attacker <em>with</em>
+an man-in-the-middle position could simply drop cookie reply messages anyway to prevent a connection, so that
+case is not relevant, though an attacker with a merely <em>passive</em> man-in-the-middle position could indeed forge
+these packets, which is not considerably different from a denial-of-service attack against TCP.) In other words,
+we use the AD field to bind cookie replies to initiation messages.</p>
+<p>With these problems solved, we can then add the aforementioned second MAC (msg.mac2) using the securely
+transmitted cookie as the MAC key. When the responder is under load, it will only accept messages that
+additionally have this second MAC.</p>
+<p>In sum, the responder, after computing these MACs as well and comparing them to the ones received in the
+message, must always reject messages with an invalidmsg.mac1, and when under load <em>may</em> reject messages with
+an invalidmsg.mac2. If the responder receives a message with a validmsg.mac1yet with an invalidmsg.mac2,
+<em>and is under load</em> , it may respond with a cookie reply message, detailed in section 5.4.7. This considerably
+improves on the cookie scheme used by DTLS and IKEv2.</p>
+<p>In contrast to HIPv2 [20], which solves this problem by using a 2-RTT key exchange and complexity puzzles,
+WireGuard eschews puzzle-solving constructs, because the former requires storing state while the latter makes
+the relationship between initiator and responder asymmetric. In WireGuard, either peer at any point might
+be motivated to begin a handshake. This means that it is not feasible to require a complexity puzzle from the
+initiator, because the initatior and responder may soon change roles, turning this mitigation mechanism into
+a denial of service vulnerability itself. Our above cookie solution, in contrast, enables denial of service attack
+mitigation on a 1-RTT protocol, while keeping the initiator and responder roles symmetric.</p>
+<h3 id="54-messages" class="relative group">5.4 Messages <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#54-messages" aria-label="Anchor">#</a></span></h3><p>There are four types of messages, each prefixed by a single-byte message type identifier, notated asmsg.type
+below:</p>
+<ul>
+<li>Section 5.4.2: The handshake initiation message that begins the handshake process for establishing a secure session.</li>
+<li>Section 5.4.3: The handshake response to the initiation message that concludes the handshake, after which a secure session can be established.</li>
+<li>Section 5.4.7: A reply to either a handshake initiation message or a handshake response message, explained in section 5.3,
+that communicates an encrypted cookie value for use in resending either the rejected handshake initiation message or handshake response message.</li>
+<li>Section 5.4.6: An encapsulated and encrypted IP packet that uses the secure session negotiated by the handshake.</li>
+</ul>
+<p>The initiator of the handshake is denoted as subscript <em>i</em> , and the responder of the handshake is denoted as
+subscript <em>r</em> , and either one is denoted as subscript∗. For messages that can be created by either an initiator
+or responder, if the peer creating the message is the initiator, let( <em>m,m</em> ′) = ( <em>i,r</em> ), and if the peer creating the
+message is the responder, let( <em>m,m</em> ′) = ( <em>r,i</em> ). The two peers have several variables they maintain locally:</p>
+<p><em>I</em> ∗ A 32-bit index that locally represents the other peer, analogous to IPsec’s “SPI”.
+<em>Spriv</em> ∗ , <em>S</em> ∗ <em>pub</em> The static private and public key values.
+<em>E</em> ∗ <em>priv</em> , <em>Epub</em> ∗ The ephemeral private and public key values.
+<em>Q</em> The optional pre-shared symmetric key value from section 5.2 When pre-shared key mode is
+not in use, this is set to 032.
+<em>H</em> ∗, <em>C</em> ∗ A hash result value and a chaining key value.
+<em>T</em> ∗ <em>send</em> , <em>T</em> ∗ <em>recv</em> Transport data symmetric key values for sending and receiving.
+<em>N</em> ∗ <em>send</em> , <em>N</em> ∗ <em>recv</em> Transport data message nonce counters for sending and receiving.
+In the constructions that follow, several symbols, functions, and operators are used. The binary operator‖
+represents concatenation of its operands, and the binary operator:=represents assignment of its right operand
+to its left operand. The annotation̂ <em>n</em> returns the value( <em>n</em> + 16), which is the Poly1305 authentication tag length
+added to <em>n</em>. <em></em> represents an empty zero-length bitstring, 0 <em>n</em> represents the all zero (0x0) bitstring of length <em>n</em>
+bytes, and <em>ρn</em> represents a random bitstring of length <em>n</em> bytes. Let <em>τ</em> be considered a temporary variable and let
+<em>κ</em> be considered a temporary encryption key. All integer assignments are little-endian, unless otherwise noted.
+The following functions and constants are utilized:</p>
+<pre tabindex="0"><code>DH(private key, public key)Curve25519 point multiplication ofprivate keyandpublic key, re-
+turning 32 bytes of output.
+DH-Generate()Generates a random Curve25519 private key and derives its corresponding public key,
+returning a pair of 32 bytes values, (private, public).
+Aead(key, counter, plain text, auth text)ChaCha20Poly1305 AEAD, as specified in RFC7539 [17],
+with its nonce being composed of 32 bits of zeros followed by the 64-bit little-endian value ofcounter.
+Xaead(key, nonce, plain text, auth text)XChaCha20Poly1305 AEAD, with a 24-byte random
+nonce, instantiated using HChaCha20 [6] and ChaCha20Poly1305.
+</code></pre><pre tabindex="0"><code>Hash(input)Blake2s(input, 32), returning 32 bytes of output.
+Mac(key, input)Keyed-Blake2s(key, input, 16), the keyed MAC variant of the BLAKE2s hash
+function, returning 16 bytes of output.
+Hmac(key, input)Hmac-Blake2s(key, input, 32), the ordinary BLAKE2s hash function used in an
+HMAC construction, returning 32 bytes of output.
+Kdf n (key, input)Sets τ 0 :=Hmac(key , input) ,τ 1 :=Hmac( τ 0 , 0x1) ,τi :=Hmac( τ 0 ,τi − 1 ‖i), and returns
+an n -tuple of 32 byte values,( τ 1 ,...,τn ). This is the HKDF [15] function.
+Timestamp()Returns the TAI64N timestamp [7] of the current time, which is 12 bytes of output, the first 8
+bytes being a big-endian integer of the number of seconds since 1970 TAI and the last 4 bytes being a
+big-endian integer of the number of nanoseconds from the beginning of that second.
+ConstructionThe UTF-8 string literal “Noise_IKpsk2_25519_ChaChaPoly_BLAKE2s”, 37 bytes of
+output.
+IdentifierThe UTF-8 string literal “WireGuard v1 zx2c4 Jason@zx2c4.com”, 34 bytes of output.
+Label-Mac1The UTF-8 string literal “mac1----”, 8 bytes of output.
+Label-CookieThe UTF-8 string literal “cookie--”, 8 bytes of output.
+</code></pre><h4 id="541-protocol-overview" class="relative group">5.4.1 Protocol Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#541-protocol-overview" aria-label="Anchor">#</a></span></h4><p>In the majority of cases, the handshake will complete
+in 1-RTT, after which transport data follows:</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+    participant Initiator
+    participant Responder
+    Initiator-&gt;&gt;Responder: Handshake Initiation
+    Responder-&gt;&gt;Initiator: Handshake Response
+    Initiator-&gt;&gt;Responder: Transport Data
+    Responder-&gt;&gt;Initiator: Transport Data
+</code></pre><p>If one peer is under load, then a cookie reply message is added to the handshake, to prevent against denial-of-service attacks:</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+    participant Initiator
+    participant Responder
+    Initiator-&gt;&gt;Responder: Handshake Initiation
+    Responder-&gt;&gt;Initiator: Cookie Reply
+    Initiator-&gt;&gt;Responder: Handshake Initiation
+    Responder-&gt;&gt;Initiator: Handshake Response
+    Initiator-&gt;&gt;Responder: Transport Data
+    Responder-&gt;&gt;Initiator: Transport Data
+</code></pre><h4 id="542-first-message-initiator-to-responder" class="relative group">5.4.2 First Message: Initiator to Responder <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#542-first-message-initiator-to-responder" aria-label="Anchor">#</a></span></h4><p>The initiator sends this message, msg:</p>
+<pre tabindex="0"><code>|--------------------|--------------------------|
+| type:=0x1(1 byte)  | reserved:= 0^3 (3 bytes) |
+|-----------------------------------------------|
+|             sender := Ii (4 bytes)            |
+|-----------------------------------------------|
+|             ephemeral (32 bytes)              |
+|-----------------------------------------------|
+|             static (̂32 bytes)                 |
+|-----------------------------------------------|
+|             timestamp (̂12 bytes)              |
+|-----------------------------------------------|
+|   mac1 (16 bytes)  |      mac2 (16 bytes)     |
+|--------------------|--------------------------|
+</code></pre><p>Thetimestampfield is explained in section 5.1, andmac1andmac2are explained further in section 5.4.4. <em>Ii</em> is
+generated randomly ( <em>ρ</em>^4 ) when this message is sent, and is used to tie subsequent replies to the session begun by
+this message. The above remaining fields are calculated [23] as follows:</p>
+<pre tabindex="0"><code>Ci :=Hash(Construction)
+Hi :=Hash( Ci ‖Identifier)
+Hi :=Hash( Hi ‖ Spubr )
+( Eipriv,Eipub ):=DH-Generate()
+Ci :=Kdf 1 ( Ci,Eipub )
+msg.ephemeral:= Eipub
+Hi :=Hash( Hi ‖msg.ephemeral)
+( Ci,κ ):=Kdf 2 ( Ci, DH( Eipriv,Srpub ))
+msg.static:=Aead( κ, 0 ,Spubi ,Hi )
+Hi :=Hash( Hi ‖msg.static)
+( Ci,κ ):=Kdf 2 ( Ci, DH( Sipriv,Spubr ))
+msg.timestamp:=Aead( κ, 0 , Timestamp() ,Hi )
+Hi :=Hash( Hi ‖msg.timestamp)
+</code></pre><p>When the responder receives this message, it does the same operations so that its final state variables are
+identical, replacing the operands of theDHfunction to produce equivalent values. (Side note: while not part of
+Noise and hence not part of WireGuard at the moment, one modification on the above message would be to
+computemsg.staticrather asAead( <em>κ,</em> 0 <em>,</em> Hash( <em>Spubi</em> ) <em>,Hi</em> ). The additional hash ensures that this elliptic curve
+point would not be transmitted directly, and hence the entire handshake would have some limited degree of
+non-forward secret post-quantum security, provided the public keys are not made known by some other means.)</p>
+<h4 id="543-second-message-responder-to-initiator" class="relative group">5.4.3 Second Message: Responder to Initiator <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#543-second-message-responder-to-initiator" aria-label="Anchor">#</a></span></h4><p>The responder sends this message, after processing the first message above from the initiator and applying the
+same operations to arrive at an identical state. <em>Ir</em> is generated randomly ( <em>ρ</em>^4 ) when this message is sent, and is
+used to tie subsequent replies to the session begun by this message, just as above. The responder sends this
+message,msg:</p>
+<pre tabindex="0"><code>|------------------------|--------------------------|
+| type:=0x2(1 byte)      | reserved:= 0^3 (3 bytes) |
+|------------------------|--------------------------|
+| sender := Ir (4 bytes) | receiver := Ii (4 bytes) |
+|-----------------------------------------------|
+|             ephemeral (32 bytes)              |
+|-----------------------------------------------|
+|             empty (^0 bytes)                  |
+|-----------------------------------------------|
+|   mac1 (16 bytes)  |      mac2 (16 bytes)     |
+|--------------------|--------------------------|
+</code></pre><p>The fieldsmac1andmac2are explained further in section 5.4.4. The above remaining fields are calculated [23]
+as follows:</p>
+<pre tabindex="0"><code>( Eprivr ,Epubr ):=DH-Generate()
+Cr :=Kdf 1 ( Cr,Epubr )
+msg.ephemeral:= Erpub
+Hr :=Hash( Hr ‖msg.ephemeral)
+Cr :=Kdf 1 ( Cr, DH( Erpriv,Eipub ))
+Cr :=Kdf 1 ( Cr, DH( Erpriv,Spubi ))
+( Cr,τ,κ ):=Kdf 3 ( Cr,Q )
+Hr :=Hash( Hr ‖ τ )
+msg.empty := Aead(κ, 0, , Hr )
+Hr :=Hash( Hr ‖msg.empty)
+</code></pre><p>When the initiator receives this message, it does the same operations so that its final state variables are identical,
+replacing the operands of theDHfunction to produce equivalent values. Note that this handshake response
+message is smaller than the handshake initiation message, preventing amplification attacks.</p>
+<h4 id="544-cookie-macs" class="relative group">5.4.4 Cookie MACs <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#544-cookie-macs" aria-label="Anchor">#</a></span></h4><p>In sections 5.4.2 and 5.4.3, the two handshake messages have themsg.mac1andmsg.mac2parameters. For a
+given handshake message,msg α represents all bytes ofmsgprior tomsg.mac1, andmsg β represents all bytes of
+msgprior tomsg.mac2. The latest cookie received L ̃∗seconds ago is represented by L ∗. Themsg.mac1and
+msg.mac2fields are populated as follows:</p>
+<pre tabindex="0"><code>msg.mac1:=Mac(Hash(Label-Mac1‖ Spubm ′) , msg α )
+if Lm =  or L ̃ m ≥ 120 :
+msg.mac2:= 0^16
+otherwise:
+msg.mac2:=Mac( Lm, msg β )
+</code></pre><p>The valueHash(Label-Mac1‖ <em>Smpub</em> ′)above can be pre-computed.</p>
+<h4 id="545-transport-data-key-derivation" class="relative group">5.4.5 Transport Data Key Derivation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#545-transport-data-key-derivation" aria-label="Anchor">#</a></span></h4><p>After the above two messages have been exchanged, keys are calculated [23] by the initiator and responder for
+sending and receiving transport data messages (section 5.4.6):</p>
+<pre tabindex="0"><code>( Tisend = Trrecv,Tirecv = Trsend ):=Kdf 2 ( Ci = Cr, )
+Nisend = Nrrecv = Nirecv = Nrsend := 0
+Eprivi = Epubi = Eprivr = Erpub = Ci = Cr := 
+</code></pre><p>On the last line, most prior states of the handshake are zeroed from memory (described in section 7.4), but the
+value Hi = Hr is not necessarily zeroed, as it could potentially be useful in future revisions of Noise [23].</p>
+<h4 id="546-subsequent-messages-transport-data-messages" class="relative group">5.4.6 Subsequent Messages: Transport Data Messages <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#546-subsequent-messages-transport-data-messages" aria-label="Anchor">#</a></span></h4><p>The initiator and the responder exchange transport data messages for exchanging encrypted encapsulated packets.
+The inner plaintext packet that is encapsulated is represented as <em>P</em> , of length‖ <em>P</em> ‖. Both peers send this message,
+msg:</p>
+<pre tabindex="0"><code>|--------------------|--------------------------|
+| type:=0x4(1 byte)  | reserved:= 0^3 (3 bytes) |
+|-----------------------------------------------|
+|             receiver:= Im&#39; (4 bytes)          |
+|-----------------------------------------------|
+|             counter (8 bytes)                 |
+|-----------------------------------------------|
+|             packet (^‖P ‖ bytes)              |
+|-----------------------------------------------|
+</code></pre><p>The remaining fields are populated as follows:</p>
+<pre tabindex="0"><code>P := P ‖ 016 ·d‖ P ‖ /^16 e−‖ P ‖
+msg.counter:= Nmsend
+msg.packet:=Aead( Tmsend,Nmsend,P, )
+Nmsend := Nmsend + 1
+</code></pre><p>The recipient of this messages uses <em>Tmrecv</em> ′ to read the message. Note that no length value is stored in this
+header, since the authentication tag serves to determine whether the message is legitimate, and the inner IP
+packet already has a length field in its header. The encapsulated packet itself is zero padded (without modifying
+the IP packet’s length field) before encryption to complicate traffic analysis, though that zero padding should
+never increase the UDP packet size beyond the maximum transmission unit length. Prior tomsg.packet, there
+are exactly 16 bytes of header fields, which means that decryption may be done in-place and still achieve
+natural memory address alignment, allowing for easier implementation in hardware and a significant performance
+improvement on many common CPU architectures. This is in part the result of the 3 bytes of reserved zero
+fields, making the first four bytes readable together as a little-endian integer.</p>
+<p>The msg.counter value is a nonce for the ChaCha20Poly1305 AEAD and is kept track of by the recipient
+using Nmrecv ′. It also functions to avoid replay attacks. Since WireGuard operates over UDP, messages can
+sometimes arrive out of order. For that reason we use a sliding window to keep track of received message counters,
+in which we keep track of the greatest counter received, as well as a window of prior messages received, checked
+only after having verified the authentication tag, using the algorithm detailed by appendix C of RFC2401 [14] or
+by RFC6479 [26], which uses a larger bitmap while avoiding bitshifts, enabling more extreme packet reordering
+that may occur on multi-core systems.</p>
+<h4 id="547-under-load-cookie-reply-message" class="relative group">5.4.7 Under Load: Cookie Reply Message <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#547-under-load-cookie-reply-message" aria-label="Anchor">#</a></span></h4><p>As mentioned in section 5.3, when a message with a validmsg.mac1is received, butmsg.mac2is invalid or
+expired, and the peer is under load, the peer may send a cookie reply message. <em>Im</em> ′is determined from the
+msg.senderfield of the message that prompted this cookie reply message,msg:</p>
+<pre tabindex="0"><code>|--------------------|--------------------------|
+| type:=0x3(1 byte)  | reserved:= 0^3 (3 bytes) |
+|-----------------------------------------------|
+|             receiver:= Im ′(4 bytes)          |
+|-----------------------------------------------|
+|             nonce:= ρ^24 (24 bytes)           |
+|-----------------------------------------------|
+|             cookie( ^16 bytes)                 |
+|-----------------------------------------------|
+</code></pre><p>The secret variable, <em>Rm</em> , changes every two minutes to a random value, <em>Am</em> ′represents a concatenation of the
+subscript’s external IP source address and UDP source port, and <em>M</em> represents themsg.mac1value of the
+message to which this is in reply. The remaining encrypted cookie reply field is populated as such:</p>
+<p>$$
+\(τ := Mac(Rm, Am′ )\)
+$$</p>
+<p>$$
+\(msg.cookie := Xaead(Hash(Label-Cookie ‖ S pub m ), msg.nonce, τ, M )\)
+$$</p>
+<p>The valueHash(Label-Cookie‖ <em>Smpub</em> )above can be pre-computed. By using <em>M</em> as the additional authenticated
+data field, we bind the cookie reply to the relevant message, in order to prevent peers from being attacked by
+sending them fraudulent cookie reply messages. Also note that this message is smaller than either the handshake
+initiation message or the handshake response message, avoiding amplification attacks.
+Upon receiving this message, if it is valid, the only thing the recipient of this message should do is store the
+cookie along with the time at which it was received. The mechanism described in section 6 will be used for
+retransmitting handshake messages with these received cookies; this cookie reply message should not, by itself,
+cause a retransmission.</p>
+<h2 id="6-timers--stateless-ux" class="relative group">6 Timers &amp; Stateless UX <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#6-timers--stateless-ux" aria-label="Anchor">#</a></span></h2><p>From the perspective of the user, WireGuard appears stateless. The private key of the interface is configured,
+followed by the public key of each of its peers, and then a user may simply send packets normally. The
+maintenance of session states, perfect forward secrecy, handshakes, and so forth is completely behind the
+scenes, invisible to the user. While similar automatic mechanisms historically have been buggy and disastrous,
+WireGuard employs an extremely <em>simple</em> timer state machine, in which each state and transitions to all adjacent
+states are clearly defined, resulting in total reliability. There are no anomalous states or sequences of states;
+everything is accounted for. It has been tested with success on 10 gigabit intranets as well as on low-bandwidth
+high-latency transatlantic commercial airline Internet. The simplicity of the timer state machine is owed to the
+fact that only a 1-RTT handshake is required, that the initiator and responder can transparently switch roles,
+and that WireGuard breaks down traditional layering, as discussed in section 1, and can therefore use intra-layer
+characteristics.</p>
+<h3 id="61-preliminaries" class="relative group">6.1 Preliminaries <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#61-preliminaries" aria-label="Anchor">#</a></span></h3><p>The following constants are used for the timer state system:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Symbol</th>
+<th style="text-align:left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Rekey-After-Messages</td>
+<td style="text-align:left">2^60 messages</td>
+</tr>
+<tr>
+<td style="text-align:left">Reject-After-Messages</td>
+<td style="text-align:left">2^64 - 2^13 - 1 messages</td>
+</tr>
+<tr>
+<td style="text-align:left">Rekey-After-Time</td>
+<td style="text-align:left">120 seconds</td>
+</tr>
+<tr>
+<td style="text-align:left">Reject-After-Time</td>
+<td style="text-align:left">180 seconds</td>
+</tr>
+<tr>
+<td style="text-align:left">Rekey-Attempt-Time</td>
+<td style="text-align:left">90 seconds</td>
+</tr>
+<tr>
+<td style="text-align:left">Rekey-Timeout</td>
+<td style="text-align:left">5 seconds</td>
+</tr>
+<tr>
+<td style="text-align:left">Keepalive-Timeout</td>
+<td style="text-align:left">10 seconds</td>
+</tr>
+</tbody>
+</table>
+<p>Under no circumstances will WireGuard send an initiation message more than once every Rekey-Timeout.
+A secure session is created after the successful receipt of a handshake response message (section 5.4.3), and
+the age of a secure session is measured from the time of processing this message and the immediately following
+derivation of transport data keys (section 5.4.5). Whenever a handshake initiation message is sent as the result
+of an expiring timer, an additional amount of jitter is added to the expiration, in order to prevent two peers
+from repeatedly initiating handshakes at the same time.</p>
+<h3 id="62-transport-message-limits" class="relative group">6.2 Transport Message Limits <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#62-transport-message-limits" aria-label="Anchor">#</a></span></h3><p>After a secure session has first been established, WireGuard will try to create a new session, by sending a
+handshake initiation message (section 5.4.2), after it has sent Rekey-After-Messages transport data messages.
+Likewise, if a peer is the initiator of a current secure session, WireGuard will send a handshake initiation
+message to begin a new secure session if, after transmitting a transport data message, the current secure session
+is Rekey-After-Time seconds old, or if after receiving a transport data message, the current secure session
+is( Reject-After-Time − Keepalive-Timeout − Rekey-Timeout )seconds old and it has not yet acted
+upon this event. This time-based opportunistic rekeying is restricted to the initiator of the current session, in
+order to prevent the “thundering herd” problem, in which both peers might try to establish a new session at
+the same time. Due to the passive keepalive feature, described in section 6.5, the initiation triggered by an old
+secure session after transmitting a transport data message should usually be sufficient to ensure new sessions are
+created every Rekey-After-Time seconds. However, for the case in which a peer has received data but does
+not have any data to send back immediately, and the Reject-After-Time second deadline is approaching in
+sooner than Keepalive-Timeout seconds, then the initiation triggered by an aged secure session occurs during
+the receive path.
+After Reject-After-Messages transport data messages or after the current secure session is Reject-
+After-Time seconds old, whichever comes first, WireGuard will refuse to send or receive any more transport data
+messages using the current secure session, until a new secure session is created through the 1-RTT handshake.</p>
+<h3 id="63-key-rotation" class="relative group">6.3 Key Rotation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#63-key-rotation" aria-label="Anchor">#</a></span></h3><p>New secure sessions are created approximately every <em>Rekey-After-Time</em> seconds (which is far more likely to
+occur before <em>Rekey-After-Messages</em> transport data messages have been sent), due to the transport message
+limits described above in section 6.2. This means that the secure session is constantly rotating, creating a new
+ephemeral symmetric session key each time, for perfect forward secrecy. But, keep in mind that after an initiator
+receives a handshake response message (section 5.4.3), the responder cannot send transport data messages
+(section 5.4.6) until it has received the first transport data message from the initiator. And, further, transport
+data messages encrypted using the previous secure session might be in transit after a new secure session has
+been created. For these reasons, WireGuard keeps in memory the current secure session, the previous secure
+session, and the next secure session for the case of an unconfirmed session. Every time a new secure session
+is created, the existing one rotates into the “previous” slot, and the new one occupies the “current” slot, for
+the initiator, and for the responder, the “next” slot is used interstitially until the handshake is confirmed. The
+“previous-previous” one is then discarded and its memory is zeroed (see section 7.4 for a discussion of memory
+zeroing). If no new secure session is created after ( <em>Reject-After-Time</em> ×3) seconds, the current secure session,
+the previous secure session, and potentially the next secure session are discarded and zeroed out, in addition to
+any possible partially-completed handshake states and ephemeral keys.</p>
+<h3 id="64-handshake-initiation-retransmission" class="relative group">6.4 Handshake Initiation Retransmission <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#64-handshake-initiation-retransmission" aria-label="Anchor">#</a></span></h3><p>The first time the user sends a packet over a WireGuard interface, the packet cannot immediately be sent,
+because no current session exists. So, after queuing the packet, WireGuard sends a handshake initiation message
+(section 5.4.2).
+After sending a handshake initiation message, because of a first-packet condition, or because of the limit
+conditions of section 6.2, if a handshake response message (section 5.4.3) is not subsequently received after
+<em>Rekey-Timeout</em> seconds, a new handshake initiation message is constructed (with new random ephemeral
+keys) and sent. This reinitiation is attempted for <em>Rekey-Attempt-Time</em> seconds before giving up, though this
+counter is reset when a peer explicitly attempts to send a <em>new</em> transport data message. Critically important
+future work includes adjusting the <em>Rekey-Timeout</em> value to use exponential backoff, instead of the current
+fixed value.</p>
+<h3 id="65-passive-keepalive" class="relative group">6.5 Passive Keepalive <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#65-passive-keepalive" aria-label="Anchor">#</a></span></h3><p>Most importantly, and most elegant, WireGuard implements a passive keepalive mechanism to ensure that
+sessions stay active and allow both peers to passively determine if a connection has failed or been disconnected. If
+a peer has received a validly-authenticated transport data message (section 5.4.6), but does not have any packets
+itself to send back for Keepalive-Timeout seconds, it sends a keepalive message. A keepalive message is simply
+a transport data message with a zero-length encapsulated encrypted inner-packet. Since all other transport data
+messages contain IP packets, which have a minimum length ofmin(‖IPv4 header‖ , ‖IPv6 header‖), this
+keepalive message can be easily distinguished by simple virtue of having a zero length encapsulated packet. (Note
+that themsg.packetfield of the message will in fact be of length 16, the length of the Poly1305 [8] authentication
+tag, since a zero length plaintext still needs to be authenticated, even if there is nothing to encrypt.)</p>
+<p>This passive keepalive is only sent when a peer has nothing to send, and is only sent in circumstances when
+another peer is sending authenticated transport data messages to it. This means that when neither side is
+exchanging transport data messages, the network link will be silent.</p>
+<p>Because every transport data message sent warrants a reply of some kind—either an organic one generated
+by the nature of the encapsulated packets or this keepalive message—we can determine if the secure session
+is broken or disconnected if a transport data message has not been received for ( Keepalive-Timeout +
+Rekey-Timeout ) seconds, in which case a handshake initiation message is sent to the unresponsive peer,
+once every Rekey-Timeout seconds, as in section 6.4, until a secure session is recreated successfully or until
+Rekey-Attempt-Time seconds have passed.</p>
+<h3 id="66-interaction-with-cookie-reply-system" class="relative group">6.6 Interaction with Cookie Reply System <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#66-interaction-with-cookie-reply-system" aria-label="Anchor">#</a></span></h3><p>As noted in sections 5.3 and 5.4.7, when a peer is under load, a handshake initiation message or a handshake
+response message may be discarded and a cookie reply message sent. On receipt of the cookie reply message,
+which will enable the peer to send a new initiation or response message with a validmsg.mac2that will not be
+discarded, the peer is <em>not</em> supposed to immediately resend the now valid message. Instead, it should simply store
+the decrypted cookie value from the cookie reply message, and wait for the expiration of the <em>Rekey-Timeout</em>
+timer for retrying a handshake initiation message. This prevents potential bandwidth generation abuse, and
+helps to alleviate the load conditions that are requiring the cookie reply messages in the first place.</p>
+<h2 id="7-linux-kernel-implementation" class="relative group">7 Linux Kernel Implementation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#7-linux-kernel-implementation" aria-label="Anchor">#</a></span></h2><p>The implementation of WireGuard inside the Linux kernel has a few goals. First, it should be short and simple, so
+that auditing and reviewing the code for security vulnerabilities is not only easy, but also enjoyable; WireGuard is
+implemented in <em>less than 4,000 lines of code</em> (excluding cryptographic primitives). Second, it must be extremely
+fast, so that it is competitive with IPsec on performance. Third, it must avoid allocations and other resource
+intensive allocations in response to incoming packets. Fourth, it must integrate as natively and smoothly as
+possible with existing kernel infrastructure and userland expectations, tools, and APIs. And fifth, it must be
+buildable as an external kernel module without requiring any changes to the core Linux kernel. WireGuard is
+not merely an academic project with never-released laboratory code, but rather a practical project aiming for
+production-ready implementations.</p>
+<h3 id="71-queuing-system" class="relative group">7.1 Queuing System <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#71-queuing-system" aria-label="Anchor">#</a></span></h3><p>The WireGuard device driver has flags indicating to the kernel that it supports generic segmentation offload
+(GSO), scatter gather I/O, and hardware checksum offloading, which in sum means that the kernel will hand
+“super packets” to WireGuard, packets that are well over the MTU size, having been priorly queued up by the
+upper layers, such as TCP or the TCP and UDP corking systems. This allows WireGuard to operate on batch
+groups of outgoing packets. After splitting packets into≤MTU-sized chunks, WireGuard attempts to encrypt,
+encapsulate, and send over UDP all of these at once, caching routing information, so that it only has to be
+computed once per cluster of packets. This has the very important effect of also reducing cache misses: by
+waiting until all individual packets of a super packet have been encrypted and encapsulated to pass them off
+to the network layer, the very complicated and CPU-intensive network layer keeps instructions, intermediate
+variables, and branch predictions in CPU cache, giving in many cases a 35% increase in sending performance.
+As well, as mentioned in section 6.4, sometimes outgoing packets must be queued until a handshake completes
+successfully. When packets are finally able to be sent, the entire queue of existing queued packets along are
+treated as a single super packet, in order to benefit from the same optimizations as above.</p>
+<p>Finally, in order to prevent against needless allocations, all packet transformations are done <em>in-place</em> , avoiding
+the need for copying. This applies not only to the encryption and decryption of data, which occur in-place, but
+also to certain user space data and files sent usingsendfile(2); these are processed using this zero-copy super
+packet queuing system.</p>
+<p>Future work on the queuing system could potentially involve integrating WireGuard with the FlowQueue [12]-
+CoDel [21] scheduling algorithm.</p>
+<h3 id="72-softirq--parallelism" class="relative group">7.2 Softirq &amp; Parallelism <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#72-softirq--parallelism" aria-label="Anchor">#</a></span></h3><p>The xfrm layer, in contrast to WireGuard, has the advantage that it does not need to do cryptography in softirq,
+which opens it up to a bit more flexibility. However, there is precedent for doing cryptographic processing in
+softirq on the interface level: themac802111subsystem used for wireless WPA encryption. WireGuard, being
+a virtual interface that does encryption, is not architecturally so much different from wireless interfaces doing
+encryption at the same layer. While in practice it does work very well, it is not parallel. For this reason, the
+kernel’spadatasystem is used for parallelizing into concurrent workers encryption and decryption operations
+for utilization of all CPUs and CPU cores. As well, packet checksums can be computed in parallel with this
+method. When sending packets, however, they must be sent in order, which means each packet cannot simply be
+sent immediately after it is encrypted. Fortunately, thepadataAPI divides operations up into a parallel step,
+followed by an in-order serial step. This is also helpful for parallel decryption, in which the message counter
+must be checked and incremented in the order that packets arrive, lest they be rejected unnecessarily. In order
+to reduce latency, if there is only a single packet in a super packet and its length is less than 256 bytes, or if
+there is only one CPU core online, the packet is processed in softirq.</p>
+<p>Likewise, handshake initiation and response messages and cookie reply messages are processed on a separate
+parallel low-priority worker thread. As mentioned in section 5.3, ECDH operations are CPU intensive, so it is
+important that a flood of handshake work does not monopolize the CPU. Low priority background workqueues
+are employed for this asynchronous handshake message handling.</p>
+<h3 id="73-rtnl-based-virtual-interface--containerization" class="relative group">7.3 RTNL-based Virtual Interface &amp; Containerization <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#73-rtnl-based-virtual-interface--containerization" aria-label="Anchor">#</a></span></h3><p>In order to integrate with the existingip(8)utilities and the netlink-based Linux user space, the kernel’s RTNL
+layer is used for registering a virtual interface, known inside the kernel as a “link”. This easily gives access to
+the kernel APIs accessed byip-link(8)andip-set(8). For configuring the interface private key and the public
+keys and endpoints of peers, initially theRTM_SETLINKRTNL message was used, but this proved to be too
+limited. It proved to be much cleaner to simply implement anioctl(2)-based API, passing a series of structures
+back and forth. While that approach was quite clean, the Linux networking stack is moving toward an entirely
+Netlink-based configuration API, so ultimately the Generic Netlink protocol was chosen. A separate user space
+tool,wg(8), is used for communicating over Netlink, and future plans involve integrating this functionality
+directly intoip(8).</p>
+<p>The RTNL subsystem allows for moving the WireGuard virtual interface between network namespaces. This
+enables the sending and receiving sockets (for the outer UDP packets) to be created in one namespace, while the
+interface itself remains in another namespace. For example, adocker(1)orrkt(1)container guest could have as
+its sole network interface a WireGuard interface, with the actual outer encrypted packets being sent out of the
+real network interface on the host, creating end-to-end authenticated encryption in and out of the container.</p>
+<h3 id="74-data-structures-and-primitives" class="relative group">7.4 Data Structures and Primitives <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#74-data-structures-and-primitives" aria-label="Anchor">#</a></span></h3><p>While the Linux kernel already includes two elaborate routing table implementations—an LC-trie [22] for IPv
+and a radix trie for IPv6—they are intimately tied to the FIB routing layer, and not at all reusable for other
+uses. For this reason, a very minimal routing table was developed. The authors have had success implementing
+the cryptokey routing table as an allotment routing table [11], an LC-trie [22], and a standard radix trie, with
+each one giving adequate but slightly different performance characteristics. Ultimately the simplicity of the
+venerable radix trie was preferred, having good performance characteristics and the ability to implement it with
+lock-less lookups, using the RCU system [19]. Every time an outgoing packet goes through WireGuard, the
+destination peer is looked up using this table, and every time an incoming packet reaches WireGuard, its validity
+is checked by consulting this table, so performance is in fact important here.</p>
+<p>For all handshake initiation messages (section 5.4.2), the responder must lookup the decrypted static public
+key of the initiator. For this, WireGuard employs a hash table using the extremely fast SipHash2-4 [1] MAC
+function with a secret, so that upper layers, which may provide the WireGuard interface with public keys in a
+more complicated key distribution scheme, cannot mount a hash table collision denial of service attack.</p>
+<p>While the Linux kernel’s crypto API has a large collection of primitives and is meant to be reused in several
+different systems, the API introduces needless complexity and allocations. Several revisions of WireGuard
+used the crypto API with different integration techniques, but ultimately, using raw primitives with direct,
+non-abstracted APIs proved to be far cleaner and less resource intensive. Both stack and heap pressure were
+reduced by using crypto primitives directly, rather than going through the kernel’s crypto API. The crypto
+API also makes it exceedingly difficult to avoid allocations when using multiple keys in the multifaceted ways
+required by Noise. As of writing, WireGuard ships with optimized implementations of ChaCha20Poly1305 for
+the various Intel Architecture vector extensions, with implementations for ARM/NEON and MIPS on their way.
+The fastest implementation supported by the hardware is selected at runtime, with the floating-point unit being
+used opportunistically. All ephemeral keys and intermediate results of cryptographic operations are zeroed out
+of memory after use, in order to maintain perfect forward secrecy and prevent against various potential leaks.
+The compiler must be specially informed about this explicit zeroing so that the “dead-store” is not optimized
+out, and for this the kernel provides thememzero_explicitfunction.</p>
+<p>In contrast to crypto primitives, the existing kernel implementations of token bucket hash-based rate limiting,
+for rate limiting handshake initiation and response messages when under-load after cookie IP attribution has
+occurred, have been very minimal and easy to reuse in WireGuard. WireGuard uses the Netfilterhashlimit
+matcher for this.</p>
+<h3 id="75-fib-considerations" class="relative group">7.5 FIB Considerations <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#75-fib-considerations" aria-label="Anchor">#</a></span></h3><p>In order to avoid routing loops, one proposed change for the Linux kernel—currently posted by the authors to
+the Linux kernel mailing list [9]—is to allow for FIB route lookups that exclude an interface. This way, the
+kernel’s routing table could have0.0.0.0/1and128.0.0.0/1, for a combined coverage of0.0.0.0/0, while being
+more specific, sent to thewg0interface. Then, the individual endpoints of WireGuard peers could be routed
+using the device that a FIB lookup would return ifwg0did not exist, namely one through the actual0.0.0.0/
+route. Or more generally, when looking up the correct interface for routing packets to particular peer endpoints,
+a route for an interface would be returned that is <em>guaranteed</em> not to bewg0. This is preferable to the current
+situation of needing to add explicit routes for WireGuard peer endpoints to the kernel routing table when the
+WireGuard-bound route has precedence. This work is ongoing.</p>
+<p>Another approach, alluded to above, is to use network namespaces to entirely isolate the WireGuard interface
+and routing table from the physical interfaces and routing tables. One namespace would contain the WireGuard
+interface and a routing table with a default route to send all packets over the WireGuard interface. The other
+namespace would contain the various physical interfaces (Ethernet devices, wireless radios, and so forth) along
+with its usual routing table. The incoming and outgoing UDP socket for the WireGuard interface would live <em>in
+the second physical interface namespace</em> , not the first WireGuard interface namespace. This way, packets sent in
+the WireGuard interface namespace are encrypted there, and then sent using a socket that lives in the physical
+interface namespace. This prevents all routing loops and also ensures total isolation. Processes living in the
+WireGuard interface namespace would have as their only networking means the WireGuard interface, preventing
+any potential clear-text packet leakage.</p>
+<h3 id="76-potential-userspace-implementations" class="relative group">7.6 Potential Userspace Implementations <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#76-potential-userspace-implementations" aria-label="Anchor">#</a></span></h3><p>In order for WireGuard to have widespread adoption, more implementations than our current one for the Linux
+kernel must be written. As a next step, the authors plan to implement a cross-platform low-speed user space
+TUN-based implementation in a safe yet high-speed language like Rust, Go, or Haskell.</p>
+<h2 id="8-performance" class="relative group">8 Performance <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#8-performance" aria-label="Anchor">#</a></span></h2><p>WireGuard was benchmarked alongside IPsec in two modes and OpenVPN, using <em>iperf3(1)</em> between an Intel
+Core i7-3820QM and an Intel Core i7-5200U with Intel 82579LM and Intel I218LM gigabit Ethernet cards
+respectively, with results averaged over thirty minutes. The results were quite promising:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Protocol</th>
+<th style="text-align:center">Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">WireGuard</td>
+<td style="text-align:center">256-bit ChaCha20, 128-bit Poly</td>
+</tr>
+<tr>
+<td style="text-align:center">IPsec #1</td>
+<td style="text-align:center">256-bit ChaCha20, 128-bit Poly</td>
+</tr>
+<tr>
+<td style="text-align:center">IPsec #2</td>
+<td style="text-align:center">256-bit AES, 128-bit GCM</td>
+</tr>
+<tr>
+<td style="text-align:center">OpenVPN</td>
+<td style="text-align:center">256-bit AES, HMAC-SHA2-256, UDP mode</td>
+</tr>
+</tbody>
+</table>
+<!-- TODO -->
+<!-- <div class="chart">
+  
+  <canvas id="351294687"></canvas>
+  <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", (event) => {
+      const ctx = document.getElementById("351294687");
+      const chart = new Chart(ctx, {
+        
+type: 'bar',
+data: {
+  labels: ['OpenVPN', 'IPsec #2', 'IPsec #1', 'WireGuard'],
+  datasets: [{
+    label: 'Throughput (Megabits per Second)',
+    data: [258, 881, 825, 1011],
+  }]
+}
+
+      });
+    });
+  </script>
+</div>
+
+
+<div class="chart">
+  
+  <canvas id="275863941"></canvas>
+  <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", (event) => {
+      const ctx = document.getElementById("275863941");
+      const chart = new Chart(ctx, {
+        
+type: 'bar',
+data: {
+  labels: ['OpenVPN', 'IPsec #2', 'IPsec #1', 'WireGuard'],
+  datasets: [{
+    label: 'Ping Time (Milliseconds)',
+    data: [1.541, 0.508, 0.501, 0.403],
+  }]
+}
+
+      });
+    });
+  </script>
+</div>
+ -->
+<p>For both metrics, WireGuard outperformed OpenVPN and both modes of IPsec. The CPU was at 100%
+utilization during the throughput tests of OpenVPN and IPsec, but was not completely utilized for the test of
+WireGuard, suggesting that WireGuard was able to completely saturate the gigabit Ethernet link.
+While the AES-NI-accelerated AES-GCM IPsec cipher suite appears to outperform the AVX2-accelerated
+ChaCha20Poly1305 IPsec cipher suite, as future chips increase the width of vector instructions—such as the upcom-
+ing AVX512—it is expected that over time ChaCha20Poly1305 will outperform AES-NI [4]. ChaCha20Poly
+is especially well suited to be implemented in software, free from side-channel attacks, with great efficiency, in
+contrast to AES, so for embedded platforms with no dedicated AES instructions, ChaCha20Poly1305 will also
+be most performant.
+Furthermore, WireGuard already outperforms both IPsec cipher suites, due to the simplicity of implementation
+and lack of overhead. The enormous gap between OpenVPN and WireGuard is to be expected, both in terms of
+ping time and throughput, because OpenVPN is a user space application, which means there is added latency
+and overhead of the scheduler and copying packets between user space and kernel space several times.</p>
+<h2 id="9-conclusion" class="relative group">9 Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#9-conclusion" aria-label="Anchor">#</a></span></h2><p>In less than 4,000 lines, WireGuard demonstrates that it is possible to have secure network tunnels that are
+simply implemented, extremely performant, make use of state of the art cryptography, and remain easy to
+administer. The simplicity allows it to be very easily independently verified and reimplemented on a wide
+diversity of platforms. The cryptographic constructions and primitives utilized ensure high-speed in a wide
+diversity of devices, from data center servers to cellphones, as well as dependable security properties well into
+the future. The ease of deployment will also eliminate many of the common and disastrous pitfalls currently
+seen with many IPsec deployments. Described around the time of its introduction by Ferguson and Schneier [10],
+“IPsec was great disappointment to us. Given the quality of the people that [ <em>sic</em> ] worked on it and the time
+that was spent on it, we expected a much better result. [.. .] Our main criticism of IPsec is its complexity.”</p>
+<p>WireGuard, in contrast, focuses on simplicity and usability, while still delivering a scalable and highly secure
+system. By remaining silent to unauthenticated packets and by not making any allocations and generally keeping
+resource utilization to a minimum, it can be deployed on the outer edges of networks, as a trustworthy and
+reliable access point, which does not readily reveal itself to attackers nor provide a viable attack target. The
+cryptokey routing table paradigm is easy to learn and will promote safe network designs. The protocol is based
+on cryptographically sound and conservative principles, using well understood yet modern crypto primitives.
+WireGuard was designed from a practical perspective, meant to solve real world secure networking problems.</p>
+<h2 id="10-acknowledgments" class="relative group">10 Acknowledgments <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#10-acknowledgments" aria-label="Anchor">#</a></span></h2><p>WireGuard was made possible with the great advice and guidance of many, in particular: Trevor Perrin,
+Jean-Philippe Aumasson, Steven M. Bellovin, and Greg Kroah-Hartman.</p>
+<h2 id="references" class="relative group">References <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#references" aria-label="Anchor">#</a></span></h2><ul>
+<li>[1] Jean-Philippe Aumasson and Daniel J. Bernstein. “Progress in Cryptology - INDOCRYPT 2012: 13th
+International Conference on Cryptology in India, Kolkata, India, December 9-12, 2012. Proceedings”. In:
+ed. by Steven Galbraith and Mridul Nandi. Document ID:b9a943a805fbfc6fde808af9fc0ecdfa. Berlin,
+Heidelberg: Springer Berlin Heidelberg, 2012. Chap. SipHash: A Fast Short-Input PRF, pp. 489–508.isbn:
+978-3-642-34931-7.doi:10.1007/978-3-642-34931-7_28.url:https://cr.yp.to/siphash/siphash-
+20120918.pdf(cit. on p. 17).</li>
+<li>[2] Jean-Philippe Aumasson et al. “BLAKE2: Simpler, Smaller, Fast As MD5”. In: Proceedings of the 11th
+International Conference on Applied Cryptography and Network Security. ACNS’13. Banff, AB, Canada:
+Springer-Verlag, 2013, pp. 119–135.isbn: 978-3-642-38979-5.doi:10.1007/978-3-642-38980-1_8.url:
+<a href="https://blake2.net/blake2.pdf%28cit" target="_blank" rel="noreferrer">https://blake2.net/blake2.pdf(cit</a>. on p. 3).</li>
+<li>[3] Daniel J. Bernstein. “ChaCha, a variant of Salsa20”. In: SASC 2008. Document ID:4027b5256e17b
+42e6d0f68b0b5e. 2008.url:https://cr.yp.to/chacha/chacha-20080128.pdf(cit. on p. 3).</li>
+<li>[4] Daniel J. Bernstein. CPUs Are Optimized for Video Games .url:https://moderncrypto.org/mail-
+archive/noise/2016/000699.html(cit. on p. 18).</li>
+<li>[5] Daniel J. Bernstein. “Curve25519: new Diffie-Hellman speed records”. In: Public Key Cryptography – PKC</li>
+</ul>
+<ol start="2006">
+<li>Ed. by Moti Yung et al. Vol. 3958. Lecture Notes in Computer Science. Document ID:4230efdfa
+480fc079449d90f322c0. Berlin, Heidelberg: Springer-Verlag Berlin Heidelberg, 2006, pp. 207–228.isbn:
+978-3-540-33852-9.doi:10.1007/11745853_14.url:https://cr.yp.to/ecdh/curve25519-20060209.pdf
+(cit. on p. 3).</li>
+</ol>
+<ul>
+<li>[6] Daniel J. Bernstein. Extending the Salsa20 nonce. Document ID:c4b172305ff16e1429a48d9434d50e8a.
+2011.url:https://cr.yp.to/snuffle/xsalsa-20110204.pdf(cit. on p. 9).</li>
+<li>[7] Daniel J. Bernstein. TAI64, TAI64N, and TAI64NA .url:https://cr.yp.to/libtai/tai64.html(cit. on
+pp. 7, 10).</li>
+<li>[8] Daniel J. Bernstein. “The Poly1305-AES Message-Authentication Code”. In: Fast Software Encryption: 12th
+International Workshop, FSE 2005, Paris, France, February 21-23, 2005, Revised Selected Papers. Vol. 3557.
+Lecture Notes in Computer Science. Document ID:0018d9551b5546d97c340e0dd8cb5750. Springer, 2005,
+pp. 32–49.doi:10.1007/11502760_3.url:https://cr.yp.to/mac/poly1305-20050329.pdf(cit. on pp. 3,
+15).</li>
+<li>[9] Jason A. Donenfeld. Inverse of flowi{4,6}_oif: flowi{4,6}_not_oif .url:http://lists.openwall.net/
+netdev/2016/02/02/222(cit. on p. 17).</li>
+<li>[10] Niels Ferguson and Bruce Schneier. A Cryptographic Evaluation of IPsec. Tech. rep. Counterpane Internet
+Security, Inc, 2000.doi:10.1.1.33.7922.url:https://www.schneier.com/cryptography/paperfiles/
+paper-ipsec.pdf(cit. on p. 18).</li>
+<li>[11] Yoichi Hariguchi. Allotment Routing Table: A Fast Free Multibit Trie Based Routing Table. 2002.url:
+<a href="https://github.com/hariguchi/art/blob/master/docs/art.pdf%28cit" target="_blank" rel="noreferrer">https://github.com/hariguchi/art/blob/master/docs/art.pdf(cit</a>. on p. 17).</li>
+<li>[12] Toke Hoeiland-Joergensen et al. The FlowQueue-CoDel Packet Scheduler and Active Queue Management
+Algorithm. RFC. Internet Engineering Task Force, Mar. 2016, p. 23.url:https://tools.ietf.org/html/draft-
+ietf-aqm-fq-codel-06(cit. on p. 16).</li>
+<li>[13] C. Kaufman et al. Internet Key Exchange Protocol Version 2. RFC 5996. RFC Editor, Sept. 2010.url:
+<a href="http://www.rfc-editor.org/rfc/rfc5996.txt%28cit" target="_blank" rel="noreferrer">http://www.rfc-editor.org/rfc/rfc5996.txt(cit</a>. on pp. 3, 8).</li>
+<li>[14] Stephen Kent and Randall Atkinson. <em>Security Architecture for IP</em>. RFC 2401. RFC Editor, Nov. 1998,
+p. 57.url:http://www.rfc-editor.org/rfc/rfc2401.txt(cit. on p. 13).</li>
+<li>[15] Hugo Krawczyk. “Advances in Cryptology – CRYPTO 2010: 30th Annual Cryptology Conference, Santa
+Barbara, CA, USA, August 15-19, 2010. Proceedings”. In: ed. by Tal Rabin. Berlin, Heidelberg: Springer
+Berlin Heidelberg, 2010. Chap. Cryptographic Extraction and Key Derivation: The HKDF Scheme, pp. 631–
+648.isbn: 978-3-642-14623-7.doi:10.1007/978-3-642-14623-7_34.url:https://eprint.iacr.org/2010/
+264.pdf(cit. on pp. 3, 10).</li>
+<li>[16] Hugo Krawczyk. “SIGMA: The ‘SIGn-and-MAc’ Approach to Authenticated Diffie-Hellman and Its
+Use in the IKE-Protocols”. In: <em>Advances in Cryptology - CRYPTO 2003, 23rd Annual International
+Cryptology Conference, Santa Barbara, California, USA, August 17-21, 2003, Proceedings</em>. Vol. 2729.
+Lecture Notes in Computer Science. Springer, 2003, pp. 400–425.doi:10.1007/978-3-540-45146-4_24.
+url:http://www.iacr.org/cryptodb/archive/2003/CRYPTO/1495/1495.pdf(cit. on p. 7).</li>
+<li>[17] Adam Langley and Yoav Nir. <em>ChaCha20 and Poly1305 for IETF Protocols</em>. RFC 7539. RFC Editor, May
+2015.url:http://www.rfc-editor.org/rfc/rfc7539.txt(cit. on pp. 3, 9).</li>
+<li>[18] Kristin Lauter and Anton Mityagin. “Public Key Cryptography - PKC 2006: 9th International Conference on
+Theory and Practice in Public-Key Cryptography, New York, NY, USA, April 24-26, 2006. Proceedings”. In:
+ed. by Moti Yung et al. Berlin, Heidelberg: Springer Berlin Heidelberg, 2006. Chap. Security Analysis of KEA
+Authenticated Key Exchange Protocol, pp. 378–394.isbn: 978-3-540-33852-9.doi:10.1007/11745853_25.
+url:http://research.microsoft.com/en-us/um/people/klauter/pkcspringer.pdf(cit. on p. 7).</li>
+<li>[19] Paul E. McKenny et al. “Read-Copy Update”. In: <em>Ottawa Linux Symposium</em>. June 2002, pp. 338–367.url:
+[http://www.rdrop.com/~paulmck/RCU/rcu.2002.07.08.pdf(cit.](<a href="http://www.rdrop.com/~paulmck/RCU/rcu.2002.07.08.pdf%28cit.%29" target="_blank" rel="noreferrer">http://www.rdrop.com/~paulmck/RCU/rcu.2002.07.08.pdf(cit.)</a> on p. 17).</li>
+<li>[20] R. Moskowitz et al. <em>Host Identity Protocol Version 2</em>. RFC 7401. RFC Editor, Apr. 2015.url:http:
+//www.rfc-editor.org/rfc/rfc7401.txt(cit. on p. 9).</li>
+<li>[21] Kathleen Nichols and Van Jacobson. “Controlling Queue Delay”. In: <em>Commun. ACM</em> 55.7 (July 2012),
+pp. 42–50.issn: 0001-0782.doi:10.1145/2209249.2209264.url:http://doi.acm.org/10.1145/2208917.
+2209336 (cit. on p. 16).</li>
+<li>[22] Stefan Nilsson and Gunnar Karlsson. “IP-address lookup using LC-tries”. In: <em>IEEE Journal on Selected
+Areas in Communications</em> 17.6 (June 1999), pp. 1083–1092.issn: 0733-8716.doi:10.1109/49.772439.url:
+<a href="https://www.nada.kth.se/~snilsson/publications/IP-address-lookup-using-LC-tries/text.pdf%28cit" target="_blank" rel="noreferrer">https://www.nada.kth.se/~snilsson/publications/IP-address-lookup-using-LC-tries/text.pdf(cit</a>. on
+p. 17).</li>
+<li>[23] Trevor Perrin. <em>The Noise Protocol Framework</em>. 2016.url:http://noiseprotocol.org/noise.pdf(cit. on
+pp. 3, 7, 11, 12).</li>
+<li>[24] E. Rescorla and N. Modadugu. <em>Datagram Transport Layer Security Version 1.2</em>. RFC 6347. RFC Editor,
+Jan. 2012.url:http://www.rfc-editor.org/rfc/rfc6347.txt(cit. on p. 8).</li>
+<li>[25] Keith Winstein and Hari Balakrishnan. “Mosh: An Interactive Remote Shell for Mobile Clients”. In: <em>USENIX
+Annual Technical Conference</em>. Boston, MA, June 2012.url:https://mosh.mit.edu/mosh-paper.pdf
+(cit. on p. 5).</li>
+<li>[26] Xiangyang Zhang and Tina Tsou. <em>IPsec Anti-Replay Algorithm without Bit Shifting</em>. RFC 6479. RFC
+Editor, Jan. 2012, p. 9.url:http://www.rfc-editor.org/rfc/rfc6479.txt(cit. on p. 13).</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="1024"
+        height="1024"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="Daniel Gorbe"
+        loading="lazy" decoding="async"
+        
+          src="/img/author_hu97a5dd91022c93ae757a723e95393e10_519666_660x0_resize_q75_h2_box_2.webp"
+          srcset="/img/author_hu97a5dd91022c93ae757a723e95393e10_519666_330x0_resize_q75_h2_box_2.webp 330w,/img/author_hu97a5dd91022c93ae757a723e95393e10_519666_660x0_resize_q75_h2_box_2.webp 660w
+          
+            ,/img/author.webp 1024w
+          
+          
+            ,/img/author.webp 1024w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Daniel Gorbe
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">Providing System Administration and Cybersecurity services for small and medium-sized companies</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="tel:&#43;36203323371"
+          target="_blank"
+          aria-label="Phone"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="mailto:daniel@gorbe.io"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/g0rbe"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/g0rbe"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://mastodon.instance/@g0rbe"
+          target="_blank"
+          aria-label="Mastodon"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://twitter.com/_g0rbe"
+          target="_blank"
+          aria-label="X-Twitter"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+  
+  <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/posts/wireguard/whitepaper/&amp;quote=WireGuard:%20Next%20Generation%20Kernel%20Network%20Tunnel"
+          title="Share on Facebook"
+          aria-label="Share on Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://x.com/intent/tweet/?url=http://localhost:1313/posts/wireguard/whitepaper/&amp;text=WireGuard:%20Next%20Generation%20Kernel%20Network%20Tunnel"
+          title="Post on X"
+          aria-label="Post on X"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://tootpick.org/#text=http://localhost:1313/posts/wireguard/whitepaper/%20WireGuard:%20Next%20Generation%20Kernel%20Network%20Tunnel"
+          title="Toot on Mastodon"
+          aria-label="Toot on Mastodon"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://pinterest.com/pin/create/bookmarklet/?url=http://localhost:1313/posts/wireguard/whitepaper/&amp;description=WireGuard:%20Next%20Generation%20Kernel%20Network%20Tunnel"
+          title="Pin on Pinterest"
+          aria-label="Pin on Pinterest"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://reddit.com/submit/?url=http://localhost:1313/posts/wireguard/whitepaper/&amp;resubmit=true&amp;title=WireGuard:%20Next%20Generation%20Kernel%20Network%20Tunnel"
+          title="Submit to Reddit"
+          aria-label="Submit to Reddit"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/posts/wireguard/whitepaper/&amp;title=WireGuard:%20Next%20Generation%20Kernel%20Network%20Tunnel"
+          title="Share on LinkedIn"
+          aria-label="Share on LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="mailto:?body=http://localhost:1313/posts/wireguard/whitepaper/&amp;subject=WireGuard:%20Next%20Generation%20Kernel%20Network%20Tunnel"
+          title="Send via email"
+          aria-label="Send via email"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://www.threads.net/intent/post?text=http://localhost:1313/posts/wireguard/whitepaper/%20WireGuard:%20Next%20Generation%20Kernel%20Network%20Tunnel"
+          title="Post on Threads"
+          aria-label="Post on Threads"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M331.5 235.7c2.2 .9 4.2 1.9 6.3 2.8c29.2 14.1 50.6 35.2 61.8 61.4c15.7 36.5 17.2 95.8-30.3 143.2c-36.2 36.2-80.3 52.5-142.6 53h-.3c-70.2-.5-124.1-24.1-160.4-70.2c-32.3-41-48.9-98.1-49.5-169.6V256v-.2C17 184.3 33.6 127.2 65.9 86.2C102.2 40.1 156.2 16.5 226.4 16h.3c70.3 .5 124.9 24 162.3 69.9c18.4 22.7 32 50 40.6 81.7l-40.4 10.8c-7.1-25.8-17.8-47.8-32.2-65.4c-29.2-35.8-73-54.2-130.5-54.6c-57 .5-100.1 18.8-128.2 54.4C72.1 146.1 58.5 194.3 58 256c.5 61.7 14.1 109.9 40.3 143.3c28 35.6 71.2 53.9 128.2 54.4c51.4-.4 85.4-12.6 113.7-40.9c32.3-32.2 31.7-71.8 21.4-95.9c-6.1-14.2-17.1-26-31.9-34.9c-3.7 26.9-11.8 48.3-24.7 64.8c-17.1 21.8-41.4 33.6-72.7 35.3c-23.6 1.3-46.3-4.4-63.9-16c-20.8-13.8-33-34.8-34.3-59.3c-2.5-48.3 35.7-83 95.2-86.4c21.1-1.2 40.9-.3 59.2 2.8c-2.4-14.8-7.3-26.6-14.6-35.2c-10-11.7-25.6-17.7-46.2-17.8H227c-16.6 0-39 4.6-53.3 26.3l-34.4-23.6c19.2-29.1 50.3-45.1 87.8-45.1h.8c62.6 .4 99.9 39.5 103.7 107.7l-.2 .2zm-156 68.8c1.3 25.1 28.4 36.8 54.6 35.3c25.6-1.4 54.6-11.4 59.5-73.2c-13.2-2.9-27.8-4.4-43.4-4.4c-4.8 0-9.6 .1-14.4 .4c-42.9 2.4-57.2 23.2-56.2 41.8l-.1 .1z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://telegram.me/share/url?text=http://localhost:1313/posts/wireguard/whitepaper/&amp;url=WireGuard:%20Next%20Generation%20Kernel%20Network%20Tunnel"
+          title="Share on Telegram"
+          aria-label="Share on Telegram"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://line.me/R/share?text=http://localhost:1313/posts/wireguard/whitepaper/WireGuard:%20Next%20Generation%20Kernel%20Network%20Tunnel"
+          title="Share on LINE"
+          aria-label="Share on LINE"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License -https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="currentColor" d="M311 196.8v81.3c0 2.1-1.6 3.7-3.7 3.7h-13c-1.3 0-2.4-.7-3-1.5l-37.3-50.3v48.2c0 2.1-1.6 3.7-3.7 3.7h-13c-2.1 0-3.7-1.6-3.7-3.7V196.9c0-2.1 1.6-3.7 3.7-3.7h12.9c1.1 0 2.4 .6 3 1.6l37.3 50.3V196.9c0-2.1 1.6-3.7 3.7-3.7h13c2.1-.1 3.8 1.6 3.8 3.5zm-93.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 2.1 1.6 3.7 3.7 3.7h13c2.1 0 3.7-1.6 3.7-3.7V196.8c0-1.9-1.6-3.7-3.7-3.7zm-31.4 68.1H150.3V196.8c0-2.1-1.6-3.7-3.7-3.7h-13c-2.1 0-3.7 1.6-3.7 3.7v81.3c0 1 .3 1.8 1 2.5c.7 .6 1.5 1 2.5 1h52.2c2.1 0 3.7-1.6 3.7-3.7v-13c0-1.9-1.6-3.7-3.5-3.7zm193.7-68.1H327.3c-1.9 0-3.7 1.6-3.7 3.7v81.3c0 1.9 1.6 3.7 3.7 3.7h52.2c2.1 0 3.7-1.6 3.7-3.7V265c0-2.1-1.6-3.7-3.7-3.7H344V247.7h35.5c2.1 0 3.7-1.6 3.7-3.7V230.9c0-2.1-1.6-3.7-3.7-3.7H344V213.5h35.5c2.1 0 3.7-1.6 3.7-3.7v-13c-.1-1.9-1.7-3.7-3.7-3.7zM512 93.4V419.4c-.1 51.2-42.1 92.7-93.4 92.6H92.6C41.4 511.9-.1 469.8 0 418.6V92.6C.1 41.4 42.2-.1 93.4 0H419.4c51.2 .1 92.7 42.1 92.6 93.4zM441.6 233.5c0-83.4-83.7-151.3-186.4-151.3s-186.4 67.9-186.4 151.3c0 74.7 66.3 137.4 155.9 149.3c21.8 4.7 19.3 12.7 14.4 42.1c-.8 4.7-3.8 18.4 16.1 10.1s107.3-63.2 146.5-108.2c27-29.7 39.9-59.8 39.9-93.1z" /></svg></span></a
+        >
+      
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://service.weibo.com/share/share.php?url=http://localhost:1313/posts/wireguard/whitepaper/&amp;appkey=&amp;title=WireGuard:%20Next%20Generation%20Kernel%20Network%20Tunnel&amp;pic=&amp;ralateUid=&amp;lang"
+          title="Share on Weibo"
+          aria-label="Share on Weibo"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="currentColor" d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8 .3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4 .6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></span></a
+        >
+      
+    
+  </section>
+
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/wireguard/security-features-and-best-practices/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >WireGuard's Security Features and Best Practices</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">1 January 0001</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/debian/upgrade/index.en./">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Upgrade Debian release</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">1 January 0001</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
+        
+      </main><footer class="py-10 print:hidden">
+  
+  
+    <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex list-none flex-col sm:flex-row">
+        
+          
+          <li class="group mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0">
+            
+              <a
+                href="/categories/"
+                title=""
+                target="_blank"
+                >
+                  <span
+                    class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                  ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L418.7 226.7C443.7 251.7 443.7 292.3 418.7 317.3L285.3 450.7C260.3 475.7 219.7 475.7 194.7 450.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5V80C0 53.49 21.49 32 48 32L48 32zM112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176z"/></svg>
+</span></span><span
+                    class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                    >Categories</span
+                  >
+                </a
+              >
+            
+          </li>
+        
+      </ul>
+    </nav>
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2024
+            Daniel Gorbe
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Uptime Kuma on G⌬RBE</title>
+    <link>http://localhost:1313/tags/uptime-kuma/</link>
+    <description>Recent content in Uptime Kuma on G⌬RBE</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/tags/uptime-kuma/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Uptime Kuma from Source on Debian 12</title>
+      <link>http://localhost:1313/posts/uptime-kuma/install-from-source/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/uptime-kuma/install-from-source/</guid>
+      <description>Source: https://github.</description>
+    </item>
+    <item>
+      <title>Update Uptime Kuma from Source on Debian 12</title>
+      <link>http://localhost:1313/posts/uptime-kuma/update-from-source/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/uptime-kuma/update-from-source/</guid>
+      <description>cd &amp;lt;uptime-kuma-directory&amp;gt; Update from git #git fetch --all git checkout $(curl -s &amp;#39;https://api.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on G⌬RBE</title>
+    <link>http://localhost:1313/hu/categories/</link>
+    <description>Recent content in Categories on G⌬RBE</description>
+    <generator>Hugo</generator>
+    <language>hu</language>
+    <lastBuildDate>Thu, 15 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/hu/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Caddy</title>
+      <link>http://localhost:1313/hu/categories/caddy/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hu/categories/caddy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Http</title>
+      <link>http://localhost:1313/hu/categories/http/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hu/categories/http/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>http://localhost:1313/hu/categories/web/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hu/categories/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webserver</title>
+      <link>http://localhost:1313/hu/categories/webserver/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hu/categories/webserver/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
