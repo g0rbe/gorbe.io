@@ -20,3 +20,7 @@ GitHub: [g0rbe](https://github.com/g0rbe)
 LinkedIn: [g0rbe](https://linkedin.com/in/g0rbe)
 
 Twitter: [_g0rbe](https://twitter.com/_g0rbe)
+
+{{< button href="/contact.vcf" target="_self" >}}
+Download vCard
+{{< /button >}}

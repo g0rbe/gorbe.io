@@ -1,0 +1,18 @@
+BEGIN:VCARD
+VERSION:4.2
+FN;CHARSET=utf-8:Daniel Gorbe
+N;CHARSET=utf-8:Daniel;Gorbe;;;
+GENDER:M
+LANG:hu-HU
+TZ:Europe/Budapest
+TEL:+36203323371
+EMAIL:daniel@gorbe.io
+URL:https://gorbe.io
+KEY:https://gorbe.io/keys/40D2D77C0890686F371E4D5C1084D03B731F55CF.txt
+LOGO:https://gorbe.io/contact.png
+PHOTO:https://gorbe.io/contact.png
+SOURCE:https://gorbe.io/contact.vcf
+ORG;CHARSET=utf-8:G⌬RBE
+ROLE:Executive
+REV:20240822T144212Z
+END:VCARD
