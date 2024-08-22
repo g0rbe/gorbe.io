@@ -32,9 +32,9 @@ showAppearanceSwitcher = false
 showScrollToTop = true
 
 [homepage]
-layout = "hero"    # valid options: page, profile, custom
-showRecent = false
-recentLimit = 5
+layout = "hero"   # valid options: page, profile, custom
+showRecent = true
+recentLimit = 10
 
 [article]
 showDate = true
@@ -86,7 +86,7 @@ showTermCount = true
 
 [plausibleAnalytics]
 domain = "gorbe.io"
-# event = ""
+event = "/api/event"
 script = "/js/script.js"
 
 #[umamiAnalytics]
