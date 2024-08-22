@@ -14,17 +14,17 @@ featureAlt: "cover-caddy-install-en"
 Download the latest binary in `.tar.gz` archive from GitHub Releases: [https://github.com/caddyserver/caddy/releases/latest](https://github.com/caddyserver/caddy/releases/latest)
 
 ```bash
-wget https://github.com/caddyserver/caddy/releases/download/v2.7.6/caddy_2.7.6_linux_amd64.tar.gz
+wget "https://github.com/caddyserver/caddy/releases/download/v2.7.6/caddy_2.7.6_linux_amd64.tar.gz"
 ```
 
 ### Verify Checksum
 
 ```bash
-wget https://github.com/caddyserver/caddy/releases/download/v2.7.6/caddy_2.7.6_checksums.txt
+wget "https://github.com/caddyserver/caddy/releases/download/v2.7.6/caddy_2.7.6_checksums.txt"
 ```
 
 ```bash
-sha512sum --ignore-missing -c caddy_2.7.6_checksums.txt
+sha512sum --ignore-missing -c "caddy_2.7.6_checksums.txt"
 ```
 
 ### Verify Signature
@@ -36,7 +36,7 @@ See [Caddy's documentation](https://caddyserver.com/docs/signature-verification)
 Extract the binary from the downloaded archive:
 
 ```bash
-tar -xf caddy_2.7.6_linux_amd64.tar.gz caddy
+tar -xf "caddy_2.7.6_linux_amd64.tar.gz caddy"
 ```
 
 ## Install the binary
@@ -58,7 +58,7 @@ sudo groupadd --system caddy
 Create the `caddy` user:
 
 ```bash
-sudo useradd --system --gid caddy --create-home  --home-dir /var/lib/caddy --shell /usr/sbin/nologin caddy
+sudo useradd --system --gid="caddy" --create-home  --home-dir="/var/lib/caddy" --shell="/usr/sbin/nologin" caddy
 ```
 
 ## Create Caddyfile
@@ -66,13 +66,13 @@ sudo useradd --system --gid caddy --create-home  --home-dir /var/lib/caddy --she
 Create the directory for the Caddyfile:
 
 ```bash
-mkdir /etc/caddy
+mkdir "/etc/caddy"
 ```
 
 Now, create the Caddyfile:
 
 ```bash
-touch /etc/caddy/Caddyfile
+touch "/etc/caddy/Caddyfile"
 ```
 
 Change the user and group of the config directory:
