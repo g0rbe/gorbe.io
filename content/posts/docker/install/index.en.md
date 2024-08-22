@@ -1,7 +1,11 @@
 ---
-sidebar_label: "Install"
 title: "Install Docker Engine on Debian 12"
 description: "Short guide about how install Docker Engine on Debian 12."
+summary: "Short guide about how install Docker Engine on Debian 12."
+date: 2023-11-15T13:30:37+01:00
+categories: ["docker", "debian"]
+keywords: ["docker", "debian"]
+draft:  false
 ---
 
 Docker has become an essential tool in the world of modern software development. If you're using Debian 12 and want to take advantage of Docker's capabilities, this guide will walk you through the installation process.

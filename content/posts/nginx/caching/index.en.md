@@ -1,8 +1,11 @@
 ---
-sidebar_label: Caching  
 title: "Nginx Caching Configurations"
-tags: ["nginx", "cache", "performance"]
 description: "How to configure content caching in Nginx"
+summary: "How to configure content caching in Nginx"
+date: 2024-08-21
+categories: ["nginx", "cache", "performance"]
+keywords: ["nginx", "cache", "performance"]
+draft:  false
 ---
 
 Create directory for caching:

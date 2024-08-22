@@ -1,9 +1,11 @@
 ---
-sidebar_label: Install
 title: Install FrankenPHP on Linux
-tags: [ "web", "webserver", "http", "php", "cgi"]
 description: How to install FrankenPHP on Debian Linux server.
-#image: /assets/docs/caddy/install/image-en.webp
+summary: How to install FrankenPHP on Debian Linux server.
+date: 2024-08-21
+categories: [ "web", "webserver", "http", "php", "cgi"]
+keywords: [ "web", "webserver", "http", "php", "cgi"]
+draft:  false
 ---
 
 ## TL;DR

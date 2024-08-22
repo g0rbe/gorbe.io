@@ -1,14 +1,10 @@
 ---
-sidebar_label: Install from Binary
-description: 
-
 title: "Install CoreDNS from Binary on Debian 12"
 description: "Install CoreDNS from Binary on Debian 12 server."
 summary: "Install CoreDNS from Binary on Debian 12 server."
-# date: 
-# lastmod: {{ .Date }}
-categories: ["dns", "domain"]
-keywords: ["dns", "domain"]
+date: 2023-11-15T03:16:48+01:00
+categories: ["coredns", "dns", "domain", "linux", "selfhost"]
+keywords: ["coredns", "dns", "domain", "linux", "selfhost"]
 draft:  false
 ---
 

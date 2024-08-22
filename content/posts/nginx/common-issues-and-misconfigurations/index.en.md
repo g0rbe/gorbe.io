@@ -1,8 +1,11 @@
 ---
-sidebar_label: Common Issues and Misconfigurations
-title: "Common Nginx Issues and Misconfigurations"
-tags: [  "nginx", "misconfiguration", "webserver",  "security", "tls", "performance", "proxy", "log" ]
+title: "Nginx Common Issues and Misconfigurations"
 description: "Common Nginx Issues and Misconfigurations and How to Fix Them"
+summary: "Common Nginx Issues and Misconfigurations and How to Fix Them"
+date: 2024-08-21
+categories: ["nginx", "misconfiguration", "webserver",  "security", "tls", "performance", "proxy", "log"]
+keywords: ["nginx", "misconfiguration", "webserver",  "security", "tls", "performance", "proxy", "log"]
+draft:  false
 ---
 
 Nginx is a popular web server known for its performance, stability, and rich feature set.

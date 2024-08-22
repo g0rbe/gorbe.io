@@ -1,8 +1,11 @@
 ---
-sidebar_label: Processes and Threads
 title: "Linux processes and threads"
-tags: ["Linux", "lfcs"]
+date: 2020-02-06T00:00:00
+categories: []
+tags: ["lfcs", "Linux"]
 description: "Short explanation about what process and thread mean in Linux."
+summary: "Short explanation about what process and thread mean in Linux."
+keywords: "linux,lfcs,process,thread"
 ---
 
 ## Program

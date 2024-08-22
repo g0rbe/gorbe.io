@@ -1,8 +1,11 @@
 ---
-sidebar_label: Install
 title: "Install and Configure Fail2Ban for SSH on Debian"
-categories: ["fail2ban", "security","hardening" ]
 description: "How to Install and Configure Fail2Ban for SSH on Debian"
+summary:  "How to Install and Configure Fail2Ban for SSH on Debian"
+date: 2023-11-15T10:57:40+01:00
+categories: ["fail2ban", "security","hardening" ]
+keywords: ["fail2ban", "security","hardening" ]
+draft:  false
 ---
 
 Fail2Ban is a vital security tool for Linux servers, particularly useful in protecting SSH services against brute-force attacks. It monitors service logs for malicious activity and bans offending IPs for a specified duration.

@@ -1,7 +1,0 @@
-label: Docker
-link:
-  type: generated-index
-  title: "Docker: Accelerated Container Application Development"
-  description: >
-    Docker is a platform designed to help developers build, share, and run container applications.
-    We handle the tedious setup, so you can focus on the code.

@@ -1,8 +1,11 @@
 ---
-sidebar_label: Commands
 title: "LFCS Commands"
-tags: [ "linux", "lfcs"]
+date: 2020-02-06T00:00:00
+tags: ["lfcs"]
+categories: ["linux"]
 description: "Commands needed for Linux Foundation Certified Sysadmin."
+summary: "Commands needed for Linux Foundation Certified Sysadmin."
+keywords: "lfcs,linux"
 ---
 
 Commands needed for Linux Foundation Certified Sysadmin.

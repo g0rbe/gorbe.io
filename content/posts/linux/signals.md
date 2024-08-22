@@ -1,8 +1,11 @@
 ---
-sidebar_label: Signals
 title: "Linux signals"
-tags: ["Linux", "lfcs"]
+date: 2020-02-06T00:00:00
+categories: []
+tags: ["lfcs", "Linux"]
 description: "Signals in Linux."
+summary: "Signals in Linux."
+keywords: "linux,lfcs,signal"
 ---
 
 ## Signals

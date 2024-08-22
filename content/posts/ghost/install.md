@@ -1,8 +1,11 @@
 ---
-sidebar_label: Install
-title: "Install Ghost CMS on Debian 10"
-tags: ["Ghost", "selfhost" ]
+title: "Install Ghost"
 description: "How to install and configure Ghost CMS on Debian 10 with MariaDB and Nginx."
+summary: "How to install and configure Ghost CMS on Debian 10 with MariaDB and Nginx."
+date: 2020-06-25T00:00:00+01:00
+categories: ["Ghost", "selfhost" ]
+keywords: ["Ghost", "selfhost" ]
+draft:  false
 ---
 
 

@@ -1,9 +1,11 @@
 ---
-sidebar_label: Configure
 title: Configure FrankenPHP
-tags: [ "web", "webserver", "http", "php", "cgi"]
 description: How to configure FrankenPHP.
-#image: /assets/docs/caddy/install/image-en.webp
+summary: How to configure FrankenPHP.
+date: 2024-08-21
+categories: [ "web", "webserver", "http", "php", "cgi"]
+keywords: [ "web", "webserver", "http", "php", "cgi"]
+draft:  false
 ---
 
 ## Common Patterns

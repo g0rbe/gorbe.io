@@ -1,9 +1,12 @@
 ---
-sidebar_label: Filesystem Hierarchy 
 title: "Linux Filesystem Hierarchy"
-categories: []
-tags: ["Linux", "lfcs", "filesystem"]
+date: 2020-02-06T00:00:00
+lastmod: 2024-01-27T00:00:00
+categories: ["filesystem"]
+tags: ["lfcs", "Linux"]
 description: "Explaining Linux's Filesystem Hierarchy Standard."
+summary: "Explaining Linux's Filesystem Hierarchy Standard."
+keywords: "linux,lfcs,fhs,filesystem"
 ---
 
 UNIX-based operating systems uses one big file system tree, started with the root (*/*) directory.

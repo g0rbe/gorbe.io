@@ -1,8 +1,10 @@
 ---
-sidebar_label: Documentation
 title: "Pinentry Documentation"
-tags: ["gnupg", "pinentry", "security", "encryption"]
 description: "Pinentry usage, the Assuan protocol and implementation details."
+summary: "Pinentry usage, the Assuan protocol and implementation details."
+date: 2023-12-18T01:01:11+01:00
+keywords:  ["gnupg", "pinentry", "security", "encryption"]
+categories: ["gnupg", "pinentry", "security", "encryption"]
 ---
 
 ## Introduction

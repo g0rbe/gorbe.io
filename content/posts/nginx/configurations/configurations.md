@@ -1,8 +1,11 @@
 ---
-sidebar_label: Configurations
 title: "Nginx Configurations"
-tags: [ "nginx",  "hardening" ]
 description: "Reasonable secure settings for nginx"
+summary: "Reasonable secure settings for nginx"
+date: 2024-08-22
+categories: ["nginx", "misconfiguration", "webserver",  "security", "tls", "performance", "proxy", "log"]
+keywords: ["nginx", "misconfiguration", "webserver",  "security", "tls", "performance", "proxy", "log"]
+draft:  false
 ---
 
 ## Security configurations
