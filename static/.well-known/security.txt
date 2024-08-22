@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:daniel@gorbe.io
+Expires: 2026-02-18T23:00:00.000Z
+Encryption: https://www.gorbe.io/40D2D77C0890686F371E4D5C1084D03B731F55CF.txt
+Preferred-Languages: en
+Canonical: https://www.gorbe.io/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iQJEBAEBCgAuFiEEnUmpH/UzmNRHLyPzC6InVe351tQFAmXURkEQHGRhbmllbEBn
+b3JiZS5pbwAKCRALoidV7fnW1BiVD/9o39MaYCccHDL7ATdK0wkBPHqc3IpvC6oF
+hzm/bqTOlftGsTPOlM73zpzweFnrvPM5E4LFOltwVIdtwrsKBE4b8Ey1rggXUytw
+8NQwPPm6utzrR0kNz+7TRj6kxHznsp33dklnuscJusFm5Ak0vT9MSjKmfS1axKwT
+6Z1rVS1l4lgu+wHj4RPoHWWp+VlFnV1OPdq0zu9/DdfeilnmkyGmMEuVBy1TTgj4
+EJAR4ArjiDCgIaRkjd+k8HrWukfHZD+GdJm87CsvXLLL4b5pTqa+IVcI34F/2thQ
+gqG0mU16DRAB4W6pH4WBQHIGKUl4SZ2pJzV/dLF7KNjeiGfR+MdwxdQkHPbnO7MH
+z+j3OKGQg2D7pfV8zLMESYo+cxoQojqw9VeWqpXGMzBlLLeb/mAzFshb0OXmoBnS
+2A5jiHtqepu+9bBRuLpDeuU9KBEHlEffML0hGaC0Mg0aSNt1GxtwhHDpmGbdqpwA
+1+LnUECZbnRLhbc/CE3oBH+Q6Ridtcl+vGa3HDu5S1uQUJE0znpTG/oPDYqa1u3Z
+mzc1BeL8Tpam/HAywyKphMF83bw4Jpfy5gjcHBqX4SF/1i1XYLfMGNDu+orcb+8N
+OlhBR4iWtNeqry/OTJotD8D+Ed/7qH7nxTHP41wKtZW53T6zJV0tX+FTaEfIAgiq
+42KMRSaFnQ==
+=He9e
+-----END PGP SIGNATURE-----
