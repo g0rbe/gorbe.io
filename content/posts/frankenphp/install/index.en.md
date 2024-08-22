@@ -6,6 +6,7 @@ date: 2024-08-21
 categories: [ "web", "webserver", "http", "php", "cgi"]
 keywords: [ "web", "webserver", "http", "php", "cgi"]
 draft:  false
+aliases: ["/docs/frankenphp/install"]
 ---
 
 ## TL;DR

@@ -6,6 +6,7 @@ date: 2024-08-21
 categories: [ "NetworkManager", "linux","security", "privacy" ]
 keywords: [ "NetworkManager", "linux","security", "privacy" ]
 draft:  false
+aliases: ["/docs/network-manager/mac-address-spoofing"]
 ---
 
 Spoofing MAC address is possible with Network Manager since 1.4.0.

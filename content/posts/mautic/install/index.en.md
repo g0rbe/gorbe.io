@@ -1,9 +1,9 @@
 ---
-sidebar_label: Install
 title: "Install Mautic using the Production Package on Debian 12"
-tags: ["mautic", "apache", "php", "mariadb", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
 description: "How to Install Mautic 5 using the Production Package on Debian 12 with Apache, PHP-FPM and MariaDB"
-image: /assets/docs/mautic/install/image-en.webp
+categories: ["mautic", "apache", "php", "mariadb", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
+keywords: ["mautic", "apache", "php", "mariadb", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
+aliases: ["/docs/mautic/install"]
 ---
 
 ## Install repository for PHP 8.1

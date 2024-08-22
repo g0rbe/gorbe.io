@@ -1,20 +1,8 @@
 ---
-sidebar_label: Install
 title: "Install Node.js Binary Distribution"
 tags: ['npm']
 description: "Install the NodeSource Node.js Binary ditsribution via package manager on Linux."
 ---
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import FAQPage from '../../src/components/FAQPage';
-
-<FAQPage entities={[
-    {question: "How to install Node.js LTS on Debian?", answer: "<p>curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs</p>"},
-    {question: "How to install Node.js Current on Debian?", answer: "<p>curl -fsSL https://deb.nodesource.com/setup_current.x | bash - && apt-get install -y nodejs</p>"},
-    {question: "How to install Node.js LTS on Ubuntu?", answer: "<p>curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt-get install -y nodejs</p>"},
-    {question: "How to install Node.js LTS on Ubuntu?", answer: "<p>curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash - && sudo apt-get install -y nodejs</p>"}
-    ]}/>
 
 ## Requirements
 

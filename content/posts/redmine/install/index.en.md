@@ -4,6 +4,7 @@ date: 2024-02-06T04:05:06+01:00
 categories: ["projectmanagement", "productivity", "selfhost", "opensource"]
 description: "How to Install Redmine 5.1 on Debian 12"
 summary: "How to Install Redmine 5.1 on Debian 12"
+aliases: ["/docs/redmine/install-redmine-5"]
 ---
 
 Redmine is a flexible project management web application. Written using the Ruby on Rails framework, it is cross-platform and cross-database.

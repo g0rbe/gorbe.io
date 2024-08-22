@@ -1,8 +1,8 @@
 ---
-sidebar_label: Update from Source
-title: "Update Uptime Kuma from Source on Debian 12"
+title: "Update Uptime Kuma from Source"
 description: "Update Uptime Kuma from Source with Nginx on Debian 12"
 tags: ["monitor", "monitoring", "selfhosted", "self-hosted", "uptime", "uptime-monitoring", "Uptime Kuma"]
+aliases: ["/docs/uptime-kuma/update-from-source"]
 ---
 
 ```bash

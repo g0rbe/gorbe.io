@@ -3,13 +3,10 @@ sidebar_label: Unlock VM
 title: "Unlock VM on Proxmox"
 tags: ["Proxmox", "QEMU", "virtualization", "virtual-machine"]
 description: "How to Unlock a Locked VM on Proxmox"
+aliases: ["/docs/proxmox/unlock-vm"]
 ---
 
-import FAQPage from '../../src/components/FAQPage';
 
-<FAQPage entities={[
-    {question: "How to unlock a VM in Proxmox?", answer: "<p>qm unlock $vmid</p> or <p>kill -9 $(pgrep -f '/usr/bin/kvm -id <vmid>')</p>"},
-]}/>
 
 ## Error
 
