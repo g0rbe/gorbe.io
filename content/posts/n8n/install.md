@@ -35,7 +35,7 @@ Configure a [systemd service](../systemd/service-unit-configuration.md) to start
 nano /etc/systemd/system/n8n.service
 ```
 
-```ini title="/etc/systemd/system/n8n.service"
+```systemd
 [Unit]
 Description=n8n servce
 After=network.target network-online.target
