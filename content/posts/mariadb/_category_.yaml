@@ -1,7 +1,0 @@
-label: "MariaDB"
-link:
-  type: generated-index
-  title: "MariaDB: The open source relational database"
-  description: >
-    MariaDB Server is one of the most popular database servers in the world.
-    It's made by the original developers of MySQL and guaranteed to stay open source. Notable users include Wikipedia, WordPress.com and Google.

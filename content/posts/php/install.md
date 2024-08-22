@@ -1,5 +1,4 @@
 ---
-sidebar_label: Install
 title: "Install PHP on Debian"
 date: 2023-12-16T01:01:11+01:00
 description: "Installing PHP on Debian: A Comprehensive Guide"

@@ -2,7 +2,6 @@
 title = "CEH v10: 19 Cloud Computing"
 date = "2020-02-01"
 lastmod = "2024-01-26"
-tags = ["cehv10"]
 categories = ["ceh"]
 description = "Certified Ethical Hacker v10 Chapter 19: Cloud Computing"
 summary = "Certified Ethical Hacker v10 Chapter 19: Cloud Computing"

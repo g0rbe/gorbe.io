@@ -1,7 +1,7 @@
 ---
 sidebar_label: Service Unit
 title: "Service Unit Configuration"
-tags: ["linux", "service", "daemon", "systemd"]
+categories: ["linux", "service", "daemon", "systemd"]
 description: "Service Unit Configuration"
 ---
 

@@ -1,7 +1,6 @@
 ---
-sidebar_label: Default Server
 title: "Default Server Settings for Nginx"
-tags: ["nginx", "security", "hardening"]
+categories: ["nginx", "security", "hardening"]
 description: "How to configure a reasonably secure Default Server for Nginx"
 ---
 

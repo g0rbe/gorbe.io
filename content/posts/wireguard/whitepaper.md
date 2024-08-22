@@ -1,9 +1,7 @@
 ---
-sidebar_label: Whitepaper
 title: "WireGuard: Next Generation Kernel Network Tunnel"
-tags: ["vpn", "security", "WireGuard"]
+categories: ["vpn", "security", "WireGuard"]
 description: "Whitepaper of WireGuard, Next Generation Kernel Network Tunnel"
-image: /assets/docs/wireguard/whitepaper/image-en.webp
 ---
 
 

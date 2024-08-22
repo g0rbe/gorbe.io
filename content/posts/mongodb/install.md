@@ -1,7 +1,6 @@
 ---
-sidebar_label: Install
 title: Install MongoDB Community Edition
-tags: [ "db", "nosql"]
+categories: [ "db", "nosql"]
 description: How to install MongoDB Community Edition on Debian Linux server using the apt package manager.
 #image: /assets/docs/caddy/install/image-en.webp
 ---

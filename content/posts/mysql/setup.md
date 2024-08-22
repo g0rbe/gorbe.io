@@ -1,7 +1,6 @@
 ---
-sidebar_label: Setup
 title: 'Setup a New Database and User in MySQL'
-tags: ["MySQL", "database"]
+categories: ["MySQL", "database"]
 description: 'How to Create a New Database and User in MySQL'
 ---
 

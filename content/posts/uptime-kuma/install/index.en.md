@@ -1,7 +1,7 @@
 ---
 title: "Install Uptime Kuma from Source"
 description: "Install Uptime Kuma from Source with Nginx on Debian 12"
-tags: ["monitor", "monitoring", "selfhosted", "self-hosted", "uptime", "uptime-monitoring", "Uptime Kuma"]
+categories: ["monitor", "monitoring", "selfhosted", "self-hosted", "uptime", "uptime-monitoring", "Uptime Kuma"]
 aliases: ["/docs/uptime-kuma/install-from-source"]
 ---
 

@@ -1,7 +1,6 @@
 ---
-sidebar_label: Security Features and Best Practices
 title: "WireGuard's Security Features and Best Practices"
-tags: ["vpn", "security", "wireguard"]
+categories: ["vpn", "security", "wireguard"]
 description: "WireGuard's Security Features and Best Practices"
 ---
 

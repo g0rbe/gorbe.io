@@ -1,12 +1,8 @@
 ---
-sidebar_label: Install
 title: Install Matomo with FrankenPHP and MariaDB on Debian Linux
-tags: [ "analytics"]
+categories: [ "analytics"]
 description: How to install Matomo On-Premise with FrankenPHP and MariaDB on Debian Linux.
-#image: /assets/docs/caddy/install/image-en.webp
 ---
-
-import PasswordCodeBlock from '../../src/components/PasswordCodeBlock';
 
 ## Requirements
 
@@ -72,9 +68,9 @@ mysql_secure_installation
 
 Create the database and the user:
 
-<PasswordCodeBlock numSymbols={0} language={'bash'} tokens={[{name: "MATOMO_DB_PASSWORD"}]}>
+```bash
 {`mysql --execute="CREATE DATABASE matomo; GRANT ALL PRIVILEGES ON matomo.* TO 'matomo'@'localhost' IDENTIFIED BY 'MATOMO_DB_PASSWORD' WITH GRANT OPTION; FLUSH PRIVILEGES;"`}
-</PasswordCodeBlock>
+```
 
 ## FrankenPHP
 
@@ -96,7 +92,7 @@ Configure the [Caddyfile](/docs/frankenphp/configure.mdx#matomo) :
 nano /etc/frankenphp/Caddyfile
 ```
 
-```markup
+```caddy
 {
 	frankenphp
 	order php_server before file_server

@@ -1,7 +1,7 @@
 ---
 sidebar_label: Unlock VM
 title: "Unlock VM on Proxmox"
-tags: ["Proxmox", "QEMU", "virtualization", "virtual-machine"]
+categories: ["Proxmox", "QEMU", "virtualization", "virtual-machine"]
 description: "How to Unlock a Locked VM on Proxmox"
 aliases: ["/docs/proxmox/unlock-vm"]
 ---

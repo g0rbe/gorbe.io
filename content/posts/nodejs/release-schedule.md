@@ -1,7 +1,6 @@
 ---
-sidebar_label: Release Schedule
 title: "Node.js Release Schedule"
-tags: ["Node.js"]
+categories: ["Node.js"]
 description: "Node.js Release Schedule"
 ---
 

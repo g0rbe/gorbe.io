@@ -1,6 +1,0 @@
-label: "Regex"
-link:
-  type: generated-index
-  title: "Regular Expression"
-  description: >
-    Regular expressions are patterns used to match character combinations in strings.

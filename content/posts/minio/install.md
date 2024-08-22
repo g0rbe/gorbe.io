@@ -1,7 +1,6 @@
 ---
-sidebar_label: Install
 title: Install MinIO on Linux
-tags: [ "s3", "storage"]
+categories: [ "s3", "storage"]
 description: How to install MinIO binary on Debian Linux server.
 #image: /assets/docs/umami/install/image-en.webp
 ---

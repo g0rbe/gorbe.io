@@ -1,7 +1,6 @@
 +++
 title = "CEH v10: 10 Denial of Service"
 date = 2020-02-01T00:00:00+01:00
-tags = ["cehv10"]
 categories = ["ceh"]
 description = "Certified Ethical Hacker v10 Chapter 10: Denial of Service"
 summary = "Certified Ethical Hacker v10 Chapter 10: Denial of Service"

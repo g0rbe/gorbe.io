@@ -1,7 +1,6 @@
 ---
-sidebar_label: RAID0
 title: "Create RAID0 with mdadm"
-tags: ["linux", "raid"]
+categories: ["linux", "raid"]
 description: "Create and manage RAID0 with mdadm on Linux."
 ---
 

@@ -1,13 +1,12 @@
 ---
 sidebar_label: Install
 title: Install umami on Linux
-tags: [ "analytics", "web-analytics", "statistics"]
+categories: [ "analytics", "web-analytics", "statistics"]
 description: How to install Umami on Debian Linux server with PostgreSQL.
 image: /assets/docs/umami/install/image-en.webp
 ---
 
-import PasswordCodeBlock from '../../src/components/PasswordCodeBlock';
-import CodeBlock from '@theme/CodeBlock';
+
 
 ## Requirements
 
@@ -56,9 +55,9 @@ CREATE DATABASE umami;
 
 Create the user:
 
-<PasswordCodeBlock  language="sql" numSymbols={0} tokens={[ {name: "UMAMI_DB_PASSWORD"}]} >
-{`CREATE USER umami WITH ENCRYPTED PASSWORD 'UMAMI_DB_PASSWORD';`}
-</PasswordCodeBlock>
+```sql
+CREATE USER umami WITH ENCRYPTED PASSWORD 'UMAMI_DB_PASSWORD';
+```
 
 
 Set the permissions:
@@ -139,11 +138,11 @@ nano .env
 
 Configure the DB connection:
 
-<PasswordCodeBlock language="bash" title="/opt/umami/.env" numSymbols={0} tokens={[{name: "UMAMI_DB_PASSWORD"},{name: "UMAMI_APP_SECRET"}]} >
-{`DATABASE_URL="postgresql://umami:UMAMI_DB_PASSWORD@localhost:5432/umami"
+```sh
+DATABASE_URL="postgresql://umami:UMAMI_DB_PASSWORD@localhost:5432/umami"
 DATABASE_TYPE="postgresql"
-APP_SECRET="UMAMI_APP_SECRET"`}
-</PasswordCodeBlock>
+APP_SECRET="UMAMI_APP_SECRET"
+```
 
 Set permission for the file:
 

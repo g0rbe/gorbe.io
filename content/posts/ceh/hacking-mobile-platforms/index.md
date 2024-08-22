@@ -1,7 +1,6 @@
 +++
 title = "CEH v10: 17 Hacking Mobile Platforms"
 date = 2020-02-01T00:00:00+01:00
-tags = ["cehv10"]
 categories = ["ceh"]
 description = "Certified Ethical Hacker v10 Chapter 17: Hacking Mobile Platforms."
 summary = "Certified Ethical Hacker v10 Chapter 17: Hacking Mobile Platforms."

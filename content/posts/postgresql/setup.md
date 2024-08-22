@@ -1,7 +1,6 @@
 ---
-sidebar_label: Setup
 title: 'Setup PostgreSQL'
-tags: ["sql", "database"]
+categories: ["sql", "database"]
 description: 'How to setup PostgreSQL database'
 ---
 

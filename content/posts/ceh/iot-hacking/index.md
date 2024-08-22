@@ -1,7 +1,6 @@
 +++
 title = "CEH v10: 18 IoT Hacking"
 date = 2020-02-01T00:00:00+01:00
-tags = ["cehv10"]
 categories = ["ceh"]
 description = "Certified Ethical Hacker v10 Chapter 18: IoT Hacking"
 summary = "Certified Ethical Hacker v10 Chapter 18: IoT Hacking"

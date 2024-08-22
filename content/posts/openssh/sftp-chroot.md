@@ -2,7 +2,7 @@
 sidebar_label: SFTP Chroot
 title: "Configure SFTP with Chroot Jail on Debian"
 date: 2023-11-15T12:32:06+01:00
-tags: ["linux", "security", "ssh", "sftp", "ssh"]
+categories: ["linux", "security", "ssh", "sftp", "ssh"]
 description: "Guide to configure SFTP with Chroot Jail on Debian 12."
 ---
 

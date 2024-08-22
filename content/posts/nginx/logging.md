@@ -1,7 +1,7 @@
 ---
 sidebar_label: Logging
 title: "Nginx Logging Configurations"
-tags: ["nginx", "log"]
+categories: ["nginx", "log"]
 description: "Nginx Logging Configurations"
 ---
 

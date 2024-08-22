@@ -1,7 +1,7 @@
 ---
 sidebar_label: Implementation and Specification
 title: 'Domain Names: Implementation and Specification'
-tags: ["dns", "domain"]
+categories: ["dns", "domain"]
 description: RFC 1035 describes the details of the domain system and protocol
 ---
 

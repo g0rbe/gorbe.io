@@ -1,6 +1,6 @@
 ---
 title: "Install Node.js Binary Distribution"
-tags: ['npm']
+categories: ['npm']
 description: "Install the NodeSource Node.js Binary ditsribution via package manager on Linux."
 ---
 

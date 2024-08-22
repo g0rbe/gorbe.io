@@ -1,7 +1,7 @@
 ---
 sidebar_label: Default Assignee and Start Date
 title: "Set Default Assignee and Start Date in OpenProject"
-tags: ["OpenProject"]
+categories: ["OpenProject"]
 description: "How to set default assignee and start date in OpenProject"
 ---
 

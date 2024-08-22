@@ -1,7 +1,6 @@
 ---
-sidebar_label: Setup
 title: "Create a database in MariaDB"
-tags: ["mariadb", "mysql", "database"]
+categories: ["mariadb", "mysql", "database"]
 description: "Create a database in MariaDB."
 ---
 

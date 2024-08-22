@@ -1,9 +1,0 @@
-label: "nftables"
-link:
-  type: generated-index
-  title: "nftables"
-  description: >
-    nftables is the modern Linux kernel packet classification framework.
-    New code should use it instead of the legacy {ip,ip6,arp,eb}_tables (xtables) infrastructure.
-    For existing codebases that have not yet converted, the legacy xtables infrastructure is still maintained as of 2021.
-    Automated tools assist the xtables to nftables conversion process. 

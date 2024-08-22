@@ -1,9 +1,7 @@
 ---
-sidebar_label: Install
 title: 'Install MySQL Community Server on Linux Server'
-tags: ["MySQL"]
+categories: ["MySQL"]
 description: 'How to Install MySQL Community Server on Linux Server.'
-image: /assets/docs/mysql/install/image-en.webp
 ---
 
 import Tabs from '@theme/Tabs';
