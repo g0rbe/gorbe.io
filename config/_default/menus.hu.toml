@@ -25,11 +25,15 @@ name = "Kapcsolat"
 pageRef = "contact"
 weight = 10
 
-
 [[main]]
 name = "Blog"
 pageRef = "posts"
 weight = 11
+
+[[main]]
+name = "Eszközök"
+pageRef = "tools"
+weight = 12
 
 [[main]]
 identifier = "search"
