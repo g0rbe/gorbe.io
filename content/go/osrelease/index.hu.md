@@ -1,10 +1,13 @@
 ---
-title: "gorbe.io/go/ip"
-externalUrl: "https://github.com/g0rbe/go-ip"
-summary: "Go module to work with IPv4 and IPv6 addresses.<br>`go get gorbe.io/go/ip`"
-description: "Go module to work with IPv4 and IPv6 addresses"
+title: "gorbe.io/go/osrelease"
+summary: " os-release parser for Golang <br>`go get gorbe.io/go/osrelease`"
+description: "os-release parser for Golang"
 showDate: false
-_build:
-  render: "link"
-  list: "always"
+gopkg:
+  module: "gorbe.io/go/ip"
+  repository: "https://github.com/g0rbe/go-osrelease"
 ---
+
+```bash
+go get gorbe.io/go/osrelease@latest
+```
