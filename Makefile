@@ -1,5 +1,6 @@
-build:
-	hugo --enableGitInfo --buildDrafts --minify
+build: clean
+	hugo --buildDrafts --minify --destination="public/gorbe.io"
+	hugo --buildDrafts --minify --baseURL="http://43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion" --destination="public/43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion"
 
 run:
 	hugo server --buildDrafts --enableGitInfo
