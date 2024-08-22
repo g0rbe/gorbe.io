@@ -1,19 +1,37 @@
 <!-- HTML for static distribution bundle build -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Swagger UI</title>
-    <link rel="stylesheet" type="text/css" href="./swagger-ui.css" />
-    <link rel="stylesheet" type="text/css" href="index.css" />
-    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
-  </head>
 
-  <body>
-    <div id="swagger-ui"></div>
-    <script src="./swagger-ui-bundle.js" charset="UTF-8"> </script>
-    <script src="./swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
-    <script src="./swagger-initializer.js" charset="UTF-8"> </script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI &middot; G⌬RBE</title>
+  <link href="./swagger-ui.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+
+  <meta property="og:url" content="http://gorbe.io/tools/swagger-ui/">
+  <meta property="og:site_name" content="G⌬RBE">
+  <meta property="og:title" content="Swagger UI &middot; G⌬RBE">
+  <meta property="og:description" content="Design, describe, and document your API.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://gorbe.io/tools/swagger-ui/cover.webp">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://gorbe.io/tools/swagger-ui/cover.webp">
+  <meta name="twitter:title" content="Swagger UI &middot; G⌬RBE">
+  <meta name="twitter:description" content="Design, describe, and document your API.">
+
+
+  <script defer data-api="/api/event" data-domain="gorbe.io" src="/js/script.js"></script>
+</head>
+
+<body>
+  <div id="swagger-ui"></div>
+  <script src="./swagger-ui-bundle.js" charset="UTF-8"> </script>
+  <script src="./swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
+  <script src="./swagger-initializer.js" charset="UTF-8"> </script>
+</body>
+
 </html>
