@@ -10,7 +10,7 @@ aliases: ["/docs/mautic/install"]
 
 Mautic 5.0 requires PHP 8.0 or 8.1.
 
-Install [Sury's Debian repository](../php/install.md):
+Install [Sury's Debian repository](../../php/install.md):
 
 ```bash
 sudo apt install -y lsb-release apt-transport-https ca-certificates curl && \
