@@ -1,58 +1,56 @@
 ---
-sidebar_label: Record Types
-title: 'List of DNS Record Types'
-tags: ["dns", "domain"]
-description: >
-    List of DNS Record Types |
-    System administrator service and Cybersecurity for small and medium-sized businesses in and around Győr.
-image: /assets/docs/protocols/dns/record-types/image-en.webp
+title: 'DNS Rekord Típusok Listája'
+description: DNS Rekord Típusainak listája
+summary: DNS Rekord Típusainak listája
+date: 2024-04-14
+categories: ["dns", "domain"]
+keywords: ["dns", "domain"]
+featureAlt: cover-protocols-dns-hu
 ---
 
+## `A` Rekord
 
+- Az ***A***ddress rekord.
+- Leképezi a domain neveket `IPv4` címekre.
 
-## `A` Record
-
-- The ***A***ddress record.
-- Maps domain names to `IPv4` addresses.
-
-```dns-zone-file title="www.gorbe.io points to 128.140.77.237"
+```dns-zone-file title="www.gorbe.io a 128.140.77.237 IP-re mutat"
 www.gorbe.io    A    128.140.77.237
 ```
 
 :::info
-The `@` symbol is indicates the root domain (eg.: `gorbe.io`).
+A `@` szimbólum a gyökértartományt jelöli (pl.: `gorbe.io`).
 :::
 
-## `AAAA` Record
+## `AAAA` Rekord
 
-- Maps domain names to `IPv6` addresses.
+- Leképezi a domain neveket `IPv4` címekre.
 
-```dns-zone-file title="www.gorbe.io points to 2a01:4f8:1c1b:5fb9::1"
+```dns-zone-file title="www.gorbe.io a 2a01:4f8:1c1b:5fb9::1 IP-re mutat"
 www.gorbe.io    AAAA    2a01:4f8:1c1b:5fb9::1
 ```
 
-## `CNAME` Record
+## `CNAME` Rekord
 
-- Redirects a domain to a different domain.
+- Egy tartományt egy másik tartományba irányít át.
 
-```dns-zone-file title="www.gorbe.io points to gorbe.io"
+```dns-zone-file title="www.gorbe.io domaint átirányítja a gorbe.io domain-re"
 www.gorbe.io    CNAME    gorbe.io
 ```
 
-## `TXT` Record
+## `TXT` Rekord
 
-- Provides any type of descriptive information in text format for the given domain.
+- Szöveges formátumban bármilyen típusú leíró információt biztosít az adott tartományhoz.
 
-```dns-zone-file title="gorbe.io has an SPF Record in TXT"
+```dns-zone-file title="SPF beállítás a gorbe.io tartomány TXT rekordjában"
 gorbe.io    TXT    "v=spf1 mx -all"
 ```
 
-## List
+## Lista
 
 | TYPE         | Value | Meaning                                |    Reference    |Template|Registration Date|
 |--------------|-------|----------------------------------------|-----------------|--------|-----------------|
-| Reserved                  |  0  |                                        |  [RFC6895][1]     |        |   2021-03-08    |
-| [A](#a-record)            |  1  | A host address                         | [RFC1035][2] | | |
+| Reserved     |  0  |                                        |  [RFC6895][1]     |        |   2021-03-08    |
+| A            |  1  | A host address                         | [RFC1035][2] | | |
 | NS           |  2  | An authoritative name server           | [RFC1035][2]||
 | ~~MD~~       |  3  | A mail destination (OBSOLETE - use MX) | [RFC1035][2]||
 | ~~MF~~       |  4  | A mail forwarder (OBSOLETE - use MX)   | [RFC1035][2]||
@@ -150,9 +148,11 @@ gorbe.io    TXT    "v=spf1 mx -all"
 | Private use|65280-65534||||
 | Reserved|65535||||
 
-[1]: https://www.gorbe.io/assets/docs/protocols/dns/rfc6895.pdf
-[2]: https://www.gorbe.io/assets/docs/protocols/dns/rfc1035.pdf
-[3]: https://www.gorbe.io/assets/docs/protocols/dns/rfc1183.pdf
-[4]: https://www.gorbe.io/assets/docs/protocols/dns/rfc5864.pdf
-[5]: https://www.gorbe.io/assets/docs/protocols/dns/rfc1706.pdf
-[6]: https://www.gorbe.io/assets/docs/protocols/dns/rfc2536.pdf
+## A Rekord
+
+[1]: rfc6895.pdf
+[2]: rfc1035.pdf
+[3]: rfc1183.pdf
+[4]: rfc5864.pdf
+[5]: rfc1706.pdf
+[6]: rfc2536.pdf
