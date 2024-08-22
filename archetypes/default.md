@@ -6,5 +6,6 @@ date: {{ .Date }}
 categories: []
 keywords: []
 # featureAlt:
-draft:  true
+# draft:  true
+# aliases: ['/']
 ---
