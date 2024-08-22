@@ -5,13 +5,13 @@ weight = 1
 
 title = "G⌬RBE"
 # copyright = "Copy, _right?_ :thinking_face:"
-images = ["cover.webp"]
 
 [params]
 dateFormat = "2 January 2006"
 
 mainSections = ["posts"]
 description = "Rendszergazda szolgáltatás és Kiberbiztonság kis- és középvállalkozások részére Győrben és környékén."
+images = ["cover.webp"]
 
 [params.hero]
 image = "img/hero.webp"
