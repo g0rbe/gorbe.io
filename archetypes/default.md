@@ -5,5 +5,6 @@ summary:
 date: {{ .Date }}
 categories: []
 keywords: []
+# featureAlt:
 draft:  true
 ---
