@@ -6,6 +6,7 @@ date: 2024-08-15
 categories: [ "web", "webserver", "http", "caddy"]
 keywords: [ "web", "webserver", "http", "caddy"]
 draft:  false
+featureAlt: "cover-caddy-install-en"
 ---
 
 ## Download binary

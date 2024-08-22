@@ -7,6 +7,7 @@ categories: [ "web", "webserver", "http", "caddy"]
 keywords: [ "web", "webserver", "http", "caddy"]
 draft:  false
 images: ["image.hu.webp"]
+featureAlt: "cover-caddy-install-hu"
 ---
 
 ## Bináris letöltése
