@@ -1,7 +1,13 @@
 ---
 title: "WireGuard: Next Generation Kernel Network Tunnel"
-tags: ["vpn", "security", "WireGuard"]
 description: "Whitepaper of WireGuard, Next Generation Kernel Network Tunnel"
+summary: "Whitepaper of WireGuard, Next Generation Kernel Network Tunnel"
+date: 2023-11-15T03:46:08+01:00
+tags: ["VPN", "security", "WireGuard"]
+keywords: ["VPN", "security", "WireGuard"]
+# featureAlt:
+# draft:  true
+# aliases: ['/']
 ---
 
 

@@ -1,7 +1,13 @@
 ---
 title: Setup a Remote Access VPN with WireGuard
-tags: ["wireguard", "vpn"]
-description: "Setup a Remote Access VPN with WireGuard and nftables on Debain 12"
+description: "Setup a Remote Access VPN with WireGuard and nftables on Debian 12"
+summary: "Setup a Remote Access VPN with WireGuard and nftables on Debian 12"
+date: 2023-11-15T03:46:08+01:00
+tags: ["WireGuard", "VPN"]
+keywords: ["WireGuard", "VPN"]
+# featureAlt:
+# draft:  true
+# aliases: ['/']
 ---
 
 ## Server
@@ -49,9 +55,9 @@ systemctl enable wg-quick@wg0
 
 ### Add peer
 
-:::caution
+{{< alert >}}
 Stop WireGuard before editing `wg0.conf`!
-:::
+{{< /alert >}}
 
 Append to `wg0.conf`:
 ```bash
