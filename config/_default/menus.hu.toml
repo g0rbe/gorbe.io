@@ -26,7 +26,7 @@ pageRef = "contact"
 weight = 10
 
 [[main]]
-name = "Blog"
+name = "Bejegyzések"
 pageRef = "posts"
 weight = 11
 
