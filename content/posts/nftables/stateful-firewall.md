@@ -1,8 +1,8 @@
 ---
-sidebar_label: Simple Stateful Firewall
 title: "Simple Stateful Firewall with nftables"
 tags: [ "security", "firewall"]
 description: "Configure a Simple Stateful Firewall with nftables."
+aliases: ["/docs/nftables/stateful-firewall"]
 ---
 
 The nftables is a subsystem of the Linux kernel providing filtering and classification of network packets/datagrams/frames.
