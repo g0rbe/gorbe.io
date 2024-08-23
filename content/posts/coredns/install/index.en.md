@@ -112,7 +112,7 @@ systemctl enable coredns.service
 
 ### nftables
 
-Below is an example for [nftables](/docs/category/nftables):
+Below is an example for [nftables](/tags/nftables):
 
 ```
 #!/usr/sbin/nft -f

@@ -8,7 +8,7 @@ keywords: ["iptables", "firewall", "security"]
 ---
 
 ::::info
-iptables is replaced by [nftables](/docs/category/nftables) starting in Debian 10 (Buster)
+iptables is replaced by [nftables](/tags/nftables) starting in Debian 10 (Buster)
 ::::
 
 ## Simple stateful firewall
