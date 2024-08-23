@@ -2,6 +2,10 @@ build: clean
 	hugo --buildDrafts --minify --destination="public/gorbe.io"
 	hugo --buildDrafts --minify --baseURL="http://43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion" --destination="public/43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion"
 
+deploy: build
+	rsync --archive --delete "public/43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion/" "gorbe.io:/var/www/43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion/"
+	rsync --archive --delete "public/gorbe.io/" "gorbe.io:/var/www/gorbe.io/"
+
 run:
 	hugo server --buildDrafts --enableGitInfo
 
@@ -9,10 +13,6 @@ clean:
 	rm -rf ./public/
 	rm -rf ./resources/
 	rm -rf ./tmp/
-	rm -rf ./node_modules/
-	rm -f package.json
-	rm -f package-lock.json
-	rm -f tailwind.config.js
 
 swaggerui: clean
 	/usr/bin/mkdir tmp
