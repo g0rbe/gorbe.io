@@ -9,7 +9,7 @@ title = "G⌬RBE"
 [params]
 dateFormat = "2 January 2006"
 
-mainSections = ["blog"]
+mainSections = ["posts"]
 description = "Rendszergazda szolgáltatás és Kiberbiztonság kis- és középvállalkozások részére Győrben és környékén."
 images = ["cover.webp"]
 

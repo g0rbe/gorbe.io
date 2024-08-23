@@ -13,7 +13,7 @@ The nftables is a subsystem of the Linux kernel providing filtering and classifi
 ## TLDR
 
 ```bash
-wget -O "/etc/nftables.conf" "https://gorbe.io/blog/nftables/stateful-firewall/nftables.conf"
+wget -O "/etc/nftables.conf" "https://gorbe.io/posts/nftables/stateful-firewall/nftables.conf"
 ```
 
 ## Config
