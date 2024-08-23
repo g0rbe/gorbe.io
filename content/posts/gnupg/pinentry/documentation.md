@@ -3,8 +3,11 @@ title: "Pinentry Documentation"
 description: "Pinentry usage, the Assuan protocol and implementation details."
 summary: "Pinentry usage, the Assuan protocol and implementation details."
 date: 2023-12-18T01:01:11+01:00
-keywords:  ["gnupg", "pinentry", "security", "encryption"]
-categories: ["gnupg", "pinentry", "security", "encryption"]
+tags:  ["gnupg", "pinentry", "security", "encryption"]
+keywords: ["gnupg", "pinentry", "security", "encryption"]
+# featureAlt:
+# draft:  true
+aliases: ["/docs/gnupg/pinentry/documentation/"]
 ---
 
 ## Introduction

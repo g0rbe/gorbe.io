@@ -3,9 +3,11 @@ title: "Install Gitea"
 description: "How to install and configure Gitea on Debian 10 with MariaDB and Nginx."
 summary: "How to install and configure Gitea on Debian 10 with MariaDB and Nginx."
 date: 2020-07-01T00:00:00+01:00
-categories: ["Gitea", "selfhost" , "git"]
+tags: ["Gitea", "selfhost" , "git"]
 keywords: ["Gitea", "selfhost" , "git"]
-draft:  false
+#featureAlt:
+#draft:  false
+aliases: ["/docs/gitea/install"]
 ---
 
 ## MariaDB
