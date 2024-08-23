@@ -4,7 +4,7 @@ summary: "Golang module to manipulate file mode bits on Linux systems.<br>`go ge
 description: "Golang module to manipulate file mode bits on Linux systems."
 showDate: false
 gopkg:
-  module: "gorbe.io/go/ip"
+  module: "gorbe.io/go/chattr"
   repository: "https://github.com/g0rbe/go-chattr"
 ---
 
