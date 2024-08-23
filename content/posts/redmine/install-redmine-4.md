@@ -1,9 +1,10 @@
 ---
-sidebar_label: Install Redmine 4
 title: "How to Install Redmine 4 on Debian 10"
 date: 2020-06-28T00:00:00+01:00
 tags: ["linux", "redmine", "debian"]
+keywords: ["linux", "redmine", "debian"]
 description: "Install and configure Redmine 4 on Debian 10 with MariaDB, Nginx and Passenger."
+aliases: ["/docs/redmine/install-redmine-4"]
 ---
 
 ## Install 
