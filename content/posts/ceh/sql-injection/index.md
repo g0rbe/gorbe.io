@@ -4,8 +4,8 @@ description: 'Certified Ethical Hacker learning material. Chapter 15: SQL Inject
 summary: 'Certified Ethical Hacker learning material. Chapter 15: SQL Injection.'
 date: 2020-02-01T00:00:00+01:00
 # lastmod: {{ .Date }}
-tags: ["ceh"]
-keywords: ["ceh", "cehv10"]
+tags: ["CEH"]
+keywords: ["CEH", "cehv10"]
 draft:  false
 ---
 

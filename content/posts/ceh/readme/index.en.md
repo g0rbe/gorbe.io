@@ -4,8 +4,8 @@ description: 'Certified Ethical Hacker v10 learning material. Chapter 00: Readme
 summary: 'Certified Ethical Hacker v10 learning material. Chapter 00: Readme.'
 date: 2020-02-01T00:00:00+01:00
 # lastmod: {{ .Date }}
-tags: ["ceh"]
-keywords: ["ceh"]
+tags: ["CEH"]
+keywords: ["CEH"]
 draft:  false
 ---
 

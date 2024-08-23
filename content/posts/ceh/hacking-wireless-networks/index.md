@@ -1,7 +1,7 @@
 +++
 title = "CEH v10: 16 Hacking Wireless Networks"
 date = 2020-02-01T00:00:00+01:00
-tags = ["ceh"]
+tags = ["CEH"]
 description = "Certified Ethical Hacker v10 Chapter 16: Hacking Wireless Networks"
 summary = 'Certified Ethical Hacker v10 Chapter 16: Hacking Wireless Networks'
 keywords = "Certified Ethical Hacker,ethical hacker,ceh,cehv10"

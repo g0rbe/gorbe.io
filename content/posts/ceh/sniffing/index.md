@@ -4,8 +4,8 @@ description: 'Certified Ethical Hacker learning material. Chapter 08: Sniffing.'
 summary: 'Certified Ethical Hacker learning material. Chapter 08: Sniffing.'
 date: 2020-02-01T00:00:00+01:00
 # lastmod: {{ .Date }}
-tags: ["ceh"]
-keywords: ["ceh", "cehv10"]
+tags: ["CEH"]
+keywords: ["CEH", "CEHv10"]
 draft:  false
 ---
 

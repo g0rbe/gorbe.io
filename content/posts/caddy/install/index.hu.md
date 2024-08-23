@@ -3,8 +3,8 @@ title: Caddy Telepítése Linux Rendszeren
 description:  Hogyan telepítsük a Caddy-t Debian Linux szerverre.
 summary:  Hogyan telepítsük a Caddy-t Debian Linux szerverre.
 date: 2024-08-15
- [ "web", "webserver", "http", "caddy"]
-keywords: [ "web", "webserver", "http", "caddy"]
+tags: [ "web", "webserver", "HTTP", "caddy"]
+keywords: [ "web", "webserver", "HTTP", "caddy"]
 draft:  false
 images: ["image.hu.webp"]
 featureAlt: "cover-caddy-install-hu"
