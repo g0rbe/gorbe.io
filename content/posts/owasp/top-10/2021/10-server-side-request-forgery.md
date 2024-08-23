@@ -8,7 +8,7 @@ description: >
     for attention and
     awareness, the hope is that they are subject to focus and can be rolled
     into a larger category in a future edition.
-categories: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["cybersecurity", 'vulnerability', 'offsec']
 ---
 
 ![Server-Side Request Forgery](server-side-request-forgery.png)

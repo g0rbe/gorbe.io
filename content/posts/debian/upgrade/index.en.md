@@ -3,7 +3,7 @@ title: 'Upgrade Debian release'
 description: 'A guide about how to upgrade to the Debian release'
 summary: 'A guide about how to upgrade to the Debian release'
 date: 2023-08-15T08:27:34+01:00
-categories: ["debian", "linux"]
+tags: ["debian", "linux"]
 keywords: ["debian", "linux"]
 draft:  false
 ---

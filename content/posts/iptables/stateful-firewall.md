@@ -3,7 +3,7 @@ title: "Simple Stateful Firewall with iptables"
 description: "How to configure a simple Stateful Firewall with iptables."
 summary: "How to configure a simple Stateful Firewall with iptables."
 date: 2023-11-15T03:21:23+01:00
-categories: ["iptables", "firewall", "security"]
+tags: ["iptables", "firewall", "security"]
 keywords: ["iptables", "firewall", "security"]
 ---
 

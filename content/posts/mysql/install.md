@@ -1,6 +1,6 @@
 ---
 title: 'Install MySQL Community Server on Linux Server'
-categories: ["MySQL"]
+tags: ["MySQL"]
 description: 'How to Install MySQL Community Server on Linux Server.'
 ---
 

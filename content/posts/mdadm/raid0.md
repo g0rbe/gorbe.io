@@ -1,6 +1,6 @@
 ---
 title: "Create RAID0 with mdadm"
-categories: ["linux", "raid"]
+tags: ["linux", "raid"]
 description: "Create and manage RAID0 with mdadm on Linux."
 ---
 

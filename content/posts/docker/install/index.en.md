@@ -3,7 +3,7 @@ title: "Install Docker Engine on Debian 12"
 description: "Short guide about how install Docker Engine on Debian 12."
 summary: "Short guide about how install Docker Engine on Debian 12."
 date: 2023-11-15T13:30:37+01:00
-categories: ["docker", "debian"]
+tags: ["docker", "debian"]
 keywords: ["docker", "debian"]
 draft:  false
 ---

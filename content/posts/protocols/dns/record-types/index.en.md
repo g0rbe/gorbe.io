@@ -3,7 +3,7 @@ title: 'List of DNS Record Types'
 description: List of DNS Record Types
 summary: List of DNS Record Types
 date: 2024-04-14
-categories: ["dns", "domain"]
+tags: ["dns", "domain"]
 keywords: ["dns", "domain"]
 featureAlt: cover-protocols-dns-en
 aliases: ["/docs/protocols/dns/record-types"]

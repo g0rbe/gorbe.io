@@ -4,7 +4,7 @@ description: 'Certified Ethical Hacker v10 Chapter 09: Social Engineering.'
 summary: 'Certified Ethical Hacker v10 Chapter 09: Social Engineering.'
 date: 2020-02-01T00:00:00+01:00
 # lastmod: {{ .Date }}
-categories: ["ceh"]
+tags: ["ceh"]
 keywords: ["ceh", "cehv10"]
 draft:  false
 ---

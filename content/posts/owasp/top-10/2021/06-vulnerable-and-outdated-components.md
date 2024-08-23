@@ -1,7 +1,7 @@
 ---
 title: A06:2021 – Vulnerable and Outdated Components 
 description: "It was #2 from the Top 10 community survey but also had enough data to make the Top 10 via data."
-categories: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["cybersecurity", 'vulnerability', 'offsec']
 ---
 
 ![Vulnerable and Outdated Components](vulnerable-and-outdated-components.png)   

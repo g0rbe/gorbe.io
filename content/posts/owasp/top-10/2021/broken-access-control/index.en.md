@@ -1,7 +1,7 @@
 ---
 title: A01:2021 - Broken Access Control
 description: Access control enforces policy such that users cannot act outside of their intended permissions.
-categories: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["cybersecurity", 'vulnerability', 'offsec']
 ---
 
 ![Broken Access Control](broken-access-control.png)

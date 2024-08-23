@@ -7,7 +7,7 @@ description: >
     failures. Notable CWEs included are *CWE-297: Improper Validation of
     Certificate with Host Mismatch*, *CWE-287: Improper Authentication*, and
     *CWE-384: Session Fixation*.
-categories: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["cybersecurity", 'vulnerability', 'offsec']
 ---
 
 ![Identification and Authentication Failures](identification-and-authentication-failures.png)

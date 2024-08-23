@@ -2,7 +2,7 @@
 title: "Linux Filesystem Hierarchy"
 date: 2020-02-06T00:00:00
 lastmod: 2024-01-27T00:00:00
-categories: ["lfcs", "Linux", "filesystem"]
+tags: ["lfcs", "Linux", "filesystem"]
 description: "Explaining Linux's Filesystem Hierarchy Standard."
 summary: "Explaining Linux's Filesystem Hierarchy Standard."
 keywords: "linux,lfcs,fhs,filesystem"

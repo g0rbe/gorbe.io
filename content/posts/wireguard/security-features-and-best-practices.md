@@ -1,6 +1,6 @@
 ---
 title: "WireGuard's Security Features and Best Practices"
-categories: ["vpn", "security", "wireguard"]
+tags: ["vpn", "security", "wireguard"]
 description: "WireGuard's Security Features and Best Practices"
 ---
 

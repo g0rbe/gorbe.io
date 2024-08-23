@@ -1,7 +1,7 @@
 ---
 sidebar_label: Install with Composer
 title: "Install Mautic 5 with Composer on Debian 12"
-categories: ["mautic", "apache", "php","composer", "mariadb", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
+tags: ["mautic", "apache", "php","composer", "mariadb", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
 description: "How to Install Mautic 5 with Composer on Debian 12 with Apache, PHP-FPM and MariaDB"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: A00:2021 - Introduction
 description: The OWASP Top 10 2021 is all-new, with a new graphic design and an available one-page infographic you can print or obtain from our home page.
-categories: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["cybersecurity", 'vulnerability', 'offsec']
 ---
 
 ## Welcome to the OWASP Top 10 - 2021

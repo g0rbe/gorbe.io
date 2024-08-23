@@ -3,7 +3,7 @@ title: 'DNS Rekord Típusok Listája'
 description: DNS Rekord Típusainak listája
 summary: DNS Rekord Típusainak listája
 date: 2024-04-14
-categories: ["dns", "domain"]
+tags: ["dns", "domain"]
 keywords: ["dns", "domain"]
 featureAlt: cover-protocols-dns-hu
 aliases: ["/hu/docs/protocols/dns/record-types"]

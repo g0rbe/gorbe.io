@@ -1,6 +1,7 @@
 ---
 date: 2024-02-01T11:45:57+01:00
 description: "Learn Regex the Easy Way"
+tags: ["regex"]
 ---
 
 # Learn Regex the Easy Way

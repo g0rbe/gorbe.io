@@ -3,7 +3,7 @@ title: Set up an Onion Service
 description: How to set up an onion service on Debian
 summary: How to set up an onion service on Debian
 date: 2024-08-22T03:54:32+02:00
-categories: ["tor", "security"]
+tags: ["tor", "security"]
 keywords: ["tor", "security"]
 draft:  true
 ---

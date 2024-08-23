@@ -1,6 +1,6 @@
 ---
 title: Install listmonk on Debian
-categories: [ "smtp", "email"]
+tags: [ "smtp", "email"]
 description: How to install listmonk binary on Debian Linux server.
 #image: /assets/docs/umami/install/image-en.webp
 ---

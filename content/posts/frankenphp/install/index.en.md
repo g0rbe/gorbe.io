@@ -3,7 +3,7 @@ title: Install FrankenPHP on Linux
 description: How to install FrankenPHP on Debian Linux server.
 summary: How to install FrankenPHP on Debian Linux server.
 date: 2024-08-21
-categories: [ "web", "webserver", "http", "php", "cgi"]
+tags: [ "web", "webserver", "http", "php", "cgi"]
 keywords: [ "web", "webserver", "http", "php", "cgi"]
 draft:  false
 aliases: ["/docs/frankenphp/install"]

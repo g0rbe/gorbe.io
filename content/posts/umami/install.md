@@ -1,7 +1,7 @@
 ---
 sidebar_label: Install
 title: Install umami on Linux
-categories: [ "analytics", "web-analytics", "statistics"]
+tags: [ "analytics", "web-analytics", "statistics"]
 description: How to install Umami on Debian Linux server with PostgreSQL.
 image: /assets/docs/umami/install/image-en.webp
 ---

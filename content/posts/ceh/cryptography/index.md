@@ -2,7 +2,7 @@
 title = "CEH v10: 20 Cryptography"
 date = 2020-02-01T00:00:00+01:00
 lastmod = 2020-02-01T00:00:00+01:00
-categories = ["ceh"]
+tags = ["ceh"]
 description = "Certified Ethical Hacker v10 Chapter 20: Cryptography"
 summary = "Certified Ethical Hacker v10 Chapter 20: Cryptography"
 keywords = "Certified Ethical Hacker,ethical hacker,ceh,cehv10"

@@ -3,7 +3,7 @@ title: "Nginx Caching Configurations"
 description: "How to configure content caching in Nginx"
 summary: "How to configure content caching in Nginx"
 date: 2024-08-21
-categories: ["nginx", "cache", "performance"]
+tags: ["nginx", "cache", "performance"]
 keywords: ["nginx", "cache", "performance"]
 draft:  false
 ---

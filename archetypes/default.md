@@ -3,7 +3,7 @@ title: {{ replace .Name "-" " " | title }}
 description:
 summary: 
 date: {{ .Date }}
-categories: []
+tags: []
 keywords: []
 # featureAlt:
 # draft:  true

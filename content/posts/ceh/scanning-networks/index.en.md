@@ -4,7 +4,7 @@ description: 'Certified Ethical Hacker v10 Chapter 03: Scanning Networks'
 summary: 'Certified Ethical Hacker v10 Chapter 03: Scanning Networks'
 date: 2020-02-01T00:00:00+01:00
 # lastmod: {{ .Date }}
-categories: ["ceh"]
+tags: ["ceh"]
 keywords: ["ceh"]
 draft:  false
 ---

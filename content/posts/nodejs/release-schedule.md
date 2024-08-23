@@ -1,6 +1,6 @@
 ---
 title: "Node.js Release Schedule"
-categories: ["Node.js"]
+tags: ["Node.js"]
 description: "Node.js Release Schedule"
 ---
 

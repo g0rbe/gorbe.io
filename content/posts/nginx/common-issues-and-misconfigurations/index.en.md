@@ -3,7 +3,7 @@ title: "Nginx Common Issues and Misconfigurations"
 description: "Common Nginx Issues and Misconfigurations and How to Fix Them"
 summary: "Common Nginx Issues and Misconfigurations and How to Fix Them"
 date: 2024-08-21
-categories: ["nginx", "misconfiguration", "webserver",  "security", "tls", "performance", "proxy", "log"]
+tags: ["nginx", "misconfiguration", "webserver",  "security", "tls", "performance", "proxy", "log"]
 keywords: ["nginx", "misconfiguration", "webserver",  "security", "tls", "performance", "proxy", "log"]
 draft:  false
 ---

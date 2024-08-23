@@ -1,6 +1,6 @@
 ---
 title: "Default Server Settings for Nginx"
-categories: ["nginx", "security", "hardening"]
+tags: ["nginx", "security", "hardening"]
 description: "How to configure a reasonably secure Default Server for Nginx"
 ---
 

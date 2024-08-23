@@ -1,6 +1,6 @@
 ---
 title: Setup a Remote Access VPN with WireGuard
-categories: ["wireguard", "vpn"]
+tags: ["wireguard", "vpn"]
 description: "Setup a Remote Access VPN with WireGuard and nftables on Debain 12"
 ---
 

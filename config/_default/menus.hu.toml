@@ -52,14 +52,10 @@ action = "locale"
 # the copyright notice. Configure as per the main menu above.
 
 [[footer]]
-name = "Kategóriák"
-pageRef = "categories"
+name = "Tags"
+pageRef = "tags"
 weight = 20
 [footer.params]
 icon = "tag"
 showName = true
 target = "_blank"
-# [[footer]]
-#   name = "Tags"
-#   pageRef = "tags"
-#   weight = 10

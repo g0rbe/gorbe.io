@@ -57,8 +57,8 @@ action = "locale"
 #   weight = 10
 
 [[footer]]
-name = "Categories"
-pageRef = "categories"
+name = "Tags"
+pageRef = "tags"
 weight = 20
 [footer.params]
 icon = "tag"

@@ -1,7 +1,7 @@
 +++
 title = "CEH v10: 13 Hacking Web Servers"
 date = 2020-02-01T00:00:00+01:00
-categories = ["ceh"]
+tags = ["ceh"]
 description = "Certified Ethical Hacker v10 Chapter 13: Hacking Web Servers"
 summary = "Certified Ethical Hacker v10 Chapter 13: Hacking Web Servers"
 keywords = "Certified Ethical Hacker,ethical hacker,ceh,cehv10"

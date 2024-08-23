@@ -1,7 +1,7 @@
 ---
 title: "Linux processes and threads"
 date: 2020-02-06T00:00:00
-categories: ["lfcs", "Linux"]
+tags: ["lfcs", "Linux"]
 description: "Short explanation about what process and thread mean in Linux."
 summary: "Short explanation about what process and thread mean in Linux."
 keywords: "linux,lfcs,process,thread"

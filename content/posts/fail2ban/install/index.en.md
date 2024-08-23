@@ -3,7 +3,7 @@ title: "Install and Configure Fail2Ban for SSH on Debian"
 description: "How to Install and Configure Fail2Ban for SSH on Debian"
 summary:  "How to Install and Configure Fail2Ban for SSH on Debian"
 date: 2023-11-15T10:57:40+01:00
-categories: ["fail2ban", "security","hardening" ]
+tags: ["fail2ban", "security","hardening" ]
 keywords: ["fail2ban", "security","hardening" ]
 draft:  false
 ---

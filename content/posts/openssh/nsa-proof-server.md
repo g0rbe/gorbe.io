@@ -1,7 +1,7 @@
 ---
 sidebar_label: NSA-Proof Server
 title: "Setup an NSA-Proof OpenSSH server"
-categories: [ "OpenSSH", "security", "hardening"]
+tags: [ "OpenSSH", "security", "hardening"]
 description: "How to configure an OpenSSH server to the highest security level."
 ---
 

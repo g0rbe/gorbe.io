@@ -3,7 +3,7 @@ title: 'Install Caddy on Linux'
 description: How to install Caddy on Debian Linux server.
 summary: How to install Caddy on Debian Linux server.
 date: 2024-08-15
-categories: [ "web", "webserver", "http", "caddy"]
+ [ "web", "webserver", "http", "caddy"]
 keywords: [ "web", "webserver", "http", "caddy"]
 draft:  false
 featureAlt: "cover-caddy-install-en"

@@ -8,7 +8,7 @@ description: >
     much CVE/CVSS data for this category, but detecting and responding to
     breaches is critical. Still, it can be very impactful for accountability, visibility,
     incident alerting, and forensics.
-categories: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["cybersecurity", 'vulnerability', 'offsec']
 ---
 
 ![Security Logging and Monitoring Failures](logging-and-monitoring-failures.png)  

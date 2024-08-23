@@ -3,7 +3,7 @@ title: Install Tor
 description: How to install Tor on Debian
 summary: How to install Tor on Debian
 date: 2024-08-22T03:42:59+02:00
-categories: ["tor", "security"]
+tags: ["tor", "security"]
 keywords: ["tor", "security"]
 draft:  true
 ---

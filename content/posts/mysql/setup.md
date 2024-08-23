@@ -1,6 +1,6 @@
 ---
 title: 'Setup a New Database and User in MySQL'
-categories: ["MySQL", "database"]
+tags: ["MySQL", "database"]
 description: 'How to Create a New Database and User in MySQL'
 ---
 

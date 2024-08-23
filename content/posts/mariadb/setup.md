@@ -1,6 +1,6 @@
 ---
 title: "Create a database in MariaDB"
-categories: ["mariadb", "mysql", "database"]
+tags: ["mariadb", "mysql", "database"]
 description: "Create a database in MariaDB."
 ---
 

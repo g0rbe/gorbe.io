@@ -1,7 +1,7 @@
 ---
 sidebar_label: Simple Stateful Firewall
 title: "Simple Stateful Firewall with nftables"
-categories: [ "security", "firewall"]
+tags: [ "security", "firewall"]
 description: "Configure a Simple Stateful Firewall with nftables."
 ---
 

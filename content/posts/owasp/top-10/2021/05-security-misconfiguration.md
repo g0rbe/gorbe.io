@@ -5,7 +5,7 @@ description: >
     tested for some form of misconfiguration, with an average incidence rate of 4.%,
     and over 208k occurrences of a Common Weakness Enumeration (CWE) in this risk category.
     With more shifts into highly configurable software, it's not surprising to see this category move up.
-categories: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["cybersecurity", 'vulnerability', 'offsec']
 ---
 
 ![Security Misconfiguration](security-misconfiguration.png)

@@ -1,7 +1,7 @@
 ---
 title: "PHP-FPM Configurations"
 date: 2020-07-14T00:00:00+01:00
-categories: ["linux", "php-fpm"]
+tags: ["linux", "php-fpm"]
 description: "Configuration examples for PHP FastCGI Process Manager (FPM)"
 ---
 
