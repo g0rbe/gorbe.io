@@ -151,5 +151,5 @@ systemctl enable --now uptime.service
 ```
 
 :::tip
-Dont forget the [default nginx configurations](https://www.gorbe.io/blog/nginx-basic-configurations/)
+Dont forget the [default nginx configurations](../../nginx/configurations/)
 :::
