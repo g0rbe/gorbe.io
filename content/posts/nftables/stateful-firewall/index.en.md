@@ -1,12 +1,19 @@
 ---
 title: "Simple Stateful Firewall with nftables"
-tags: [ "security", "firewall"]
 description: "Configure a Simple Stateful Firewall with nftables."
+summary: "Configure a Simple Stateful Firewall with nftables."
+tags: ["nftables", "security", "firewall"]
+keywords: ["nftables", "security", "firewall"]
 aliases: ["/docs/nftables/stateful-firewall"]
 ---
 
 The nftables is a subsystem of the Linux kernel providing filtering and classification of network packets/datagrams/frames.
 
+## TLDR
+
+```
+wget -O "/etc/nftables.conf" "https://gorbe.io/posts/nftables/stateful-firewall/nftables.conf"
+```
 
 Configure a simple firewall for a basic webserver.
 
