@@ -1,12 +1,16 @@
 ---
-sidebar_label: Unlock VM
 title: "Unlock VM on Proxmox"
-tags: ["Proxmox", "QEMU", "virtualization", "virtual-machine"]
 description: "How to Unlock a Locked VM on Proxmox"
+summary: "How to Unlock a Locked VM on Proxmox"
+date: 2024-01-31T03:33:09+01:00
+tags: ["Proxmox", "QEMU", "virtualization", "virtual-machine"]
+keywords: ["Proxmox", "QEMU", "virtualization", "virtual-machine"]
+# featureAlt:
+# draft:  true
 aliases: ["/docs/proxmox/unlock-vm"]
 ---
 
-
+Solve the `Error: VM is locked` error on Proxmox.
 
 ## Error
 
