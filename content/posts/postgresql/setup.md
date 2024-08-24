@@ -1,6 +1,7 @@
 ---
 title: 'Setup PostgreSQL'
-tags: ["sql", "database"]
+tags: ["PostgreSQL", "sql", "database"]
+keywords: ["PostgreSQL", "sql", "database"]
 description: 'How to setup PostgreSQL database'
 ---
 
