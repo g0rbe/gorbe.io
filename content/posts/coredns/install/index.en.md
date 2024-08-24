@@ -6,6 +6,7 @@ date: 2023-11-15T03:16:48+01:00
 tags: ["coredns", "dns", "domain", "linux", "selfhost"]
 keywords: ["coredns", "dns", "domain", "linux", "selfhost"]
 draft:  false
+aliases: ["/docs/coredns/install-from-binary"]
 ---
 
 ## Create user
