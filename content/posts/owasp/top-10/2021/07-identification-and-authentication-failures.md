@@ -8,6 +8,7 @@ description: >
     Certificate with Host Mismatch*, *CWE-287: Improper Authentication*, and
     *CWE-384: Session Fixation*.
 tags: ["cybersecurity", 'vulnerability', 'offsec']
+aliases: ["/docs/owasp/top-10/2021/identification-and-authentication-failures"]
 ---
 
 ![Identification and Authentication Failures](identification-and-authentication-failures.png)
