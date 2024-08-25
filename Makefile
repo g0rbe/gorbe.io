@@ -1,6 +1,6 @@
 build: clean
-	hugo --buildDrafts --minify --destination="public/gorbe.io"
-	hugo --buildDrafts --minify --baseURL="http://43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion" --destination="public/43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion"
+	hugo --buildDrafts --minify --printPathWarnings --destination="public/gorbe.io"
+	hugo --buildDrafts --minify --printPathWarnings --baseURL="http://43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion" --destination="public/43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion"
 
 deploy: build
 	rsync --archive --delete "public/43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion/" "gorbe.io:/var/www/43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion/"
