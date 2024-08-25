@@ -7,7 +7,7 @@ date: "2020-02-01"
 keywords: ["NodeJS"]
 # featureAlt:
 # draft:  true
-aliases: ['/docs/category/nodejs']
+aliases: ['docs/category/nodejs']
 ---
 
 Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.
