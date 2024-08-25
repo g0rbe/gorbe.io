@@ -7,6 +7,7 @@ tags: [ "web", "webserver", "HTTP", "caddy"]
 keywords: [ "web", "webserver", "HTTP", "caddy"]
 draft:  false
 featureAlt: "cover-caddy-install-en"
+aliases: ["docs/caddy/install"]
 ---
 
 ## Download binary
