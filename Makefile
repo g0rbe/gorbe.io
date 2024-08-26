@@ -27,3 +27,9 @@ swaggereditor: clean
 	cd ./tmp && /usr/bin/npm i swagger-editor-dist
 	/usr/bin/cp -r ./tmp/node_modules/swagger-editor-dist/* static/tools/swagger-editor/
 	# /usr/bin/patch ./static/swagger-editor/index.html swagger-editor.patch
+
+commitall:
+	git add .
+	git commit
+	git push
+	make deploy

@@ -4,6 +4,7 @@ description: "Hogyan hozzunk létre adatbázist MariaDB-ben."
 summary: "Hogyan hozzunk létre adatbázist MariaDB-ben."
 tags: ["MariaDB", "MySQL", "database"]
 keywords: ["MariaDB", "MySQL", "database"]
+aliases: ["/hu/docs/mariadb/setup"]
 ---
 
 ## Telepítés
