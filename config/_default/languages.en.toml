@@ -3,7 +3,7 @@ languageName = "English"
 languageDirection = "ltr"
 weight = 1
 
-title = "G⌬RBE"
+title = "Daniel Gorbe · G⌬RBE"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 [params]
@@ -16,7 +16,7 @@ images = ["cover.webp"]
 
 [params.hero]
 image = "img/hero.webp"
-title = "DANIEL G⌬RBE"
+title = "Daniel Gorbe"
 headline = "System Administrator, Ethical Hacker, Go Developer"
 
 [params.author]
