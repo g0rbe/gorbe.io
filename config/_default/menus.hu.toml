@@ -59,3 +59,12 @@ weight = 20
 icon = "tag"
 showName = true
 target = "_blank"
+
+[[footer]]
+name = "GitHub"
+url = "https://github.com/g0rbe/"
+weight = 21
+[footer.params]
+icon = "github"
+showName = true
+target = "_blank"
