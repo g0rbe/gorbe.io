@@ -36,6 +36,11 @@ pageRef = "tools"
 weight = 12
 
 [[main]]
+name = "Go"
+pageRef = "go"
+weight = 13
+
+[[main]]
 identifier = "search"
 weight = 99
 [main.params]
