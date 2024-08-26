@@ -1,18 +1,18 @@
 ---
-title: "Install Mautic using the Production Package"
-description: "How to Install Mautic 5 using the Production Package on Debian 12 with Apache, PHP-FPM and MariaDB"
-summary: "How to Install Mautic 5 using the Production Package on Debian 12 with Apache, PHP-FPM and MariaDB"
+title: "Mautic Telepítése a Production Package használatával"
+description: "A Mautic Telepítése a Production Package használatával Debian 12 rendszerre, Apache, PHP-FPM és MariaDB használatával."
+summary: "A Mautic Telepítése a Production Package használatával Debian 12 rendszerre, Apache, PHP-FPM és MariaDB használatával."
 date: 2024-03-19T03:18:31+01:00
 tags: ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
 keywords: ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
-aliases: ["/docs/mautic/install"]
+aliases: ["/hu/docs/mautic/install"]
 ---
 
-## Install repository for PHP 8.1
+## A PHP 8.1 Telepítése
 
-Mautic 5.0 requires PHP 8.0 or 8.1.
+A Mautic 5.0-hoz PHP 8.0 vagy 8.1 szükséges.
 
-Install [Sury's Debian repository](../../php/install.md):
+Telepítse [Sury Debian repository-ját](/posts/php/install/):
 
 ```bash
 sudo apt install -y lsb-release apt-transport-https ca-certificates curl && \
@@ -21,43 +21,43 @@ echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee "/e
 sudo apt update
 ```
 
-## Install required packages
+## Telepítse a szükséges csomagokat
 
-Install the dependencies:
+Telepítse a függőségeket:
 
 ```bash
 apt install apache2 mariadb-server php8.1 php8.1-{fpm,xml,mysql,imap,zip,intl,curl,gd,mbstring,bcmath} unzip
 ```
 
-## Configure MariaDB
+## A MariaDB konfigurálása
 
 ```bash
 mysql_secure_installation
 ```
 
-Create the DB and the user:
+Hozza létre a DB-t és a felhasználót:
 
-Generate a random password for the database and store it in an environment variable:
+Hozzon létre egy véletlenszerű jelszót az adatbázishoz, és tárolja azt egy környezeti változóban:
 
 ```bash
 MYSQL_PASSWD=$(echo $RANDOM | md5sum | head -c 20)
 ```
 
-To print the database password:
+Az adatbázis jelszavának kiírása:
 
 ```bash
 echo $MYSQL_PASSWD
 ```
 
-Create the database and the user:
+Hozza létre az adatbázist és a felhasználót:
 
 ```bash
 mysql --execute="CREATE DATABASE mautic; GRANT ALL PRIVILEGES ON mautic.* TO 'mautic'@'localhost' IDENTIFIED BY '${MYSQL_PASSWD}' WITH GRANT OPTION; FLUSH PRIVILEGES;"
 ```
 
-## Configure PHP-FPM
+## A PHP-FPM konfigurálása
 
-Configure the recommended settings for PHP-FPM:
+Állítsa be a PHP-FPM ajánlott beállításait:
 
 ```bash
 nano +c/date.timezone /etc/php/8.1/fpm/php.ini
@@ -68,7 +68,7 @@ date.timezone = Europe/Budapest
 ```
 
 :::warning
-Modify the values below to your needs!
+Módosítsa az alábbi értékeket igényei szerint!
 :::
 
 ```bash
@@ -78,7 +78,7 @@ sed -i 's/max_execution_time = 30/max_execution_time = 600/' /etc/php/8.1/fpm/ph
 sed -i 's/post_max_size = 8M/post_max_size = 64M/' /etc/php/8.1/fpm/php.ini
 ```
 
-Restart the PHP-FPM service to apply the settings:
+Indítsa újra a PHP-FPM szolgáltatást a beállítások alkalmazásához:
 
 ```bash
 systemctl restart php8.1-fpm.service
@@ -86,7 +86,7 @@ systemctl restart php8.1-fpm.service
 
 ## Apache
 
-Create the site config:
+Hozd létre a webhely konfigurációját:
 
 ```bash
 nano /etc/apache2/sites-available/mautic.conf
@@ -116,58 +116,57 @@ nano /etc/apache2/sites-available/mautic.conf
 </VirtualHost>
 ```
 
-Disable `mpm_prefork`:
+Az `mpm_prefork` letiltása:
 
 ```bash
 sudo a2dismod mpm_prefork
 ```
 
-Enable the required Apache modules:
+Engedélyezze a szükséges Apache modulokat:
 
 ```bash
 a2enmod rewrite mpm_event proxy_fcgi setenvif
 ```
 
-Enable PHP-FPM for Apache:
+PHP-FPM engedélyezése Apache számára:
 
 ```bash
 a2enconf php8.1-fpm
 ```
 
-Enable the site:
+A webhely engedélyezése:
 
 ```bash
 a2ensite mautic.conf
 ```
 
-Apply settings for Apache:
+Beállítások alkalmazása Apache-hoz:
 
 ```bash
 systemctl restart apache2
 ```
 
+## Telepítse a Mautic-ot
 
-## Install Mautic
-
-Download the [latest archive](https://github.com/mautic/mautic/releases/latest):
+Töltse le a [legfrissebb archívumot](https://github.com/mautic/mautic/releases/latest):
 
 ```bash
 wget https://github.com/mautic/mautic/releases/download/5.0.4/5.0.4.zip
 ```
 
-Create the directory for Mautic:
+Hozza létre a Mautic könyvtárát:
 
 ```bash
 mkdir /var/www/mautic
 ```
 
-Extract the zip archive:
+A zip-archívum kibontása:
 
 ```bash
 unzip -d /var/www/mautic/ 5.0.4.zip
 ```
 
-Change the owner of the files:
+Módosítsa a fájlok tulajdonosát:
 
 ```bash
 chown -R www-data:www-data /var/www/mautic

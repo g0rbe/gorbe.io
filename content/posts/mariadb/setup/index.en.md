@@ -1,7 +1,9 @@
 ---
 title: "Create a database in MariaDB"
-tags: ["mariadb", "mysql", "database"]
-description: "Create a database in MariaDB."
+description: "How to create a database in MariaDB."
+summary: "How to create a database in MariaDB."
+tags: ["MariaDB", "MySQL", "database"]
+keywords: ["MariaDB", "MySQL", "database"]
 ---
 
 ## Install
