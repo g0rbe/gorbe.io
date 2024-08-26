@@ -1,6 +1,7 @@
 ---
 title: Configure MongoDB Community Edition
-tags: [ "db", "nosql"]
+tags: [ "DB", "NoSQL"]
+keywords: [ "DB", "NoSQL"]
 description: How to configure MongoDB Community Edition.
 #image: /assets/docs/caddy/install/image-en.webp
 ---

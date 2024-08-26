@@ -10,7 +10,7 @@ image: /assets/docs/umami/install/image-en.webp
 
 ## Requirements
 
-- [Node.js](../nodejs/install.mdx) version 18.17 or newer
+- [Node.js](../nodejs/install.md) version 18.17 or newer
 - MySQL version 8.0 or newer **OR** [PostgreSQL](../postgresql/setup.md) version v12.14 or newer 
 
 :::warning

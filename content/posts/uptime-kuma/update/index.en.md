@@ -1,7 +1,9 @@
 ---
 title: "Update Uptime Kuma from Source"
 description: "Update Uptime Kuma from Source with Nginx on Debian 12"
+date: 2024-01-30T17:46:33+01:00
 tags: ["monitor", "monitoring", "selfhosted", "self-hosted", "uptime", "uptime-monitoring", "Uptime Kuma"]
+keywords: ["monitor", "monitoring", "selfhosted", "self-hosted", "uptime", "uptime-monitoring", "Uptime Kuma"]
 aliases: ["/docs/uptime-kuma/update-from-source"]
 ---
 

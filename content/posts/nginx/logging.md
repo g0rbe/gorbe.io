@@ -1,8 +1,10 @@
 ---
-sidebar_label: Logging
 title: "Nginx Logging Configurations"
-tags: ["nginx", "log"]
 description: "Nginx Logging Configurations"
+summary: "Nginx Logging Configurations"
+date: 2024-01-31T01:49:32+01:00
+tags: ["nginx", "log"]
+keywords: ["nginx", "log"]
 ---
 
 ## Format

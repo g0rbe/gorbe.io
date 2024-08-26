@@ -2,6 +2,7 @@
 title: Install Matomo with FrankenPHP and MariaDB on Debian Linux
 tags: [ "analytics"]
 description: How to install Matomo On-Premise with FrankenPHP and MariaDB on Debian Linux.
+date: 2023-11-17T01:15:02+01:00
 ---
 
 ## Requirements
@@ -60,7 +61,7 @@ tar -xf matomo-latest.tar.gz -C /var/www "matomo/"
 
 ## MariaDB
 
-Setup [MariaDB](/docs/mariadb/setup):
+Setup [MariaDB](../mariadb/setup.md):
 
 ```bash
 mysql_secure_installation
@@ -74,7 +75,7 @@ Create the database and the user:
 
 ## FrankenPHP
 
-Install [FrankenPHP](/docs/frankenphp/install.mdx):
+Install [FrankenPHP](../frankenphp/install/index.en.md):
 
 ```bash
 wget -q -O- 'https://gorbe.io/assets/docs/frankenphp/install/frankenphp-install.sh' | bash -x -
@@ -86,7 +87,7 @@ Change the owner and the group of the PHP files:
 chown -R frankenphp:frankenphp /var/www/matomo/
 ```
 
-Configure the [Caddyfile](/docs/frankenphp/configure.mdx#matomo) :
+Configure the [Caddyfile](../frankenphp/configure/index.en.md#matomo) :
 
 ```bash
 nano /etc/frankenphp/Caddyfile

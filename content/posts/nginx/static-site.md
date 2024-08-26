@@ -1,8 +1,10 @@
 ---
-sidebar_label: Static Site
 title: "Setup Nginx to host a Static Site"
-tags: ["nginx"]
 description: "A reasonably secure Nginx config for static site hosting with TLS using Let's Encrypt certificate."
+summary: "A reasonably secure Nginx config for static site hosting with TLS using Let's Encrypt certificate."
+date: 2024-03-04T10:42:24+01:00
+tags: ["nginx"]
+keywords: ["nginx"]
 ---
 
 

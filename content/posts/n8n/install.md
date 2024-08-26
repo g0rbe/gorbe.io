@@ -7,7 +7,7 @@ description: "Install n8n on Debian Linux."
 
 ## Requirements
 
-Install [Node.js 18 or above](../nodejs/install.mdx).
+Install [Node.js 18 or above](../nodejs/install.md).
 
 ## Create user nad group
 

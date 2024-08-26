@@ -3,8 +3,8 @@ title: "Install CoreDNS from Binary on Debian 12"
 description: "Install CoreDNS from Binary on Debian 12 server."
 summary: "Install CoreDNS from Binary on Debian 12 server."
 date: 2023-11-15T03:16:48+01:00
-tags: ["coredns", "dns", "domain", "linux", "selfhost"]
-keywords: ["coredns", "dns", "domain", "linux", "selfhost"]
+tags: ["CoreDNS", "DNS", "domain", "linux", "selfhost"]
+keywords: ["CoreDNS", "DNS", "domain", "linux", "selfhost"]
 draft:  false
 aliases: ["/docs/coredns/install-from-binary"]
 ---
