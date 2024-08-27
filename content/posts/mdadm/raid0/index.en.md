@@ -1,7 +1,11 @@
 ---
 title: "Create RAID0 with mdadm"
-tags: ["linux", "raid"]
 description: "Create and manage RAID0 with mdadm on Linux."
+summary: "Create and manage RAID0 with mdadm on Linux."
+date: 2023-11-15T03:32:28+01:00
+tags: ["linux", "raid", "mdadm"]
+keywords: ["linux", "raid", "mdadm"]
+aliases: ["/docs/mdadm/raid0"]
 ---
 
 RAID (***R***edundant ***A***rray of ***I***nexpensive ***D***isks) is a data storage virtualization technology that combines multiple physical disk drive components into one or more logical units for the purposes of data redundancy, performance improvement, or both.

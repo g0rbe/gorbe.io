@@ -1,8 +1,9 @@
 ---
-sidebar_label: Install
 title: "Install n8n"
-tags: ["automation", "npm", "selfhost", "homelab"]
 description: "Install n8n on Debian Linux."
+tags: ["automation", "npm", "selfhost", "homelab"]
+keywords: ["automation", "npm", "selfhost", "homelab"]
+aliases: ["/docs/n8n/install"]
 ---
 
 ## Requirements

@@ -7,7 +7,7 @@ tags: ["VPN", "security", "WireGuard"]
 keywords: ["VPN", "security", "WireGuard"]
 # featureAlt:
 # draft:  true
-# aliases: ['/']
+aliases: ["/docs/wireguard/whitepaper/"]
 ---
 
 

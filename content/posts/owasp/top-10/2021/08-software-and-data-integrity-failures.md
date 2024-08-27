@@ -6,6 +6,7 @@ description: >
     integrity. One of the highest weighted impacts from 
     Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS) data.
 tags: ["cybersecurity", 'vulnerability', 'offsec']
+aliases: ["/docs/owasp/top-10/2021/software-and-data-integrity-failures"]
 ---
 
 ![Software and Data Integrity Failures](software-and-data-integrity-failures.png)
