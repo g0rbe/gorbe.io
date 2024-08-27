@@ -1,8 +1,9 @@
 ---
-sidebar_label: Service Unit
-title: "Service Unit Configuration"
+title: "Systemd Service Unit Configuration"
+description: "How to configure a systemd service unit on Debian"
+summary: "How to configure a systemd service unit on Debian"
 tags: ["linux", "service", "daemon", "systemd"]
-description: "Service Unit Configuration"
+keywords: ["linux", "service", "daemon", "systemd"]
 ---
 
 ## TL;DR
@@ -11,7 +12,7 @@ description: "Service Unit Configuration"
 nano /etc/systemd/system/<name>.service
 ```
 
-```systemd
+```toml
 [Unit]
 Description=
 After=
