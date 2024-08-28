@@ -5,7 +5,7 @@ summary: "FrankenPHP: Modern App Server for PHP"
 date: "2024-02-01"
 # tags: []
 keywords: ["FrankenPHP"]
-# featureAlt:
+featureAlt: FrankenPHP Logo
 # draft:  true
 aliases: ['/docs/category/frankenphp']
 ---
