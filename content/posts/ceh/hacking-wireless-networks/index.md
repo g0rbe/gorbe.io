@@ -63,7 +63,7 @@ Wi-Fi is a local area networking technology based on the IEEE 802.11 standard.
 - The Open System Authentication Request (authentication frame) is to set authentication open, 
 the sequence number is set to 0x0001
 - The Open System Request Response's sequence number is 0x0002
-- The Association Request contains the security parameters (choosen encryption, ...)
+- The Association Request contains the security parameters (chosen encryption, ...)
 - The Association Response complete the associations process
 
 ##### Shared Key Authentication

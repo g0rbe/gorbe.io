@@ -53,7 +53,7 @@ keywords: "linux,lfcs,process,thread"
     - **with** *systemd*: the PPID will set to 2, **kthreadd** will be the parent
 - [**zombie process**][1]: the parent process is not programmed properly to handle the die of the child process, all resources are released, just the child are stick around in memory
 - *init* process is kills gracefully every adopted zombie processes
-- processes are controlled by **Linux Process Scheduler**, a component of the kernel which decides which proccess to run next
+- processes are controlled by **Linux Process Scheduler**, a component of the kernel which decides which process to run next
 - the maximum number of PIDs can be viewed or modified in `/proc/sys/kernel/pid_max`
 - when the PID number reaches the maximum, the kernel starts to assign from the released PIDs from 300
 - **context**: information about the process (eg.: state of the CPU, environment, content of the memory, etc...)

@@ -41,7 +41,7 @@ sudo nano /etc/ssh/sshd_config
 ### `Port`
 
 The default port that SSH binds to is 22. Somebody change it to protect himself against bots created by script kiddies (better bots finds the port number anyway).
-Im not going to change it, i leave the protection from bots to fail2ban. To change it, modify 22 to any arbitary number, eg. `Port 2222`. I use the default Port 22.
+Im not going to change it, i leave the protection from bots to fail2ban. To change it, modify 22 to any arbitrary number, eg. `Port 2222`. I use the default Port 22.
 
 ```
 Port 22
@@ -158,7 +158,7 @@ AuthorizedKeysFile     .ssh/authorized_keys
 ### `HostbasedAuthentication`
 
 Enables the remote host to authenticate with his HostKey's public key.
-It is usefull for automated stuffs.
+It is useful for automated stuffs.
 Do you need it? Its up to you.
 
 ```
@@ -245,7 +245,7 @@ AllowTcpForwarding no
 
 ### `GatewayPorts`
 
-If you forward a port from remote host to the client, requests only allowed for the server's loopback only by default, so third party cant make a request to the client.
+If you forward a port from remote host to the client, requests only allowed for the server's loopback only by default, so third party can't make a request to the client.
 With this option, you can enable it.
 
 ```
@@ -270,7 +270,7 @@ X11Forwarding no
 
 **M**essage **o**f **t**he **d**ay can be fun and useful if you create one. Ubuntu has a package (`update-motd`) to generate dynamic messages.
 Thats it.
-This is shown **after** successfull authentication. The banner before authentication is `Banner` below.
+This is shown **after** successful authentication. The banner before authentication is `Banner` below.
 
 ```
 PrintMotd no
@@ -292,7 +292,7 @@ PrintLastLog yes
 
 ### `TCPKeepAlive`
 
-Send TCP keep alive to the other side of the connection. It is usefull to properly handle the crash of the other side (eg. network problems, system crash) and kill connection to avoid "ghost" users.
+Send TCP keep alive to the other side of the connection. It is useful to properly handle the crash of the other side (eg. network problems, system crash) and kill connection to avoid "ghost" users.
 
 ```
 TCPKeepAlive yes
@@ -454,7 +454,7 @@ The order of parsing this rules are this, started from the top:
 
 ### `DenyUsers`
 
-This creates a blacklist of users that cant log in.
+This creates a blacklist of users that can't log in.
 Any other users that not on the list can log in.
 The list of users is a space separated list.
 
@@ -482,7 +482,7 @@ AllowGroups ssh-login
 
 ### `DenyGroups`
 
-The groups specified in this option cant login. This is the opposite of AllowGroups.
+The groups specified in this option can't login. This is the opposite of AllowGroups.
 
 
 ## Crypto
@@ -505,7 +505,7 @@ KexAlgorithms diffie-hellman-group18-sha512,diffie-hellman-group16-sha512
 
 Host key is used to authenticate the server to the client. It should be unique to prevent network based attack (eg. mitm).
 
-Stribika suggests not to use DSA/ECDSA because it is depends on random numbers and DSA's key lenght is only 1024 bits. He is right, so i disable it.
+Stribika suggests not to use DSA/ECDSA because it is depends on random numbers and DSA's key length is only 1024 bits. He is right, so i disable it.
 
 The final config looks like this:
 
@@ -566,7 +566,7 @@ MACs hmac-sha2-512-etm@openssh.com
 ### `RekeyLimit`
 
 Changing the session key over time to mitigate crypt analysis attacks.
-One method to attack cryptography is to collect a huge ammount of data to analyse and restore the key.
+One method to attack cryptography is to collect a huge amount of data to analyse and restore the key.
 
 Changing key too often not suggested.
 

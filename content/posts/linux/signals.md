@@ -16,7 +16,7 @@ keywords: "linux,lfcs,signal"
 - signals are sent from the kernel or from a user process via system call with `kill`
 - user can send signal to his own processes 
 - root can send signal to any process
-- signals can be handled differently by the programmer or resbond acording to the system defaults
+- signals can be handled differently by the programmer or resbond according to the system defaults
 - two signal always use the system default: **SIGKILL** and **SIGSTOP**
 - signal has a type and the type is indicate the meaning of the signal
 - signals handle:

@@ -14,10 +14,10 @@ Commands needed for Linux Foundation Certified Sysadmin.
 ### `ulimit`
 - [man page](https://ss64.com/bash/ulimit.html)
 - get/set the resource limits of processes
-- **restrict**: processes cant exhaust the system's resource
+- **restrict**: processes can't exhaust the system's resource
 - **expand**: set enough resource to run a propgram properly
 - **hard limit**: the possible maximum of resource, set by root
-- **soft limit**: the possible maximum of resource for user, cant exceed hard limit
+- **soft limit**: the possible maximum of resource for user, can't exceed hard limit
 - users and `root` has different limits
 - the settings are valid for the current shell, to modify persistent, write to `/etc/security/limits.conf`
 - get all limit: `ulimit -a`
@@ -61,7 +61,7 @@ Commands needed for Linux Foundation Certified Sysadmin.
 
 - [man page](http://man7.org/linux/man-pages/man1/ipcs.1.html)
 - get informations about IPC facilities
-- to list facilites with PID: `ipcs -p`
+- to list facilities with PID: `ipcs -p`
 
 ## Signals
 
@@ -70,7 +70,7 @@ Commands needed for Linux Foundation Certified Sysadmin.
 - [man page](http://linuxcommand.org/lc3_man_pages/kill1.html)
 - send a signal to a process
 - list signals: `kill -l`
-- **SIGTERM is the default signal**, if the number ommited
+- **SIGTERM is the default signal**, if the number omitted
 - **only accept PID**!
 - kill process using number: `kill -n 9 2000` or `kill -9 2000`
 - kill process using name: `kill -s SIGKILL 2000` or `kill -SIGKILL 2000`

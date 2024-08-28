@@ -1347,7 +1347,7 @@ RDATA           a variable length string of octets that describes the
 In order to reduce the size of messages, the domain system utilizes a
 compression scheme which eliminates the repetition of domain names in a
 message.  In this scheme, an entire domain name or a list of labels at
-the end of a domain name is replaced with a pointer to a prior occurence
+the end of a domain name is replaced with a pointer to a prior occurrence
 of the same name.
 
 The pointer takes the form of a two octet sequence:
@@ -1372,7 +1372,7 @@ represented as either:
 - a pointer
 - a sequence of labels ending with a pointer
 
-Pointers can only be used for occurences of a domain name where the
+Pointers can only be used for occurrences of a domain name where the
 format is not class specific.  If this were not the case, a name server
 or resolver would be required to know the format of all RRs it handled.
 As yet, there are no such cases, but they may occur in future RDATA

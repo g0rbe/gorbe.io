@@ -195,7 +195,7 @@ flowchart LR
 
 ### `/usr`
 
-- /**us**e**r** or todays: /**U**ser **S**ystem **R**esources
+- /**us**e**r** or today's: /**U**ser **S**ystem **R**esources
 - multi-user (*user-land*) applications, utilities and datas stored here are not needed to boot the system
 - contains a secondary hierarchy (`/usr/bin`, `/usr/lib`, etc...)
 - typically a read-only directory
