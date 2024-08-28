@@ -7,6 +7,7 @@ date: 2024-04-19
 tags: ["ssl", "tls", "encryption", "security"]
 keywords: ["ssl", "tls", "encryption", "security"]
 draft:  false
+aliases: ["/docs/certbot/certificate"]
 ---
 
 ## Nginx

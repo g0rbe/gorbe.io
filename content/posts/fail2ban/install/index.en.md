@@ -6,6 +6,7 @@ date: 2023-11-15T10:57:40+01:00
 tags: ["fail2ban", "security","hardening" ]
 keywords: ["fail2ban", "security","hardening" ]
 draft:  false
+aliases: ["/docs/fail2ban/install"]
 ---
 
 Fail2Ban is a vital security tool for Linux servers, particularly useful in protecting SSH services against brute-force attacks. It monitors service logs for malicious activity and bans offending IPs for a specified duration.

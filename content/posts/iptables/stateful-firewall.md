@@ -5,6 +5,7 @@ summary: "How to configure a simple Stateful Firewall with iptables."
 date: 2023-11-15T03:21:23+01:00
 tags: ["iptables", "firewall", "security"]
 keywords: ["iptables", "firewall", "security"]
+aliases: ["/docs/iptables/stateful-firewall"]
 ---
 
 ::::info

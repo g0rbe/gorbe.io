@@ -2,6 +2,8 @@
 title: 'Install MySQL Community Server on Linux Server'
 tags: ["MySQL"]
 description: 'How to Install MySQL Community Server on Linux Server.'
+
+aliases: ["/docs/mysql/install"]
 ---
 
 import Tabs from '@theme/Tabs';

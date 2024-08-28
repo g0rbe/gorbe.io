@@ -6,7 +6,7 @@ date: 2023-11-15T03:16:48+01:00
 tags: ["CoreDNS", "DNS", "domain", "linux", "selfhost"]
 keywords: ["CoreDNS", "DNS", "domain", "linux", "selfhost"]
 draft:  false
-aliases: ["/docs/coredns/install-from-binary"]
+aliases: ["/docs/coredns/install-from-binary", "/blog/how-to-install-coredns-binary-on-debian-12/"]
 ---
 
 ## Create user

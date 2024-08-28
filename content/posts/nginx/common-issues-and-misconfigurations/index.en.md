@@ -6,7 +6,7 @@ date: 2024-08-21
 tags: ["nginx", "misconfiguration", "webserver",  "security", "tls", "performance", "proxy", "log"]
 keywords: ["nginx", "misconfiguration", "webserver",  "security", "tls", "performance", "proxy", "log"]
 draft:  false
-aliases: ["docs/nginx/common-issues-and-misconfigurations"]
+aliases: ["/docs/nginx/common-issues-and-misconfigurations"]
 ---
 
 Nginx is a popular web server known for its performance, stability, and rich feature set.
