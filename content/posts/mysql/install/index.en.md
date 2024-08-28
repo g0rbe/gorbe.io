@@ -10,7 +10,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 :::note
-MySQL was replaced by [Mariadb](../mariadb/setup.md) in Debian 9 (Stretch).
+MySQL was replaced by [Mariadb](../../mariadb/setup/index.en.md) in Debian 9 (Stretch).
 :::
 
 ## Repository Setup
@@ -41,7 +41,7 @@ apt install ./mysql-apt-config_0.8.29-1_all.deb
 
 ## Configure Repository
 
-![MySQL Configure](/assets/docs/mysql/install/configure.webp)
+![MySQL Configure](configure.webp)
 
 ## Install
 
