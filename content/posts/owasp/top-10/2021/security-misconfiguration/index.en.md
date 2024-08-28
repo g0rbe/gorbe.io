@@ -5,7 +5,8 @@ description: >
     tested for some form of misconfiguration, with an average incidence rate of 4.%,
     and over 208k occurrences of a Common Weakness Enumeration (CWE) in this risk category.
     With more shifts into highly configurable software, it's not surprising to see this category move up.
-tags: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
+keywords: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 ---
 
 ![Security Misconfiguration](security-misconfiguration.png)
@@ -50,7 +51,7 @@ The application might be vulnerable if the application is:
 -   The server does not send security headers or directives, or they are
     not set to secure values.
 
--   The software is out of date or vulnerable see [A06:2021-Vulnerable and Outdated Components](06-vulnerable-and-outdated-components.md).
+-   The software is out of date or vulnerable see [A06:2021-Vulnerable and Outdated Components](../vulnerable-and-outdated-components/).
 
 Without a concerted, repeatable application security configuration
 process, systems are at a higher risk.
@@ -72,7 +73,7 @@ Secure installation processes should be implemented, including:
 
 -   A task to review and update the configurations appropriate to all
     security notes, updates, and patches as part of the patch management
-    process (see [A06:2021-Vulnerable and Outdated Components](06-vulnerable-and-outdated-components.md)). Review
+    process (see [A06:2021-Vulnerable and Outdated Components](../vulnerable-and-outdated-components/)). Review
     cloud storage permissions (e.g., S3 bucket permissions).
 
 -   A segmented application architecture provides effective and secure

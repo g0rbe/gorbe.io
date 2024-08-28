@@ -6,7 +6,8 @@ description: >
     at length for inclusion, but in the end, they didn’t make it. No matter
     how we tried to interpret or twist the data, the other risks were more
     prevalent and impactful.
-tags: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
+keywords: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 ---
 
 By design, the OWASP Top 10 is innately limited to the ten most

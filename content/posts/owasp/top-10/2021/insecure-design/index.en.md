@@ -1,7 +1,8 @@
 ---
 title: A04:2021 – Insecure Design  
 description: Insecure design is a broad category representing different weaknesses, expressed as “missing or ineffective control design”
-tags: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
+keywords: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 ---
 
 ![Insecure Design](insecure-design.png)

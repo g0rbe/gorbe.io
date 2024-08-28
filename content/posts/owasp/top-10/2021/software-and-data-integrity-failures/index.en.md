@@ -5,7 +5,8 @@ description: >
     software updates, critical data, and CI/CD pipelines without verifying
     integrity. One of the highest weighted impacts from 
     Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS) data.
-tags: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
+keywords: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 aliases: ["/docs/owasp/top-10/2021/software-and-data-integrity-failures"]
 ---
 

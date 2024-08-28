@@ -8,7 +8,8 @@ description: >
     for attention and
     awareness, the hope is that they are subject to focus and can be rolled
     into a larger category in a future edition.
-tags: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
+keywords: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 ---
 
 ![Server-Side Request Forgery](server-side-request-forgery.png)
@@ -59,7 +60,7 @@ defense in depth controls:
 
     ~ Establish an ownership and a lifecycle for firewall rules based on applications.<br/>
     ~ Log all accepted *and* blocked network flows on firewalls
-    (see [A09:2021-Security Logging and Monitoring Failures](09-security-logging-and-monitoring-failures.md)).
+    (see [A09:2021-Security Logging and Monitoring Failures](../security-logging-and-monitoring-failures/)).
     
 ### **From Application layer:**
 

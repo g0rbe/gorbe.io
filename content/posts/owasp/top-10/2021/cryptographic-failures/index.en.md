@@ -1,7 +1,8 @@
 ---
 title: A02:2021 – Cryptographic Failures
 description: The first thing is to determine the protection needs of data in transit and at rest
-tags: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
+keywords: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 ---
 
 ![Cryptographic Failures](cryptographic-failures.png)

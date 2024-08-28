@@ -13,7 +13,7 @@ keywords: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 aliases: ["/docs/owasp/top-10/2021/security-logging-and-monitoring-failures"]
 ---
 
-![Security Logging and Monitoring Failures](logging-and-monitoring-failures.png)  
+![Security Logging and Monitoring Failures](./logging-and-monitoring-failures.png)  
 
 ## Factors
 

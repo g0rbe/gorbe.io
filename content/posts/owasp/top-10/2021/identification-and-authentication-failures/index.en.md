@@ -7,7 +7,8 @@ description: >
     failures. Notable CWEs included are *CWE-297: Improper Validation of
     Certificate with Host Mismatch*, *CWE-287: Improper Authentication*, and
     *CWE-384: Session Fixation*.
-tags: ["cybersecurity", 'vulnerability', 'offsec']
+tags: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
+keywords: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 aliases: ["/docs/owasp/top-10/2021/identification-and-authentication-failures"]
 ---
 
@@ -47,7 +48,7 @@ attacks. There may be authentication weaknesses if the application:
     safe.
 
 -   Uses plain text, encrypted, or weakly hashed passwords data stores (see
-    [A02:2021-Cryptographic Failures](02-cryptographic-failures.md)).
+    [A02:2021-Cryptographic Failures](../cryptographic-failures/)).
 
 -   Has missing or ineffective multi-factor authentication.
 
