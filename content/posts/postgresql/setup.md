@@ -1,8 +1,10 @@
 ---
 title: 'Setup PostgreSQL'
-tags: ["PostgreSQL", "sql", "database"]
-keywords: ["PostgreSQL", "sql", "database"]
-description: 'How to setup PostgreSQL database'
+description: 'How to setup PostgreSQL and create a database'
+summary: 'How to setup PostgreSQL and create a database'
+date: 2024-04-24
+tags: ["PostgreSQL", "SQL", "database"]
+keywords: ["PostgreSQL", "SQL", "database"]
 ---
 
 ## Connect
