@@ -7,7 +7,7 @@ deploy: build
 	rsync --archive --delete "public/gorbe.io/" "gorbe.io:/var/www/gorbe.io/"
 
 run:
-	hugo server --buildDrafts --enableGitInfo
+	hugo server --buildDrafts --enableGitInfo --printPathWarnings --disableFastRender
 
 clean:
 	rm -rf ./public/
