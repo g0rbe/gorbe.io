@@ -1,11 +1,12 @@
-+++
-title = "CEH v10: 17 Hacking Mobile Platforms"
-date = 2020-02-01T00:00:00+01:00
-tags = ["CEH"]
-description = "Certified Ethical Hacker v10 Chapter 17: Hacking Mobile Platforms."
-summary = "Certified Ethical Hacker v10 Chapter 17: Hacking Mobile Platforms."
-keywords = "Certified Ethical Hacker,ethical hacker,ceh,cehv10"
-+++
+---
+title: "CEH v10: 17 Hacking Mobile Platforms"
+date: 2020-02-01T00:00:00+01:00
+tags: ["CEH"]
+description: "Certified Ethical Hacker v10 Chapter 17: Hacking Mobile Platforms."
+summary: "Certified Ethical Hacker v10 Chapter 17: Hacking Mobile Platforms."
+keywords: "Certified Ethical Hacker,ethical hacker,ceh,cehv10"
+aliases: ["/docs/ceh/hacking-mobile-platforms/"]
+---
 
 Mobile Platform Attack Vectors
 

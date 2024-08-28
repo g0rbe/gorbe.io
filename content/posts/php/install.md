@@ -5,6 +5,7 @@ description: "Installing PHP on Debian: A Comprehensive Guide"
 aliases: ["docs/php/install"]
 tags: [ "PHP"]
 keywords: [ "PHP"]
+aliases: ["/docs/php/install"]
 ---
 
 PHP is a crucial component for web development, and having the latest version ensures access to the newest features and security updates. Debian 12, known for its stability and reliability, is a popular choice for hosting PHP-based applications. This post guides you through installing the latest PHP version on Debian 12.
