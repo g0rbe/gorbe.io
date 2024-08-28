@@ -3,8 +3,8 @@ title: Configure FrankenPHP
 description: How to configure FrankenPHP.
 summary: How to configure FrankenPHP.
 date: 2024-08-21
-tags: [ "web", "webserver", "HTTP", "php", "CGI"]
-keywords: [ "web", "webserver", "HTTP", "php", "CGI"]
+tags: [ "FrankenPHP", "web", "webserver", "HTTP", "php", "CGI"]
+keywords: [ "FrankenPHP", "web", "webserver", "HTTP", "php", "CGI"]
 draft:  false
 aliases: ["/docs/frankenphp/configure"]
 ---
