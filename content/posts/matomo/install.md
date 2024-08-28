@@ -61,7 +61,7 @@ tar -xf matomo-latest.tar.gz -C /var/www "matomo/"
 
 ## MariaDB
 
-Setup [MariaDB](../mariadb/setup.md):
+Setup [MariaDB](../mariadb/setup/index.en.md):
 
 ```bash
 mysql_secure_installation
