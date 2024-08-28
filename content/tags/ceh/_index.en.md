@@ -5,7 +5,7 @@ summary: Study material for Certified Ethical Hacker v10 exam.
 date: "2020-02-01"
 # tags: []
 keywords: ["CEH", "CEHv10"]
-# featureAlt:
+featureAlt: Certified Ethical Hacker Logo
 # draft:  true
 aliases: ['/docs/category/ceh', "/categories/ceh/"]
 ---
