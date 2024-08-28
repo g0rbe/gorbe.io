@@ -10,7 +10,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 {{< alert "circle-info" >}}
-MySQL was replaced by [Mariadb](../../mariadb/setup/index.en.md) in Debian 9 (Stretch).
+MySQL was replaced by [Mariadb](../../mariadb/setup/) in Debian 9 (Stretch).
 {{< /alert >}}
 
 ## Repository Setup
