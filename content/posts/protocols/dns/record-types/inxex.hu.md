@@ -18,9 +18,9 @@ aliases: ["/hu/docs/protocols/dns/record-types"]
 www.gorbe.io    A    128.140.77.237
 ```
 
-:::info
+{{< alert "circle-info" >}}
 A `@` szimbólum a gyökértartományt jelöli (pl.: `gorbe.io`).
-:::
+{{< /alert >}}
 
 ## `AAAA` Rekord
 

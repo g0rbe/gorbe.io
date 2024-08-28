@@ -653,9 +653,7 @@ If the window was closed, then the handler should set the
 pressed.
 
 
-:::note
-
+{{< alert "circle-info" >}}
 This wall of text is a Markdown formatted copy of the
 [original documentation](https://git.gnupg.org/cgi-bin/gitweb.cgi?p=pinentry.git;a=blob;f=doc/pinentry.texi;h=a05bdb11716e46882bbd981d343064c06b85afe4;hb=HEAD).
-
-:::
+{{< /alert >}}

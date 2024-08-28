@@ -29,14 +29,13 @@ CREATE USER user WITH ENCRYPTED PASSWORD 'password';
 GRANT ALL PRIVILEGES ON DATABASE name TO user;
 ```
 
-:::info
+{{< alert "circle-info" >}}
 Change the database before configuring the schema:
 
 ```bash
 \c <db>
 ```
-
-:::
+{{< /alert >}}
 
 ```sql
 GRANT ALL ON SCHEMA public TO user;

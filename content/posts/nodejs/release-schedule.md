@@ -11,10 +11,9 @@ Production applications should only use Active LTS or Maintenance LTS releases.
 
 ![Node.js Release schedule](https://raw.githubusercontent.com/nodejs/Release/main/schedule.svg)
 
-:::info
+{{< alert "circle-info" >}}
 Full details regarding Node.js release schedule are available [on GitHub](https://github.com/nodejs/release#release-schedule).
-:::
-
+{{< /alert >}}
 ## End-of-Life Releases
 
 |  Release |      Status     |  Codename | Initial Release | Active LTS Start | Maintenance LTS Start | End-of-life |

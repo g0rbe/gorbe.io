@@ -8,9 +8,9 @@ keywords: ["iptables", "firewall", "security"]
 aliases: ["/docs/iptables/stateful-firewall"]
 ---
 
-::::info
+{{< alert "circle-info" >}}
 iptables is replaced by [nftables](/tags/nftables) starting in Debian 10 (Buster)
-::::
+{{< /alert >}}
 
 ## Simple stateful firewall
 

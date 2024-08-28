@@ -9,9 +9,9 @@ aliases: ["/docs/mysql/install"]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-:::note
+{{< alert "circle-info" >}}
 MySQL was replaced by [Mariadb](../../mariadb/setup/index.en.md) in Debian 9 (Stretch).
-:::
+{{< /alert >}}
 
 ## Repository Setup
 

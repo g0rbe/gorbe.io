@@ -20,9 +20,9 @@ aliases: ["/docs/protocols/dns/record-types"]
 www.gorbe.io    A    128.140.77.237
 ```
 
-:::info
+{{< alert "circle-info" >}}
 The `@` symbol is indicates the root domain (eg.: `gorbe.io`).
-:::
+{{< /alert >}}
 
 ## `AAAA` Record
 

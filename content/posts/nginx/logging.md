@@ -11,9 +11,9 @@ keywords: ["nginx", "log"]
 
 ### Combined
 
-:::note
+{{< alert "circle-info" >}}
 This is the default log format in Nginx.
-:::
+{{< /alert >}}
 
 ```nginx
 log_format combined '$remote_addr - $remote_user [$time_local] '

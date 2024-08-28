@@ -152,6 +152,6 @@ systemctl daemon-reload
 systemctl enable --now uptime.service
 ```
 
-:::tip
+{{< alert "circle-info" >}}
 Dont forget the [default nginx configurations](../../nginx/configurations/)
-:::
+{{< /alert >}}
