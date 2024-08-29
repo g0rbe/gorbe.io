@@ -5,7 +5,7 @@ summary: "A Mautic Telepítése a Production Package használatával Debian 12 r
 date: 2024-03-19T03:18:31+01:00
 tags: ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
 keywords: ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
-aliases: ["/hu/docs/mautic/install"]
+aliases: ["/hu/docs/mautic/install", "/blog/how-to-install-mautic-5-with-composer-on-debian-12/"]
 ---
 
 ## A PHP 8.1 Telepítése
@@ -63,7 +63,7 @@ mysql --execute="CREATE DATABASE mautic; GRANT ALL PRIVILEGES ON mautic.* TO 'ma
 nano +c/date.timezone /etc/php/8.1/fpm/php.ini
 ```
 
-```ini
+```toml
 date.timezone = Europe/Budapest
 ```
 
