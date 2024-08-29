@@ -6,6 +6,7 @@ date: 2024-08-21
 tags: [ "FrankenPHP", "web", "webserver", "HTTP", "php", "CGI"]
 keywords: [ "FrankenPHP", "web", "webserver", "HTTP", "php", "CGI"]
 draft:  false
+coverAlt: "Configure FrankenPHP"
 aliases: ["/docs/frankenphp/configure"]
 ---
 
