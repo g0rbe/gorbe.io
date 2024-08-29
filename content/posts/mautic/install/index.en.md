@@ -3,8 +3,8 @@ title: "Install Mautic using the Production Package"
 description: "How to Install Mautic 5 using the Production Package on Debian 12 with Apache, PHP-FPM and MariaDB"
 summary: "How to Install Mautic 5 using the Production Package on Debian 12 with Apache, PHP-FPM and MariaDB"
 date: 2024-03-19T03:18:31+01:00
-tags: ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
-keywords: ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
+tags:  ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email", "campaigns", "automation"]
+keywords: ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email", "campaigns", "automation"]
 aliases: ["/docs/mautic/install"]
 ---
 

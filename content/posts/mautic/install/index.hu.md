@@ -3,8 +3,8 @@ title: "Mautic Telepítése a Production Package használatával"
 description: "A Mautic Telepítése a Production Package használatával Debian 12 rendszerre, Apache, PHP-FPM és MariaDB használatával."
 summary: "A Mautic Telepítése a Production Package használatával Debian 12 rendszerre, Apache, PHP-FPM és MariaDB használatával."
 date: 2024-03-19T03:18:31+01:00
-tags: ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
-keywords: ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
+tags:  ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email", "campaigns", "automation"]
+keywords: ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email", "campaigns", "automation"]
 aliases: ["/hu/docs/mautic/install", "/blog/how-to-install-mautic-5-with-composer-on-debian-12/"]
 ---
 
