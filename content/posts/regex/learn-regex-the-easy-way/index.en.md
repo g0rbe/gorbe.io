@@ -1,10 +1,11 @@
 ---
-date: 2024-02-01T11:45:57+01:00
+title: Learn Regex the Easy Way
 description: "Learn Regex the Easy Way"
+summary: "Learn Regex the Easy Way"
+date: 2024-02-01T11:45:57+01:00
 tags: ["regex"]
+keywords: ["regex"]
 ---
-
-# Learn Regex the Easy Way
 
 ![Learn Regex](./learn-regex.png)
 
@@ -256,7 +257,7 @@ within parentheses `(...)`. For example, the regular expression `(?:c|g|p)ar` is
 
 Non-capturing groups can come in handy when used in find-and-replace functionality or 
 when mixed with capturing groups to keep the overview when producing any other kind of output. 
-See also [4. Lookaround](./index.md#4-lookarounds).
+See also [4. Lookaround](#4-lookarounds).
 
 ## 2.6 Alternation
 

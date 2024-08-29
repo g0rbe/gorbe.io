@@ -1,7 +1,8 @@
 ---
 title: "Node.js Release Schedule"
-tags: ["Node.js"]
+tags: ["NodeJS"]
 description: "Node.js Release Schedule"
+summary: "Node.js Release Schedule"
 ---
 
 Major Node.js versions enter Current release status for six months, which gives library authors time to add support for them.
@@ -34,4 +35,10 @@ Full details regarding Node.js release schedule are available [on GitHub](https:
 |  15.x    | **End-of-Life** |           |    2020-10-20   |         -        |                       |  2021-06-01 |
 |  16.x    | **End-of-Life** |  Gallium  |    2021-04-20   |    2021-10-26    |       2022-10-18      |  2023-09-11 |
 |  17.x    | **End-of-Life** |           |    2021-10-19   |         -        |                       |  2022-06-01 |
+|  18.x    | **Maintenance** | Hydrogen  |    2022-04-19   |    2022-10-25    |       2023-10-18      |  2025-04-30 |
 |  19.x    | **End-of-Life** |           |    2022-10-18   |         -        |                       |  2023-06-01 |
+|  20.x    | **LTS**         |  Iron     |    2023-04-18   |    2023-10-24    |       2024-10-22      |  2026-04-30 |
+|  21.x    | **End-of-Life** |           |    2023-10-17   |         -        |       2024-04-01      |  2024-06-01 |
+|  22.x    | **Current**     |           |    2024-04-24   |    2024-10-29    |       2025-10-21      |  2027-04-30 |
+|  23.x    | **Pending**     |           |    2024-10-15   |         -        |       2025-04-01      |  2025-06-01 |
+|  24.x    | **Pending**     |           |    2025-04-22   |    2025-10-28    |       2026-10-20      |  2028-04-30 |

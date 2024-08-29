@@ -1,12 +1,7 @@
 ---
 title: A07:2021 – Identification and Authentication Failures
-description: >
-    Previously known as *Broken Authentication*, this category slid down
-    from the second position and now includes Common Weakness 
-    Enumerations (CWEs) related to identification
-    failures. Notable CWEs included are *CWE-297: Improper Validation of
-    Certificate with Host Mismatch*, *CWE-287: Improper Authentication*, and
-    *CWE-384: Session Fixation*.
+description: Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks.
+summary: Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks.
 tags: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 keywords: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 aliases: ["/docs/owasp/top-10/2021/identification-and-authentication-failures"]
