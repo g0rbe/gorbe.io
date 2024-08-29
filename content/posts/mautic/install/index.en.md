@@ -67,9 +67,9 @@ nano +c/date.timezone /etc/php/8.1/fpm/php.ini
 date.timezone = Europe/Budapest
 ```
 
-:::warning
+{{< alert >}}
 Modify the values below to your needs!
-:::
+{{< /alert >}}
 
 ```bash
 sed -i 's/memory_limit = 128M/memory_limit = 512M/' /etc/php/8.1/fpm/php.ini && \
