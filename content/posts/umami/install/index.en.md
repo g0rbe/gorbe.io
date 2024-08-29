@@ -1,23 +1,24 @@
 ---
-sidebar_label: Install
-title: Install umami on Linux
-tags: [ "analytics", "web-analytics", "statistics"]
+title: Install umami
 description: How to install Umami on Debian Linux server with PostgreSQL.
-image: /assets/docs/umami/install/image-en.webp
+summary: How to install Umami on Debian Linux server with PostgreSQL.
+date: 2024-05-04
+tags: [ "umami", "analytics", "statistics"]
+keywords: [ "umami", "analytics", "statistics"]
+coverAlt: "Install umami"
+aliases: ["/docs/umami/install"]
 ---
 
 
 
 ## Requirements
 
-- [Node.js](../nodejs/install.md) version 18.17 or newer
-- MySQL version 8.0 or newer **OR** [PostgreSQL](../postgresql/setup.md) version v12.14 or newer 
+- [Node.js](../../nodejs/install.md) version 18.17 or newer
+- MySQL version 8.0 or newer **OR** [PostgreSQL](../../postgresql/setup/) version v12.14 or newer 
 
-:::warning
-
+{{< alert >}}
 MariaDB is not supported because it doesn't implement the `BIN_TO_UUID` function.
-
-:::
+{{< /alert >}}
 
 ### Packages
 
@@ -156,18 +157,19 @@ chmod 0640 .env
 yarn build
 ```
 
-:::info
+{{< alert >}}
 The default username is `admin` and the password is `umami`
-:::
+{{< /alert >}}
+
 ## Configure systemd
 
 Create the systemd service:
 
 ```bash
-nano /etc/systemd/system/umami.service
+nano "/etc/systemd/system/umami.service"
 ```
 
-```ini title="/etc/systemd/system/umami.service"
+```ini
 [Unit]
 Description=Umami
 After=postgresql@15-main.service
