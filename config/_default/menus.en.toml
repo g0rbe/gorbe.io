@@ -36,7 +36,7 @@ pageRef = "tools"
 weight = 12
 
 [[main]]
-name = "Go"
+name = "Go Modules"
 pageRef = "go"
 weight = 13
 

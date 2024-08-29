@@ -31,11 +31,6 @@ pageRef = "posts"
 weight = 11
 
 [[main]]
-name = "Go"
-pageRef = "go"
-weight = 13
-
-[[main]]
 identifier = "search"
 weight = 99
 [main.params]
