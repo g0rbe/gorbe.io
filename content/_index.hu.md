@@ -1,5 +1,5 @@
 ---
-title: "G⌬RBE.IO"
+title: "Fő oldal"
 ---
 
 Személyre Szabott Informatikai Megoldások, Adatvédelem, Szervervédelem, IT Infrastruktúra Üzemeltetés és Egyéb Számítástechnikai szolgáltatások Győr és környékén.
