@@ -1,5 +1,5 @@
 ---
-title: "gorbe.io/go/ip"
+title: "ip"
 summary: "Go module to work with IPv4 and IPv6 addresses.<br>`go get gorbe.io/go/ip`"
 description: "Go module to work with IPv4 and IPv6 addresses"
 showDate: false

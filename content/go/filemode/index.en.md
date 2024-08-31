@@ -1,5 +1,5 @@
 ---
-title: "gorbe.io/go/filemode"
+title: "filemode"
 summary: "File attribute changer library in go<br>`go get gorbe.io/go/filemode`"
 description: "File attribute changer library in go"
 showDate: false

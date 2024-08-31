@@ -1,5 +1,5 @@
 ---
-title: "gorbe.io/go/redmine"
+title: "redmine"
 summary: "Golang module for Redmine API<br>`go get gorbe.io/go/redmine`"
 description: "Golang module for Redmine API"
 showDate: false
