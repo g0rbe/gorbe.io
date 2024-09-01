@@ -1,7 +1,7 @@
 ---
-title: Learn Regex the Easy Way
-description: "Learn Regex the Easy Way"
-summary: "Learn Regex the Easy Way"
+title: Regex tanulás egyszerű módon
+description: "A reguláris kifejezés karakterek vagy szimbólumok egy csoportja, amelyet egy szövegből adott minták megtalálására használnak."
+summary: "A reguláris kifejezés karakterek vagy szimbólumok egy csoportja, amelyet egy szövegből adott minták megtalálására használnak."
 date: 2024-02-01T11:45:57+01:00
 tags: ["regex"]
 keywords: ["regex"]

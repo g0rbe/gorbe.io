@@ -1,7 +1,7 @@
 ---
 title: Learn Regex the Easy Way
-description: "Learn Regex the Easy Way"
-summary: "Learn Regex the Easy Way"
+description: "A regular expression is a group of characters or symbols which is used to find a specific pattern in a text."
+summary: "A regular expression is a group of characters or symbols which is used to find a specific pattern in a text."
 date: 2024-02-01T11:45:57+01:00
 tags: ["regex"]
 keywords: ["regex"]
