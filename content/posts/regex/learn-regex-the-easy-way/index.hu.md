@@ -25,7 +25,7 @@ tartalmazhat. Szeretnénk limitálni a karakterek maximális számát is a felha
 hogy ne legyen csúnya. A felhasználónév validálására a következő reguláris kifejezést
 használjuk:
 
-![Regular expression](./regexp.png)
+![Regular expression](./regexp.hu.png)
 
 A feljebbi reguláris kifejezés elfogadja a `john_doe`, `jo-hn_doe` és a
 `john12_as` karakterláncokat. Nem fog egyezni a `Jo`-ra mert ez nagybetűt

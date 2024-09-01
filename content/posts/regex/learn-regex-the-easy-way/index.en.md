@@ -25,7 +25,7 @@ numbers, underscores and hyphens. We also want to limit the number of characters
 in the username so it does not look ugly. We can use the following regular expression to
 validate the username:
 
-![Regular expression](./regexp.png)
+![Regular expression](./regexp.en.png)
 
 The regular expression above can accept the strings `john_doe`, `jo-hn_doe` and
 `john12_as`. It does not match `Jo` because that string contains an uppercase
