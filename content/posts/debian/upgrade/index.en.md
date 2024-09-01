@@ -9,12 +9,12 @@ draft:  false
 aliases: ["/docs/debian/upgrade-10-to-11", "/docs/debian/upgrade-11-to-12"]
 ---
 
-## Upgrade 11 to 12
-
-### Prerequisites
+## Prerequisites
 
 1. **Superuser Privileges**: You must perform the upgrade with superuser privileges. Log in as root or a user with sudo privileges.
 2. **Data Backup**: Back up your data before starting the upgrade. If you're using a virtual machine, consider taking a complete system snapshot.
+
+## Upgrade 11 to 12
 
 ### Update All Currently Installed Packages
 
@@ -75,11 +75,6 @@ sudo apt --purge autoremove
 ```
 
 ## Upgrade 10 to 11
-
-### Prerequisites
-
-1. **Superuser Privileges**: You must perform the upgrade with superuser privileges. Log in as root or a user with sudo privileges.
-2. **Data Backup**: Back up your data before starting the upgrade. If you're using a virtual machine, consider taking a complete system snapshot.
 
 ### Update Current Packages
 
