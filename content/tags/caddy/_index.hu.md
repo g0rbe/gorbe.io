@@ -1,7 +1,7 @@
 ---
 title: Caddy
-description: "Caddy: The Ultimate Server with Automatic HTTPS"
-summary: "Caddy: The Ultimate Server with Automatic HTTPS"
+description: "Caddy: A Végső Szerver Automatikus HTTPS-sel"
+summary: "Caddy: A Végső Szerver Automatikus HTTPS-sel"
 date: "2024-02-01"
 # tags: []
 keywords: ["Caddy"]
