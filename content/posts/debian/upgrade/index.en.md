@@ -6,6 +6,7 @@ date: 2023-08-15T08:27:34+01:00
 tags: ["debian", "linux"]
 keywords: ["debian", "linux"]
 draft:  false
+thumbnailAlt: Debian Logo
 aliases: ["/docs/debian/upgrade-10-to-11", "/docs/debian/upgrade-11-to-12"]
 ---
 
