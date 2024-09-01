@@ -7,17 +7,17 @@ draft:  false
 images: ["cover.en.webp"]
 ---
 
-IT service for small and medium-sized companies tailored to your business needs. #
+## IT service for small and medium-sized companies tailored to your business needs.
 
 - Advice, analysis
--  Planning, redesign
+- Planning, redesign
 - Operation, optimization
 - Hosting in your own data center
--  Mail, contacts, calendar
--  Data backup
--  Linux and Windows server systems
--  Virtualization and containers
--  Network, firewall, VPN, WLAN
+- Mail, contacts, calendar
+- Data backup
+- Linux and Windows server systems
+- Virtualization and containers
+- Network, firewall, VPN, WLAN
 
 
 ## Hosting
