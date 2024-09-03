@@ -7,6 +7,7 @@ tags: [ "FrankenPHP","web", "webserver", "HTTP", "PHP", "CGI"]
 keywords: [ "FrankenPHP","web", "webserver", "HTTP", "PHP", "CGI"]
 draft:  false
 coverAlt: "Install FrankenPHP on Linux"
+thumbnailAlt: "FrankenPHP logo"
 aliases: ["/docs/frankenphp/install"]
 ---
 

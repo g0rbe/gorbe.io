@@ -6,6 +6,7 @@ date: 2023-11-15T13:30:37+01:00
 tags: ["docker", "debian"]
 keywords: ["docker", "debian"]
 draft:  false
+thumbnailAlt: "Docker logo"
 aliases: ["docs/docker/install"]
 ---
 

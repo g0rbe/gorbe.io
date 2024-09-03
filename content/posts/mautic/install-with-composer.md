@@ -4,6 +4,7 @@ date: 2024-03-19T03:18:31+01:00
 tags: ["mautic", "apache", "PHP","composer", "MariaDB", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
 keywords: ["mautic", "apache", "PHP","composer", "MariaDB", "marketing", "newsletter", "email-marketing", "email-campaigns", "marketing-tools", "marketing-automation"]
 description: "How to Install Mautic 5 with Composer on Debian 12 with Apache, PHP-FPM and MariaDB"
+thumbnailAlt: "Mautic logo"
 aliases: ["/docs/mautic/install-with-composer/"]
 ---
 

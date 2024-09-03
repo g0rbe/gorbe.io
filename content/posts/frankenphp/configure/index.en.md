@@ -7,6 +7,7 @@ tags: [ "FrankenPHP", "web", "webserver", "HTTP", "php", "CGI"]
 keywords: [ "FrankenPHP", "web", "webserver", "HTTP", "php", "CGI"]
 draft:  false
 coverAlt: "Configure FrankenPHP"
+thumbnailAlt: "FrankenPHP logo"
 aliases: ["/docs/frankenphp/configure"]
 ---
 

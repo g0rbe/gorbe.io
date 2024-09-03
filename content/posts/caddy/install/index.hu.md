@@ -6,8 +6,8 @@ date: 2024-08-15
 tags: [ "web", "webserver", "HTTP", "caddy"]
 keywords: [ "web", "webserver", "HTTP", "caddy"]
 draft:  false
-images: ["image.hu.webp"]
-featureAlt: "cover-caddy-install-hu"
+thumbnailAlt: "Caddy logo"
+coverAlt: "cover-caddy-install-hu"
 aliases: ["docs/caddy/install"]
 ---
 

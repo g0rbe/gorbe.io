@@ -6,6 +6,7 @@ date: 2024-08-21
 tags: [ "NetworkManager", "linux","security", "privacy" ]
 keywords: [ "NetworkManager", "linux","security", "privacy" ]
 draft:  false
+thumbnailAlt: "Nwtwork Manager logo"
 aliases: ["/docs/network-manager/mac-address-spoofing"]
 ---
 

@@ -4,6 +4,7 @@ description: "How to create a database in MariaDB."
 summary: "How to create a database in MariaDB."
 tags: ["MariaDB", "MySQL", "database"]
 keywords: ["MariaDB", "MySQL", "database"]
+thumbnailAlt: "MariaDB logo"
 aliases: ["/docs/mariadb/setup"]
 ---
 

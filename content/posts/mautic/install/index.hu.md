@@ -5,6 +5,7 @@ summary: "A Mautic Telepítése a Production Package használatával Debian 12 r
 date: 2024-03-19T03:18:31+01:00
 tags:  ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email", "campaigns", "automation"]
 keywords: ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email", "campaigns", "automation"]
+thumbnailAlt: "Mautic logó"
 aliases: ["/hu/docs/mautic/install", "/blog/how-to-install-mautic-5-with-composer-on-debian-12/"]
 ---
 

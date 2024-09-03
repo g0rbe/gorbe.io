@@ -4,8 +4,9 @@ description: "Use Certbot to obtain free TLS certificate from Let's Encrypt."
 summary: "Use Certbot to obtain free TLS certificate from Let's Encrypt."
 date: 2024-04-19
 # lastmod: {{ .Date }}
-tags: ["ssl", "tls", "encryption", "security"]
-keywords: ["ssl", "tls", "encryption", "security"]
+tags: ["certbot", "ssl", "tls", "encryption", "security"]
+keywords: ["certbot", "ssl", "tls", "encryption", "security"]
+thumbnailAlt: "Certbot logo"
 draft:  false
 aliases: ["/docs/certbot/certificate"]
 ---

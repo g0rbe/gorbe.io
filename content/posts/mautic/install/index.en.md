@@ -5,6 +5,7 @@ summary: "How to Install Mautic 5 using the Production Package on Debian 12 with
 date: 2024-03-19T03:18:31+01:00
 tags:  ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email", "campaigns", "automation"]
 keywords: ["mautic", "apache", "PHP", "MariaDB", "marketing", "newsletter", "email", "campaigns", "automation"]
+thumbnailAlt: "Mautic logo"
 aliases: ["/docs/mautic/install"]
 ---
 
