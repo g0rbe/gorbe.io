@@ -5,6 +5,7 @@ summary: "How to configure content caching in Nginx"
 date: 2024-08-21
 tags: ["nginx", "cache", "performance"]
 keywords: ["nginx", "cache", "performance"]
+thumbnailAlt: Nginx logo
 draft:  false
 ---
 
@@ -15,7 +16,7 @@ mkdir /var/cache/nginx
 
 Edit `/etc/nginx/conf.d/cache.conf`:
 
-```nginx title="/etc/nginx/conf.d/cache.conf"
+```nginx
 # Cache config
 proxy_cache_path /var/cache/nginx levels=1:2 use_temp_path=off keys_zone=cache:10m inactive=14d max_size=8G;
 
@@ -35,4 +36,15 @@ proxy_cache cache;
 proxy_cache_lock on;
 proxy_cache_lock_age 20s;
 proxy_cache_lock_timeout 5s;
+```
+## `Cache-Control`
+
+
+```nginx
+location ~* \.(jpg|jpeg|png|gif|ico|css|js|webp)$ {
+    etag off;
+    if_modified_since off;
+    expires 30d;
+    add_header Cache-Control "public";
+}
 ```
