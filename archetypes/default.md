@@ -6,6 +6,8 @@ date: {{ .Date }}
 tags: []
 keywords: []
 # featureAlt:
+# thumbnailAlt:
+# coverAlt:
 # draft:  true
 # aliases: ['/']
 ---
