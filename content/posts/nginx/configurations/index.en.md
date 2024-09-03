@@ -19,7 +19,7 @@ certbot certonly --nginx -d example.com --key-type rsa --rsa-key-size 4096
 ```
 
 Set TLS ciphers in Nginx `server` context:
-```bash
+```nginx
 ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
 ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
 ssl_trusted_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
@@ -34,7 +34,7 @@ openssl req -x509 -nodes -newkey rsa:4096 -keyout /etc/nginx/default_ssl/key.pem
 ```
 
 Configure the certificate in `server` context:
-```bash
+```nginx
 ssl_certificate /etc/nginx/default_ssl/cert.pem;
 ssl_certificate_key /etc/nginx/default_ssl/key.pem;
 ```
@@ -66,7 +66,7 @@ Important:
 
 
 Configure TLS ciphers in `http` or `server` context:
-```bash
+```nginx
 ssl_protocols TLSv1.2 TLSv1.3;
 ssl_ciphers TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-CHACHA20-POLY1305;
 ssl_prefer_server_ciphers on;
@@ -77,7 +77,7 @@ ssl_prefer_server_ciphers on;
 If Nginx version >= 1.19.4:
 
 
-```bash
+```nginx
 ssl_conf_command Options ServerPreference;
 ssl_conf_command Ciphersuites TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256;
 ```
@@ -100,7 +100,7 @@ htpasswd -c /etc/nginx/.htpasswd user
 ```
 
 Use it in a `location` context:
-```bash
+```nginx
 location /admin {
         auth_basic "Message";
         auth_basic_user_file /etc/nginx/.htpasswd;
@@ -113,7 +113,7 @@ location /admin {
 
 ### nginx.conf
 
-```bash
+```nginx
 user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
@@ -149,7 +149,7 @@ http {
 
 ### sites-available/example.com
 
-```bash
+```nginx
 # https
 server {
 
@@ -247,7 +247,7 @@ server {
 
 ### sites-enabled/default
 
-```bash
+```nginx
 server {
 
         listen [::]:443 ssl http2;
@@ -274,7 +274,7 @@ server {
 
 ### conf.d/security.conf
 
-```bash
+```nginx
 # Do not send server version
 server_tokens off;
 
@@ -298,7 +298,7 @@ ssl_buffer_size 4k;
 
 ### Basic reverse proxy template
 
-```bash
+```nginx
 # https
 server {
 
