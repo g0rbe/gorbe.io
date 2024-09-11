@@ -41,7 +41,7 @@ Cryptography is the practice and study of techniques for secure communication in
 
 Example:
 
-```
+```text
 Plaintext :  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
 Ciphertext : QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
 
@@ -55,7 +55,7 @@ Key : right shift of 3
 
 Example:
 
-```
+```text
 Clear text: WE ARE DISCOVERED. FLEE AT ONCE
 
 W . . . E . . . C . . . R . . . L . . . T . . . E
