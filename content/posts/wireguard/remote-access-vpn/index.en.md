@@ -6,8 +6,9 @@ date: 2023-11-15T03:46:08+01:00
 tags: ["WireGuard", "VPN"]
 keywords: ["WireGuard", "VPN"]
 # featureAlt:
+thumbnailAlt: "WireGuard logo"
 # draft:  true
-# aliases: ['/']
+aliases: ['/docs/wireguard/remote-access-vpn']
 ---
 
 ## Server
