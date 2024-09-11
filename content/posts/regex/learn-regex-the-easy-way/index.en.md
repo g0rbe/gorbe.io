@@ -5,9 +5,10 @@ summary: "A regular expression is a group of characters or symbols which is used
 date: 2024-02-01T11:45:57+01:00
 tags: ["regex"]
 keywords: ["regex"]
+thumbnailAlt: "Regex logo"
 ---
 
-![Learn Regex](./learn-regex.png)
+![Learn Regex](learn-regex.png)
 
 ## What is Regular Expression?
 
@@ -25,7 +26,7 @@ numbers, underscores and hyphens. We also want to limit the number of characters
 in the username so it does not look ugly. We can use the following regular expression to
 validate the username:
 
-![Regular expression](./regexp.en.png)
+![Regular expression](regexp.en.png)
 
 The regular expression above can accept the strings `john_doe`, `jo-hn_doe` and
 `john12_as`. It does not match `Jo` because that string contains an uppercase

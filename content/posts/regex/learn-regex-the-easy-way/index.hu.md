@@ -5,9 +5,10 @@ summary: "A reguláris kifejezés karakterek vagy szimbólumok egy csoportja, am
 date: 2024-02-01T11:45:57+01:00
 tags: ["regex"]
 keywords: ["regex"]
+thumbnailAlt: "Regex logo"
 ---
 
-![Learn Regex](./learn-regex.png)
+![Learn Regex](learn-regex.png)
 
 ## Mi az a reguláris kifejezés?
 
@@ -25,7 +26,7 @@ tartalmazhat. Szeretnénk limitálni a karakterek maximális számát is a felha
 hogy ne legyen csúnya. A felhasználónév validálására a következő reguláris kifejezést
 használjuk:
 
-![Regular expression](./regexp.hu.png)
+![Regular expression](regexp.hu.png)
 
 A feljebbi reguláris kifejezés elfogadja a `john_doe`, `jo-hn_doe` és a
 `john12_as` karakterláncokat. Nem fog egyezni a `Jo`-ra mert ez nagybetűt
