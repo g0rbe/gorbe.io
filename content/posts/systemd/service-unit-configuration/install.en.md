@@ -4,6 +4,7 @@ description: "How to configure a systemd service unit on Debian"
 summary: "How to configure a systemd service unit on Debian"
 tags: ["linux", "service", "daemon", "systemd"]
 keywords: ["linux", "service", "daemon", "systemd"]
+aliases: ["/docs/systemd/service-unit-configuration/"]
 ---
 
 ## TL;DR

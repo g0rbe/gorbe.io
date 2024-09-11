@@ -7,7 +7,7 @@ tags: ["docker", "debian"]
 keywords: ["docker", "debian"]
 draft:  false
 thumbnailAlt: "Docker logo"
-aliases: ["docs/docker/install"]
+aliases: ["/docs/docker/install"]
 ---
 
 Docker has become an essential tool in the world of modern software development. If you're using Debian 12 and want to take advantage of Docker's capabilities, this guide will walk you through the installation process.

@@ -3,6 +3,7 @@ title: Install Matomo with FrankenPHP and MariaDB on Debian Linux
 tags: [ "analytics"]
 description: How to install Matomo On-Premise with FrankenPHP and MariaDB on Debian Linux.
 date: 2023-11-17T01:15:02+01:00
+aliases: ["/docs/matomo/install"]
 ---
 
 ## Requirements
