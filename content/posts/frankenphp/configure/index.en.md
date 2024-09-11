@@ -15,7 +15,7 @@ aliases: ["/docs/frankenphp/configure"]
 
 ### Matomo
 
-```
+```caddy
 }
 	frankenphp
 	order php_server before file_server
