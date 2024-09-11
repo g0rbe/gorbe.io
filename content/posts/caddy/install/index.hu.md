@@ -8,7 +8,7 @@ keywords: [ "web", "webserver", "HTTP", "caddy"]
 draft:  false
 thumbnailAlt: "Caddy logo"
 coverAlt: "cover-caddy-install-hu"
-aliases: ["docs/caddy/install"]
+aliases: ["/hu/docs/caddy/install"]
 ---
 
 ## Bináris letöltése

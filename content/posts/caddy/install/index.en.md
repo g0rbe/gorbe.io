@@ -8,7 +8,7 @@ keywords: [ "web", "webserver", "HTTP", "caddy"]
 draft:  false
 thumbnailAlt: "Caddy logo"
 coverAlt: "cover-caddy-install-en"
-aliases: ["docs/caddy/install"]
+aliases: ["/docs/caddy/install"]
 ---
 
 ## Download binary
