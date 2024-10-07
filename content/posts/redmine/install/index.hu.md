@@ -6,6 +6,7 @@ summary: A Redmine 5 telepítése Debian 12 rendszeren.
 tags: ["projectmanagement", "productivity", "opensource"]
 keywords: ["projectmanagement", "productivity", "opensource"]
 aliases: ["/hu/docs/redmine/how-to-install-redmine-5.1-on-debian-12/"]
+thumbnailAlt: Redmine Logo
 ---
 
 A Redmine egy rugalmas projektmenedzsment webalkalmazás. A Ruby on Rails keretrendszerrel írva platformok és adatbázisok közötti.

@@ -5,6 +5,7 @@ summary: "A reasonably secure Nginx config for static site hosting with TLS usin
 date: 2024-03-04T10:42:24+01:00
 tags: ["nginx"]
 keywords: ["nginx"]
+thumbnailAlt: Nginx Logo
 ---
 
 

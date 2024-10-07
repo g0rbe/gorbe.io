@@ -5,7 +5,8 @@ summary: "Understanding DNS Vulnerabilities and Common Misconfigurations"
 date: 2023-11-15T19:01:30+01:00
 tags: ["dns", "domain", "security", "vulnerability", "misconfiguration"]
 keywords: ["dns", "domain", "security", "vulnerability", "misconfiguration"]
-aliases: ["/posts/regex/learn-regex-the-easy-way/"]
+thumbnailAlt: DNS Logo
+#aliases:
 ---
 
 The Domain Name System (DNS) is often described as the phonebook of the internet, translating human-readable domain names into IP addresses that computers understand. However, its pivotal role in internet connectivity also makes it a prime target for cyber attacks. This blog post will delve into the vulnerabilities inherent in the DNS system and the common misconfigurations that exacerbate these risks.

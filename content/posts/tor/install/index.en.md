@@ -6,6 +6,7 @@ date: 2024-08-22T03:42:59+02:00
 tags: ["tor", "security"]
 keywords: ["tor", "security"]
 draft:  true
+thumbnailAlt: Tor Logo
 ---
 
 ## TLDR

@@ -6,7 +6,7 @@ date: 2024-04-19
 # lastmod: {{ .Date }}
 tags: ["certbot", "ssl", "tls", "encryption", "security"]
 keywords: ["certbot", "ssl", "tls", "encryption", "security"]
-thumbnailAlt: "Certbot logo"
+thumbnailAlt: Certbot Logo
 draft:  false
 aliases: ["/docs/certbot/certificate"]
 ---

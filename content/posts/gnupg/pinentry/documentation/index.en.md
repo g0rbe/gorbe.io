@@ -7,6 +7,7 @@ tags:  ["gnupg", "pinentry", "security", "encryption"]
 keywords: ["gnupg", "pinentry", "security", "encryption"]
 # featureAlt:
 # draft:  true
+thumbnailAlt: GnuPG Logo
 aliases: ["/docs/gnupg/pinentry/documentation/", "/posts/pinentry/documentation/"]
 ---
 

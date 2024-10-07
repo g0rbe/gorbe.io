@@ -7,6 +7,7 @@ tags: ["Proxmox", "QEMU", "virtualization", "virtual-machine"]
 keywords: ["Proxmox", "QEMU", "virtualization", "virtual-machine"]
 # featureAlt:
 # draft:  true
+thumbnailAlt: Proxmox Logo
 aliases: ["/docs/proxmox/unlock-vm"]
 ---
 

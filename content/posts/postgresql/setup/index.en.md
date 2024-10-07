@@ -5,6 +5,7 @@ summary: 'How to setup PostgreSQL and create a database'
 date: 2024-04-24
 tags: ["PostgreSQL", "SQL", "database"]
 keywords: ["PostgreSQL", "SQL", "database"]
+thumbnailAlt: PostgreSQL Logo
 ---
 
 ## Connect

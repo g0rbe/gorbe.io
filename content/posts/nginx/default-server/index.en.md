@@ -1,7 +1,9 @@
 ---
 title: "Default Server Settings for Nginx"
+date: 2024-03-04T10:42:24+01:00
 tags: ["nginx", "security", "hardening"]
 description: "How to configure a reasonably secure Default Server for Nginx"
+thumbnailAlt: Nginx Logo
 ---
 
 ## Config

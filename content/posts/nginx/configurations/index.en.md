@@ -6,6 +6,7 @@ date: 2024-08-22
 tags: ["nginx", "misconfiguration", "webserver",  "security", "tls", "performance", "proxy", "log"]
 keywords: ["nginx", "misconfiguration", "webserver",  "security", "tls", "performance", "proxy", "log"]
 draft:  false
+thumbnailAlt: Nginx Logo
 aliases: ["/docs/nginx/configurations"]
 ---
 

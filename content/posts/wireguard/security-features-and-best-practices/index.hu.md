@@ -7,6 +7,7 @@ tags: ["VPN", "security", "WireGuard"]
 keywords: ["VPN", "security", "WireGuard"]
 # featureAlt:
 # draft:  true
+thumbnailAlt: WireGuard Logo
 # aliases: ['/']
 ---
 
