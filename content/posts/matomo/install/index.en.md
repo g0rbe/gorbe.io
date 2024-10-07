@@ -1,8 +1,10 @@
 ---
-title: Install Matomo with FrankenPHP and MariaDB on Debian Linux
-tags: [ "analytics"]
+title: Install Matomo
 description: How to install Matomo On-Premise with FrankenPHP and MariaDB on Debian Linux.
+summary: How to install Matomo On-Premise with FrankenPHP and MariaDB on Debian Linux.
 date: 2023-11-17T01:15:02+01:00
+tags: [ "Matomo", "analytics"]
+keywords: [ "Matomo", "analytics"]
 aliases: ["/docs/matomo/install"]
 ---
 
@@ -42,17 +44,15 @@ gpg --verify matomo-latest.tar.gz.asc
 
 Should see the **Good signature...** in the output: 
 
-```bash
-
+{{< highlight bash "linenos=table,hl_lines=4" >}}
 gpg: assuming signed data in 'matomo-latest.tar.gz'
 gpg: Signature made Fri 08 Mar 2024 12:36:28 AM CET
 gpg:                using RSA key F529A27008477483777FC23D63BB30D0E5D2C749
-# highlight-next-line
 gpg: Good signature from "Matomo <hello@matomo.org>" [unknown]
 gpg: WARNING: This key is not certified with a trusted signature!
 gpg:          There is no indication that the signature belongs to the owner.
 Primary key fingerprint: F529 A270 0847 7483 777F  C23D 63BB 30D0 E5D2 C749
-```
+{{< / highlight >}}
 
 Extract the `tar.gz` archive:
 
@@ -71,7 +71,7 @@ mysql_secure_installation
 Create the database and the user:
 
 ```bash
-{`mysql --execute="CREATE DATABASE matomo; GRANT ALL PRIVILEGES ON matomo.* TO 'matomo'@'localhost' IDENTIFIED BY 'MATOMO_DB_PASSWORD' WITH GRANT OPTION; FLUSH PRIVILEGES;"`}
+mysql --execute="CREATE DATABASE matomo; GRANT ALL PRIVILEGES ON matomo.* TO 'matomo'@'localhost' IDENTIFIED BY 'MATOMO_DB_PASSWORD' WITH GRANT OPTION; FLUSH PRIVILEGES;"
 ```
 
 ## FrankenPHP
