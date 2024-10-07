@@ -5,6 +5,7 @@ tags = ["CEH"]
 description = "Certified Ethical Hacker v10 Chapter 10: Denial of Service"
 summary = "Certified Ethical Hacker v10 Chapter 10: Denial of Service"
 keywords = "Certified Ethical Hacker,ethical hacker,ceh,cehv10"
+thumbnailAlt = "CEH Logo"
 +++
 
 Denial-of-Service is type of attack on which service offered by a system or a network is denied.

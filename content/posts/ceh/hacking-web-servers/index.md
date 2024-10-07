@@ -6,6 +6,7 @@ description = "Certified Ethical Hacker v10 Chapter 13: Hacking Web Servers"
 summary = "Certified Ethical Hacker v10 Chapter 13: Hacking Web Servers"
 keywords = ["Certified Ethical Hacker", "CEH" ,"CEHv10"]
 aliases = ["/docs/ceh/hacking-web-servers"]
+thumbnailAlt = "CEH Logo"
 +++
 
 ## Web Server

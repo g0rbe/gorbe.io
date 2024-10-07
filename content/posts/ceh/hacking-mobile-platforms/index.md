@@ -6,6 +6,7 @@ description: "Certified Ethical Hacker v10 Chapter 17: Hacking Mobile Platforms.
 summary: "Certified Ethical Hacker v10 Chapter 17: Hacking Mobile Platforms."
 keywords: "Certified Ethical Hacker,ethical hacker,ceh,cehv10"
 aliases: ["/docs/ceh/hacking-mobile-platforms/"]
+thumbnailAlt: "CEH Logo"
 ---
 
 Mobile Platform Attack Vectors

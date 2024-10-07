@@ -5,6 +5,7 @@ tags = ["CEH"]
 description = "Certified Ethical Hacker v10 Chapter 16: Hacking Wireless Networks"
 summary = 'Certified Ethical Hacker v10 Chapter 16: Hacking Wireless Networks'
 keywords = "Certified Ethical Hacker,ethical hacker,ceh,cehv10"
+thumbnailAlt = "CEH Logo"
 +++
 
 ## Terms

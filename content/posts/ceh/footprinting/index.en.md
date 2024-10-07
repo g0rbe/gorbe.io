@@ -7,6 +7,7 @@ date: 2020-02-01T00:00:00+01:00
 tags: ["CEH"]
 keywords: ["CEH"]
 draft:  false
+thumbnailAlt: "CEH Logo"
 ---
 
 Collect information about a target network.

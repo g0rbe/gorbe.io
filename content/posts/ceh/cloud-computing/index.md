@@ -6,6 +6,7 @@ tags = ["CEH"]
 description = "Certified Ethical Hacker v10 Chapter 19: Cloud Computing"
 summary = "Certified Ethical Hacker v10 Chapter 19: Cloud Computing"
 keywords = "Certified Ethical Hacker,ethical hacker,ceh,cehv10"
+thumbnailAlt = "CEH Logo"
 +++
 
 Cloud computing is shared pools of configurable computer system resources and higher-level 

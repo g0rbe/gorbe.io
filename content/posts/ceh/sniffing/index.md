@@ -7,6 +7,7 @@ date: 2020-02-01T00:00:00+01:00
 tags: ["CEH"]
 keywords: ["CEH", "CEHv10"]
 draft:  false
+thumbnailAlt: "CEH Logo"
 ---
 
 With sniffing, you can monitor all sorts of traffic either protected or unprotected.

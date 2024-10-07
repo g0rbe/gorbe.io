@@ -6,6 +6,7 @@ tags = ["CEH"]
 description = "Certified Ethical Hacker v10 Chapter 20: Cryptography"
 summary = "Certified Ethical Hacker v10 Chapter 20: Cryptography"
 keywords = "Certified Ethical Hacker,ethical hacker,ceh,cehv10"
+thumbnailAlt = "CEH Logo"
 +++
 
 Cryptography is the practice and study of techniques for secure communication in the presence of adversarial behavior.
