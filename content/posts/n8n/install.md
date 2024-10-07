@@ -30,7 +30,7 @@ npm install n8n -g
 
 ## Start automatically
 
-Configure a [systemd service](../systemd/service-unit-configuration/install.en.md) to start automatically at boot.
+Configure a [systemd service](../systemd/service-unit-configuration/index.en.md) to start automatically at boot.
 
 ```bash
 nano /etc/systemd/system/n8n.service
