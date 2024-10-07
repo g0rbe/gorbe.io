@@ -1,13 +1,16 @@
 ---
 title: Install MinIO on Linux
-tags: [ "s3", "storage"]
 description: How to install MinIO binary on Debian Linux server.
-#image: /assets/docs/umami/install/image-en.webp
+summary: How to install MinIO binary on Debian Linux server.
+date: 2024-08-28
+tags: [ "Minio", "S3", "storage", "objectstorage"]
+keywords: [ "Minio", "S3", "storage", "objectstorage"]
+# featureAlt:
+# thumbnailAlt:
+# coverAlt:
+# draft:  true
 aliases: ['/docs/minio/install']
 ---
-
-import PasswordCodeBlock from '../../src/components/PasswordCodeBlock';
-import CodeBlock from '@theme/CodeBlock';
 
 ## User and group
 
@@ -87,21 +90,14 @@ EnvironmentFile=-/etc/default/minio
 ExecStartPre=/bin/bash -c "if [ -z \"${MINIO_VOLUMES}\" ]; then echo \"Variable MINIO_VOLUMES not set in /etc/default/minio\"; exit 1; fi"
 ExecStart=/usr/local/bin/minio server $MINIO_OPTS $MINIO_VOLUMES
 
-# MinIO RELEASE.2023-05-04T21-44-30Z adds support for Type=notify (https://www.freedesktop.org/software/systemd/man/systemd.service.html#Type=)
-# This may improve systemctl setups where other services use `After=minio.server`
-# Uncomment the line to enable the functionality
-# Type=notify
+Type=notify
 
-# Let systemd restart this service always
 Restart=always
 
-# Specifies the maximum file descriptor number that can be opened by this process
 LimitNOFILE=65536
 
-# Specifies the maximum number of threads this process can create
 TasksMax=infinity
 
-# Disable timeout logic and wait until process is stopped
 TimeoutStopSec=infinity
 SendSIGKILL=no
 

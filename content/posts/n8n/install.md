@@ -1,8 +1,10 @@
 ---
 title: "Install n8n"
 description: "Install n8n on Debian Linux."
-tags: ["automation", "npm", "selfhost", "homelab"]
-keywords: ["automation", "npm", "selfhost", "homelab"]
+summary: "Install n8n on Debian Linux."
+date: 2024-04-19
+tags: ["n8n", "automation", "npm", "selfhost", "homelab"]
+keywords: ["n8n", "automation", "npm", "selfhost", "homelab"]
 aliases: ["/docs/n8n/install"]
 ---
 
@@ -45,7 +47,6 @@ Requires=network-online.target
 [Service]
 User=n8n
 Group=n8n
-#WorkingDirectory=
 Type=exec
 Restart=always
 RestartSec=1
