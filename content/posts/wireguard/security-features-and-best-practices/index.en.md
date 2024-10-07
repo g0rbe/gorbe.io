@@ -7,7 +7,7 @@ tags: ["VPN", "security", "WireGuard"]
 keywords: ["VPN", "security", "WireGuard"]
 # featureAlt:
 # draft:  true
-# aliases: ['/']
+aliases: ['/docs/wireguard/security-features-and-best-practices']
 ---
 
 WireGuard, a relatively new open-source VPN protocol introduced in 2016, has gained popularity due to its fast, efficient, and secure communication between online devices.
