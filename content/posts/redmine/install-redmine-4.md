@@ -32,7 +32,7 @@ apt install ruby-dev mariadb-server libmariadb-dev git imagemagick ghostscript b
 
 #### Redmine
 
-Download Redmine from [here](https://www.redmine.org/projects/redmine/wiki/Download).
+Download Redmine from [the project's site](https://www.redmine.org/projects/redmine/wiki/Download).
 
 ``` bash
 wget https://www.redmine.org/releases/redmine-4.1.1.tar.gz

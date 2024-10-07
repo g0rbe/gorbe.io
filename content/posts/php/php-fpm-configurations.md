@@ -16,7 +16,7 @@ apt install php-fpm
 ```
 
 {{< alert "circle-info" >}}
-Detailed guide about how to install PHP on Debian can be found [here](../install/)
+Check the [detailed guide about how to install PHP on Debian](../install/)
 {{< /alert >}}
 ## Configuration
 
