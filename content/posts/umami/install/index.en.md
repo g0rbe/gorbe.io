@@ -6,10 +6,9 @@ date: 2024-05-04
 tags: [ "umami", "analytics", "statistics"]
 keywords: [ "umami", "analytics", "statistics"]
 coverAlt: "Install umami"
+thumbnailAlt: umami Logo
 aliases: ["/docs/umami/install"]
 ---
-
-
 
 ## Requirements
 
