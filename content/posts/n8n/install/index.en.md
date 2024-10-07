@@ -5,6 +5,7 @@ summary: "Install n8n on Debian Linux."
 date: 2024-04-19
 tags: ["n8n", "automation", "npm", "selfhost", "homelab"]
 keywords: ["n8n", "automation", "npm", "selfhost", "homelab"]
+thumbnailAlt: n8n Logo
 aliases: ["/docs/n8n/install"]
 ---
 

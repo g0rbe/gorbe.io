@@ -2,11 +2,11 @@
 title: Install MinIO on Linux
 description: How to install MinIO binary on Debian Linux server.
 summary: How to install MinIO binary on Debian Linux server.
-date: 2024-08-28
+date: 2024-07-28
 tags: [ "Minio", "S3", "storage", "objectstorage"]
 keywords: [ "Minio", "S3", "storage", "objectstorage"]
 # featureAlt:
-# thumbnailAlt:
+thumbnailAlt: Minio Logo
 # coverAlt:
 # draft:  true
 aliases: ['/docs/minio/install']
@@ -40,14 +40,14 @@ sudo install -v minio /usr/local/bin/
 nano /etc/default/minio
 ```
 
-<PasswordCodeBlock  language="sql" numSymbols={0} tokens={[ {name: "SECURE_PASSWORD"}]} >
-{`MINIO_ROOT_USER=admin
+```env
+MINIO_ROOT_USER=admin
 MINIO_ROOT_PASSWORD="SECURE_PASSWORD"
 
 MINIO_VOLUMES="/mnt/data"
 
-MINIO_OPTS='--console-address=:9001 --sftp=\"address=:9022\" --sftp=\"ssh-private-key=/var/lib/minio/.ssh/id_rsa\"'`}
-</PasswordCodeBlock>
+MINIO_OPTS='--console-address=:9001 --sftp=\"address=:9022\" --sftp=\"ssh-private-key=/var/lib/minio/.ssh/id_rsa\"'
+```
 
 ### SFTP
 
