@@ -7,4 +7,5 @@ description: "Dynamically generate API documentation from a OpenAPI Specificatio
 _build:
   render: "link"
   list: "always"
+thumbnailAlt: Swagger Logo
 ---

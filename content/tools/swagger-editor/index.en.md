@@ -7,4 +7,5 @@ summary: "Design, describe, and document your API."
 _build:
   render: "link"
   list: "always"
+thumbnailAlt: Swagger Logo
 ---
