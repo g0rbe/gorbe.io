@@ -1,10 +1,10 @@
 ---
 title: Install AdGuard Home
-description: Install AdGuard Home on Debian Server
-summary: Install AdGuard Home on Debian Server
+description: How to install AdGuard Home on Debian Server
+summary: How to install AdGuard Home on Debian Server
 date: 2024-10-05T13:49:38+02:00
-tags: ["AdGuard", "dns", "dhcp", "privacy", "adblock", "dns-over-tls", "dns-over-https", "golang"]
-keywords: ["AdGuard", "dns", "dhcp", "privacy", "adblock", "dns-over-tls", "dns-over-https", "golang"]
+tags: ["AdGuard", "DNS", "DHCP", "privacy", "adblock", "DNSOverTLS", "DNSOverHTTPS", "golang"]
+keywords:  ["AdGuard", "DNS", "DHCP", "privacy", "adblock", "DNSOverTLS", "DNSOverHTTPS", "golang"]
 # featureAlt:
 thumbnailAlt: AdGuard Logo
 coverAlt: Install AdGuard Home Cover
