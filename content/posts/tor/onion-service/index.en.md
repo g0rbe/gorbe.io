@@ -19,7 +19,7 @@ nano /etc/tor/torrc
 
 Add these lines:
 
-```
+```bash
 HiddenServiceDir /var/lib/tor/my_website/
 HiddenServicePort 80 127.0.0.1:80
 ```
