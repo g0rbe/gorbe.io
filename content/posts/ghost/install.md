@@ -6,6 +6,7 @@ date: 2020-06-25T00:00:00+01:00
 tags: ["Ghost", "selfhost" ]
 keywords: ["Ghost", "selfhost" ]
 draft:  false
+aliases: ["/blog/ghost-on-debian/"]
 ---
 
 

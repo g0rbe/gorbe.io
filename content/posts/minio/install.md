@@ -3,6 +3,7 @@ title: Install MinIO on Linux
 tags: [ "s3", "storage"]
 description: How to install MinIO binary on Debian Linux server.
 #image: /assets/docs/umami/install/image-en.webp
+aliases: ['/docs/minio/install']
 ---
 
 import PasswordCodeBlock from '../../src/components/PasswordCodeBlock';
