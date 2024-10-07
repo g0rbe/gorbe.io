@@ -8,7 +8,7 @@ keywords: ["AdGuard", "dns", "dhcp", "privacy", "adblock", "dns-over-tls", "dns-
 # featureAlt:
 thumbnailAlt: AdGuard Logo
 coverAlt: Install AdGuard Home Cover
-draft:  true
+draft:  false
 # aliases: ['/']
 ---
 
