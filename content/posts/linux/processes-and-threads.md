@@ -13,9 +13,9 @@ keywords: "linux,lfcs,process,thread"
 - **internal data**: strings, integers, etc...
 - **external data**: databases, files, etc...
 
-# Process vs thread
+## Process vs thread
 
-## Process
+### Process
 
 - an executing instance of a program
 - each process has its own resource
@@ -25,14 +25,14 @@ keywords: "linux,lfcs,process,thread"
 - **heavy weight process**: a process with its own resources
 - **light weight process**: a thread of a process with shared resources with other threads
 
-## Thread
+### Thread
 
 - started from a process
 - can share resources (eg.: memory)
 - each thread is considered individually, as a standalone process
 - each thread has the same process ID (thread group ID) and different thread ID 
 
-# Processes in details
+## Processes in details
 
 - has attributes, eg.:
     - *command*: command that executed to start the process
@@ -108,6 +108,7 @@ keywords: "linux,lfcs,process,thread"
         - shared memory
         - message passing
     - `ipcs` is used to list these IPC facilities
+
 ## Reference
 
 - LFS201 (this is just my note from LFS201, not meant to replace the original, which is explain better the above)

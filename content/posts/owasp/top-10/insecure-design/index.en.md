@@ -7,8 +7,6 @@ keywords: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 
 ![Insecure Design](insecure-design.png)
 
-# 
-
 ## Factors
 
 | CWEs Mapped | Max Incidence Rate | Avg Incidence Rate | Avg Weighted Exploit | Avg Weighted Impact | Max Coverage | Avg Coverage | Total Occurrences | Total CVEs |
