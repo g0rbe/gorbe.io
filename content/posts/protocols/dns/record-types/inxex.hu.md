@@ -6,6 +6,7 @@ date: 2024-04-14
 tags: ["dns", "domain"]
 keywords: ["dns", "domain"]
 featureAlt: cover-protocols-dns-hu
+thumbnailAlt: DNS Logo
 aliases: ["/hu/docs/protocols/dns/record-types"]
 ---
 
