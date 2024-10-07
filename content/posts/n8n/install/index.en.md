@@ -11,7 +11,7 @@ aliases: ["/docs/n8n/install"]
 
 ## Requirements
 
-Install [Node.js 18 or above](../nodejs/install.md).
+Install [Node.js 18 or above](../nodejs/install/).
 
 ## Create user nad group
 
@@ -33,7 +33,7 @@ npm install n8n -g
 
 ## Start automatically
 
-Configure a [systemd service](../systemd/service-unit-configuration/index.en.md) to start automatically at boot.
+Configure a [systemd service](../systemd/service-unit-configuration/) to start automatically at boot.
 
 ```bash
 nano /etc/systemd/system/n8n.service

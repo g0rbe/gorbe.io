@@ -13,7 +13,7 @@ aliases: ["/docs/umami/install"]
 
 ## Requirements
 
-- [Node.js](../../nodejs/install.md) version 18.17 or newer
+- [Node.js](../../nodejs/install/) version 18.17 or newer
 - MySQL version 8.0 or newer **OR** [PostgreSQL](../../postgresql/setup/) version v12.14 or newer 
 
 {{< alert >}}
