@@ -62,7 +62,7 @@ tar -xf matomo-latest.tar.gz -C /var/www "matomo/"
 
 ## MariaDB
 
-Setup [MariaDB](../mariadb/setup/index.en.md):
+Setup [MariaDB](../../mariadb/setup/index.en.md):
 
 ```bash
 mysql_secure_installation
@@ -76,7 +76,7 @@ mysql --execute="CREATE DATABASE matomo; GRANT ALL PRIVILEGES ON matomo.* TO 'ma
 
 ## FrankenPHP
 
-Install [FrankenPHP](../frankenphp/install/index.en.md):
+Install [FrankenPHP](../../frankenphp/install/index.en.md):
 
 ```bash
 wget -q -O- 'https://gorbe.io/assets/docs/frankenphp/install/frankenphp-install.sh' | bash -x -
@@ -88,7 +88,7 @@ Change the owner and the group of the PHP files:
 chown -R frankenphp:frankenphp /var/www/matomo/
 ```
 
-Configure the [Caddyfile](../frankenphp/configure/index.en.md#matomo) :
+Configure the [Caddyfile](../../frankenphp/configure/index.en.md#matomo) :
 
 ```bash
 nano /etc/frankenphp/Caddyfile
