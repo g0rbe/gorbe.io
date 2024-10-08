@@ -104,7 +104,7 @@ Collecting information from internet.
 
 Attacker extract information about internal files.
 
-[Read more](https://en.wikipedia.org/wiki/Robots.txt)
+[More details about robots.txt](https://en.wikipedia.org/wiki/Robots.txt)
 
 ### Web Server Footprinting
 

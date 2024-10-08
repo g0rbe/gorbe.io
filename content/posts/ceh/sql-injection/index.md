@@ -27,7 +27,7 @@ The intention of SQL injection is to reveal or manipulate sensitive information 
 
 SQL stands for **S**tructured **Q**uery **L**anguage.
 
-SQL tutorial [here](https://www.w3schools.com/sql/sql_delete.asp)
+[SQL tutorial](https://www.w3schools.com/sql/sql_delete.asp)
 
 ## Types of SQL Injection
 
