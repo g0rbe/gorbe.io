@@ -327,7 +327,7 @@ nmap -O danielgorbe.com
 | Windows 2008 |  128  |        8192       |
 |   FreeBSD    |  64   |        5840       |
 
-- More values [here](https://subinsb.com/default-device-ttl-values/)
+- [More TTL values](https://subinsb.com/default-device-ttl-values/)
 
 ### Banner Grabbing
 
