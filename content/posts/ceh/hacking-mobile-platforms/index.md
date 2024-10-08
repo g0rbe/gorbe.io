@@ -9,14 +9,12 @@ aliases: ["/docs/ceh/hacking-mobile-platforms/"]
 thumbnailAlt: "CEH Logo"
 ---
 
-Mobile Platform Attack Vectors
-
-### OWASP Top 10 Mobile Threats
+## OWASP Top 10 Mobile Threats
 
 [OWASP Mobile Security Project](https://www.owasp.org/index.php/OWASP_Mobile_Security_Project#Top_Ten_Mobile_Risks) maintain a list 
 of the most common mobile security risks.
 
-#### Top Ten (2014)
+### Top Ten (2014)
 
 1. Weak Server Side Controls
 2. Insecure Data Storage
@@ -29,7 +27,7 @@ of the most common mobile security risks.
 9. Improper Session Handling
 10. Lack of Binary Protections
 
-#### Top Ten (2016)
+### Top Ten (2016)
 
 1. **Improper Platform Usage**: misuse of a platform feature or failure to use a platform security controls
 2. **Insecure Data Storage**: insecure data storage + unintended data leakage
@@ -42,16 +40,16 @@ of the most common mobile security risks.
 9. **Reverse Engineering**: analysis of the final core binary to determine the source code, libraries, ...
 10. **Extraneous Functionality**: internal development security controls that are not intended to be released into a production environment
 
-### Attack Vector
+## Attack Vector
 
-#### Basic Threats
+### Basic Threats
 
 - Malware / rootkit
 - Data Loss
 - Data Tampering
 - Data Exfiltration
 
-#### Vulnerabilities And Risks on Mobile Platforms
+### Vulnerabilities And Risks on Mobile Platforms
 
 - Malicious third-party application / in the store
 - Application vulnerability
@@ -63,52 +61,50 @@ of the most common mobile security risks.
 - Jailbreaking / rooting
 - Physical attack
 
-#### OS Sandboxing Issue
+### OS Sandboxing Issue
 
 - Sandbox is a security mechanism for separating running programs, usually in an effort to mitigate system failures or software 
 vulnerabilities from spreading
 - Sandbox limits the app's access to files, preferences, network resources, ...
 - Advanced malware designed to bypass it, by fragment code or put sleep timer in the script to bypass the inspection process
 
-## Android
-
-### Device Administration API
+#### Android Device Administration API
 
 - Provides device administration features at the system level
 - This API allows to create security-aware apps that are useful in the enterprise settings, where require rich control over employee 
 devices
 
-### Rooting
+##### Rooting
 
 - A process of allowing user to attain privileged control
 - Needed for modify settings, get full control over the kernel or install custom ROMs
 
-## iOS
+#### iOS
 
-### Jailbreaking
+##### Jailbreaking
 
 - Rooting the iOS
 - Escalating the privileges on iOS to remove or bypass the factory default restrictions
 
-#### Types of Jailbreaking
+##### Types of Jailbreaking
 
 - **Userland Exploit** : allow user-level access without escalating iBoot-level access
 - **iBoot Exploit** : allow user-level and boot-level access
 - **Bootrom Exploit** : allow user-level and boot-level access
 
-#### Jailbreaking Techniques
+### Jailbreaking Techniques
 
-##### Untethered  Jailbreak
+#### Untethered Jailbreak
 
 - Does not require to reboot with a connection to your computer
 - Exploit bypass the iBoot sequence
 
-##### Tethered Jailbreak
+#### Tethered Jailbreak
 
 - Need a connection to your computer to reboot, without it, the boot stuck with an Apple logo
 - Offers complete jailbreak features
 
-##### Semi-Untethered Jailbreak
+#### Semi-Untethered Jailbreak
 
 - Allows to boot into the iOS device, but with limited functionality
 - The jailbreak functions will be disabled until the launch of a jailbreak app
@@ -119,12 +115,12 @@ devices
 - To get the full functionality, a reboot with a tethered jailbreak required
 - Semi-Tethered Jailbreak: tethered jailbreak + a package to allow reboot with limited functionality
 
-## Windows Phone
+#### Windows Phone
 
 - Windows Phone 8 using the Windows NT Kernel
 - Windows Phone 8 include app sandboxing, remote device management, native code support (C++)
 
-## BlackBerry OS
+#### BlackBerry OS
 
 - Support for Java Micro Edition MIDP 1.0 and MIDP 2.0
 - OS update with BlackBerry over the air software loading service (OTASL)
@@ -168,11 +164,11 @@ Two type:
 - Less administration needed
 - The deployment and maintenance is the responsibility of the service provider
 
-### Bring Your Own Device (BYOD)
+## Bring Your Own Device (BYOD)
 
 BYOD is a trend of employees using their personal devices for work. It could be a laptop, a phone, etc...
 
-#### BYOD Policies
+### BYOD Policies
 
 BYOD policies should include:
 
