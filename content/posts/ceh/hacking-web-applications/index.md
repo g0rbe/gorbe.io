@@ -192,8 +192,7 @@ URL. To use this not as separator, then it must be encoded.
 
 %2F used for '/'
 
-Full list of percent encoded characters 
-[here](https://www.degraeve.com/reference/urlencoding.php)
+[Full list of percent encoded characters](https://www.degraeve.com/reference/urlencoding.php)
 
 ### HTML Encoding
 
