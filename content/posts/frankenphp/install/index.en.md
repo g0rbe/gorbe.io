@@ -75,7 +75,7 @@ Create the systemd service:
 nano /etc/systemd/system/frankenphp.service
 ```
 
-```systemd title="/etc/systemd/system/frankenphp.service"
+```systemd
 [Unit]
 Description=FrankenPHP Server
 After=network.target network-online.target
