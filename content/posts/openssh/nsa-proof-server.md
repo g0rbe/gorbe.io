@@ -15,7 +15,7 @@ Common softwares that uses SSH protocol:
 - Putty
 - sshfs
 
-What NSA can do with encrypted traffic? Read [here][1].
+[What NSA can do with encrypted traffic][1].
 The cryptographic algorithms based on stribika's [recommendations][2].
 
 ## The config file
@@ -385,7 +385,7 @@ PermitTunnel no
 
 ### `ChrootDirectory`
 
-chroot is special to Unix systems. Its modifys the current root director (/). If you want to restrict what user can do on your server set it, a good explanation can be found [here][5].
+chroot is special to Unix systems. Its modifys the current root director (/). If you want to restrict what user can do on your server set it, [a good explanation can be found][5].
 
 ```
 ChrootDirectory none
@@ -424,7 +424,7 @@ AcceptEnv LANG LC_*
 
 ### `Subsystem`
 
-Subsystem is a useful feature of SSH, it is a set of remote command predefined on the server. Read more [here][6] if you are interested.
+Subsystem is a useful feature of SSH, it is a [set of remote command predefined on the server][6]. if you are interested.
 
 By default, sftp is configured:
 
