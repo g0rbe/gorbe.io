@@ -10,6 +10,7 @@ description: >
     into a larger category in a future edition.
 tags: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 keywords: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
+aliases: ["/posts/owasp/top-10/2021/server-side-request-forgery/"]
 ---
 
 ![Server-Side Request Forgery](server-side-request-forgery.png)

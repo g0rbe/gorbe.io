@@ -3,6 +3,7 @@ sidebar_label: NSA-Proof Server
 title: "Setup an NSA-Proof OpenSSH server"
 tags: [ "OpenSSH", "security", "hardening"]
 description: "How to configure an OpenSSH server to the highest security level."
+aliases: ["/docs/openssh/nsa-proof-server"]
 ---
 
 The SSH protocol uses encryption to secure the connection between a client and a server. All user authentication, commands, output, and file transfers are encrypted to protect against attacks in the network. SSH is an Appliaction Layer protocol, uses TCP port 22 by default.
