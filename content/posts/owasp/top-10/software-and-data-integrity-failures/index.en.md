@@ -7,7 +7,7 @@ description: >
     Common Vulnerability and Exposures/Common Vulnerability Scoring System (CVE/CVSS) data.
 tags: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
 keywords: ["OWASP", "cybersecurity", 'vulnerability', 'offsec']
-aliases: ["/docs/owasp/top-10/2021/software-and-data-integrity-failures"]
+aliases: ["/docs/owasp/top-10/2021/software-and-data-integrity-failures", "/posts/owasp/top-10/2021/software-and-data-integrity-failures/"]
 ---
 
 ![Software and Data Integrity Failures](software-and-data-integrity-failures.png)
