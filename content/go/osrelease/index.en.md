@@ -1,5 +1,5 @@
 ---
-title: "osrelease"
+title: "gorbe.io/go/osrelease"
 summary: " os-release parser for Golang <br>`go get gorbe.io/go/osrelease`"
 description: "os-release parser for Golang"
 showDate: false
