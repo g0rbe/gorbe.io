@@ -5,7 +5,7 @@ summary: "Golang module for experimental functions<br>`go get gorbe.io/go/g`"
 showDate: false
 gopkg:
   module: "gorbe.io/go/g"
-  repository: "https://github.com/g0rbe/go-g"
+  repository: "https://github.com/g0rbe/g"
 ---
 
 ```bash
