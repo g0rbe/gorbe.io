@@ -1,13 +1,13 @@
 ---
 title: "Configure SFTP with Chroot Jail"
-description: "Guide to configure SFTP with Chroot Jail with OpenSSH on Debian 12."
-summary: "Guide to configure SFTP with Chroot Jail with OpenSSH on Debian 12."
+description: "Guide to configure SFTP with Chroot Jail with OpenSSH on Debian"
+summary: "Guide to configure SFTP with Chroot Jail with OpenSSH on Debian"
 date: 2023-11-15T12:32:06+01:00
 tags: ["linux", "security", "SSH", "SFTP"]
 keywords: ["linux", "security", "SSH", "SFTP"]
 # featureAlt:
 # draft:  true
-aliases: ["/docs/openssh/sftp-chroot"]
+aliases: ["/docs/openssh/sftp-chroot", "/posts/openssh/sftp-chroot"]
 ---
 
 Setting up a chroot jail for SFTP (Secure File Transfer Protocol) on a Debian server enhances security by restricting users' access to a specific directory. This is particularly useful for granting limited file transfer capabilities without providing full shell access.
