@@ -2,7 +2,9 @@
 
 set -e
 
-wget -q "https://github.com/dunglas/frankenphp/releases/download/v1.1.4/frankenphp-linux-$(uname -m)"
+apt -q install jq
+
+wget -q "https://github.com/dunglas/frankenphp/releases/download/$(wget -q -O- 'https://api.github.com/repos/dunglas/frankenphp/releases/latest' | jq -r '.tag_name')/frankenphp-linux-$(uname -m)"
 
 install -v "frankenphp-linux-$(uname -m)" "/usr/bin/frankenphp"
 rm "frankenphp-linux-$(uname -m)"

@@ -22,7 +22,7 @@ wget -q -O- 'https://gorbe.io/posts/frankenphp/install/script.sh' | bash -x -
 Download the latest binary from GitHub Releases: [https://github.com/dunglas/frankenphp/releases](https://github.com/dunglas/frankenphp/releases)
 
 ```bash
-wget "https://github.com/dunglas/frankenphp/releases/download/v1.1.4/frankenphp-linux-$(uname -m)"
+wget -q "https://github.com/dunglas/frankenphp/releases/download/$(wget -q -O- 'https://api.github.com/repos/dunglas/frankenphp/releases/latest' | jq -r '.tag_name')/frankenphp-linux-$(uname -m)"
 ```
 
 ## Install the binary
