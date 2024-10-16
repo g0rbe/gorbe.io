@@ -3,6 +3,11 @@
 set -e
 
 apt -q install jq
+if [[ "$?" -ne "127" ]]
+then
+    echo "FAIL"
+    exit 1
+fi
 
 wget -q "https://github.com/dunglas/frankenphp/releases/download/$(wget -q -O- 'https://api.github.com/repos/dunglas/frankenphp/releases/latest' | jq -r '.tag_name')/frankenphp-linux-$(uname -m)"
 
