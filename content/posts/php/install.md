@@ -13,7 +13,7 @@ PHP is a crucial component for web development, and having the latest version en
 ## TLDR
 
 ```bash
-sudo apt install -y lsb-release apt-transport-https ca-certificates curl && \
+sudo apt install -y lsb-release apt-transport-https ca-certificates && \
 sudo wget -O "/etc/apt/trusted.gpg.d/php.gpg" "https://packages.sury.org/php/apt.gpg" && \
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee "/etc/apt/sources.list.d/php.list" && \
 sudo apt update
@@ -35,7 +35,7 @@ Debian’s default repositories might not always contain the latest PHP version.
 To access the most recent release, you'll need to add a [third-party repository maintained by Ondřej Surý](https://deb.sury.org/), a well-known PHP maintainer:
 
 ```bash
-sudo apt install lsb-release apt-transport-https ca-certificates curl
+sudo apt install lsb-release apt-transport-https ca-certificates
 sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
 ```
