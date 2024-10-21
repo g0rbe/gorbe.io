@@ -12,7 +12,7 @@ thumbnailAlt: Tor Logo
 ## TLDR
 
 ```bash
-apt install apt-transport-https && \
+apt install apt-transport-https gpg && \
 echo "deb [signed-by=/usr/share/keyrings/deb.torproject.org-keyring.gpg] https://deb.torproject.org/torproject.org $(lsb_release -c -s 2>/dev/null) main" > /etc/apt/sources.list.d/tor.list && \
 echo "deb-src [signed-by=/usr/share/keyrings/deb.torproject.org-keyring.gpg] https://deb.torproject.org/torproject.org $(lsb_release -c -s 2>/dev/null) main" >> /etc/apt/sources.list.d/tor.list && \
 wget -qO- https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --dearmor | tee /usr/share/keyrings/deb.torproject.org-keyring.gpg >/dev/null && \
@@ -22,7 +22,7 @@ apt update && apt install tor deb.torproject.org-keyring
 ## Requirements
 
 ```bash
-apt install apt-transport-https
+apt install apt-transport-https gpg
 ```
 
 ## APT Source
