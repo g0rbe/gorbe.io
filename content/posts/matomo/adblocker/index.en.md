@@ -11,7 +11,7 @@ thumbnailAlt: Matomo Logo
 ---
 
 {{< alert "circle-info" >}}
-The idea comes from [Plausible's solution](https://plausible.io/docs/proxy/introduction).
+The solution is based on [Plausible's solution](https://plausible.io/docs/proxy/introduction).
 {{< /alert >}}
 
 ## Tracking Code
@@ -25,14 +25,14 @@ The idea comes from [Plausible's solution](https://plausible.io/docs/proxy/intro
   _paq.push(['enableLinkTracking']);
   (function () {
     var u = "/";
-    _paq.push(['setTrackerUrl', u + 'omotam']);
+    _paq.push(['setTrackerUrl', u + 'tam/omo']);
     _paq.push(['setSiteId', '1']);
     var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-    g.async = true; g.src = u + 'omotam/script.js'; s.parentNode.insertBefore(g, s);
+    g.async = true; g.src = u + 'omo/tam.js'; s.parentNode.insertBefore(g, s);
   })();
 </script>
 <noscript>
-  <p><img referrerpolicy="no-referrer-when-downgrade" src="/omotam?idsite=1&amp;rec=1" style="border:0;"
+  <p><img referrerpolicy="no-referrer-when-downgrade" src="/tam/omo?idsite=1&amp;rec=1" style="border:0;"
       alt="omotam img" /></p>
 </noscript>
 <!-- End Matomo Code -->
@@ -43,19 +43,19 @@ The idea comes from [Plausible's solution](https://plausible.io/docs/proxy/intro
 Use nginx's [rewrite module](https://nginx.org/en/docs/http/ngx_http_rewrite_module.html)
 
 ```nginx
-rewrite ^/omotam$            /matomo.php last;
-rewrite ^/omotam/script.js$  /matomo.js  last;
+rewrite ^/tam/omo$     /matomo.php last;
+rewrite ^/omo/tam.js$  /matomo.js  last;
 ```
 
 Reverse proxy the two URLs above:
 
 ```nginx
-location = /omotam {
+location = /tam/omo {
         proxy_pass https://matomo.example.com;
         proxy_set_header Host matomo.example.com;
 }
 
-location = /omotam/script.js {
+location = /omo/tam.js {
         proxy_pass https://matomo.example.com;
         proxy_set_header Host matomo.example.com;
         proxy_buffering on;
@@ -70,14 +70,14 @@ location = /omotam/script.js {
 ## Caddy
 
 ```caddyfile
-rewrite /omotam            /matomo.php
-rewrite /omotam/script.js  /matomo.js
+rewrite /tam/omo    /matomo.php
+rewrite /omo/tam.js /matomo.js
 ```
 
 Reverse proxy the two URLs above:
 
 ```caddyfile
-@matomo-tracker path /omotam /omotam/script.js
+@matomo-tracker path /tam/omo /omo/tam.js
 
 handle @matomo-tracker {
         reverse_proxy  https://matomo.example.com {
