@@ -17,10 +17,8 @@ The solution is based on [Plausible's solution](https://plausible.io/docs/proxy/
 ## Tracking Code
 
 ```html
-<!-- Matomo -->
 <script>
   var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function () {
@@ -35,7 +33,6 @@ The solution is based on [Plausible's solution](https://plausible.io/docs/proxy/
   <p><img referrerpolicy="no-referrer-when-downgrade" src="/tam/omo?idsite=1&amp;rec=1" style="border:0;"
       alt="omotam img" /></p>
 </noscript>
-<!-- End Matomo Code -->
  ```
 
 ## nginx
