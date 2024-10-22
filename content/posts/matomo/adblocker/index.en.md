@@ -50,9 +50,18 @@ rewrite ^/omo/tam.js$  /matomo.js  last;
 Reverse proxy the two URLs above:
 
 ```nginx
-location = /tam/omo {
+ location = /tam/omo {
         proxy_pass https://matomo.example.com;
         proxy_set_header Host matomo.example.com;
+        proxy_buffering on;
+        proxy_http_version 1.1;
+
+        proxy_ssl_name "matomo.example.com";
+        proxy_ssl_server_name on;
+
+        proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host  $host;
 }
 
 location = /omo/tam.js {
@@ -60,6 +69,9 @@ location = /omo/tam.js {
         proxy_set_header Host matomo.example.com;
         proxy_buffering on;
         proxy_http_version 1.1;
+
+        proxy_ssl_name "matomo.example.com";
+        proxy_ssl_server_name on;
 
         proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
