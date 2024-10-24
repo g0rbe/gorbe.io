@@ -95,7 +95,7 @@ Create the database and the user:
 mysql --execute="CREATE DATABASE matomo; GRANT ALL PRIVILEGES ON matomo.* TO 'matomo'@'localhost' IDENTIFIED BY 'MATOMO_DB_PASSWORD' WITH GRANT OPTION; FLUSH PRIVILEGES;"
 ```
 
-## Runing the PHP code
+## Running the PHP code
 
 There are two choice to run Matomo's PHP code:
 
