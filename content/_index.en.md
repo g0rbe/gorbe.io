@@ -1,5 +1,5 @@
 ---
-# title: "Daniel Gorbe"
+title: "G⌬RBE"
 ---
 
 Personalized IT Solutions, Data Protection, Server Protection, IT Infrastructure Operation and Other IT Services in and around Győr.
