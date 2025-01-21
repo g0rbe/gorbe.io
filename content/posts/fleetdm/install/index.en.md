@@ -8,7 +8,7 @@ keywords: ["fleetdm", "mdm", "device-management", "endpoint-security", "vulnerab
 # featureAlt:
 thumbnailAlt: "Fleet Logo"
 coverAlt: "Cover for Install Fleet"
-draft:  true
+# draft:  true
 # aliases: ['/']
 ---
 
