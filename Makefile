@@ -1,4 +1,4 @@
-build: clean
+build:
 	hugo --buildDrafts --minify --printPathWarnings --destination="public/gorbe.io"
 	hugo --buildDrafts --minify --printPathWarnings --baseURL="http://43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion" --destination="public/43cmk4mruizijv76vk5ensj5lq5svgiswaqlyqy4ocq3fugs6zzunpad.onion"
 
