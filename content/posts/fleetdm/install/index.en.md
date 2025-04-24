@@ -3,8 +3,8 @@ title: Install Fleet
 description: How to install Fleet on Debian Linux server.
 summary: How to install Fleet on Debian Linux server.
 date: 2025-01-20T22:33:59+01:00
-tags: ["fleetdm", "mdm", "device-management", "endpoint-security", "vulnerability-management"]
-keywords: ["fleetdm", "mdm", "device-management", "endpoint-security", "vulnerability-management"]
+tags: ["fleet", "mdm", "device-management", "endpoint-security", "vulnerability-management"]
+keywords: ["fleet", "mdm", "device-management", "endpoint-security", "vulnerability-management"]
 # featureAlt:
 thumbnailAlt: "Fleet Logo"
 coverAlt: "Cover for Install Fleet"
@@ -17,7 +17,7 @@ coverAlt: "Cover for Install Fleet"
 Install requirements from `apt`:
 
 ```bash
-apt install redis nginx python3-certbot-nginx
+apt install redis nginx python3-certbot-nginx gnupg
 ```
 
 ### MySQL
@@ -47,20 +47,11 @@ Dont forget to change the password!
 [Setup a new database and user](../../mysql/setup.md):
 
 ```bash
-mysql
+export MYSQL_PASSWD="$(tr -dc A-Za-z0-9 </dev/urandom | head -c 16; echo)"
 ```
 
-```sql
-CREATE DATABASE fleet;
-```
-```sql
-CREATE USER 'fleet'@'localhost' IDENTIFIED BY 'fleet';
-```
-```sql
-GRANT ALL PRIVILEGES ON fleet.* TO 'fleet'@'localhost';
-```
-```sql
-FLUSH PRIVILEGES; EXIT;
+```bash
+mysql --execute="CREATE DATABASE fleet; CREATE USER 'fleet'@'localhost' IDENTIFIED BY '${MYSQL_PASSWD}'; GRANT ALL PRIVILEGES ON fleet.* TO 'fleet'@'localhost'; FLUSH PRIVILEGES;"
 ```
 
 ### Redis
@@ -70,7 +61,7 @@ Nothing to config on localhost.
 ### Certbot
 
 ```bash
-certbot certonly --nginx -d fleetdm.example.com
+certbot certonly --nginx -d fleet.example.com
 ```
 
 {{< alert "circle-info" >}}
@@ -80,7 +71,7 @@ The default key algorithm from version  `2.0.0` is `ECDSA`. See here [how to gen
 ### Nginx
 
 ```bash
-nano /etc/nginx/siteas-available/fleetdm.example.com
+nano /etc/nginx/sites-available/fleet.example.com
 ```
 
 Template for site config:
@@ -91,11 +82,11 @@ server {
         listen 443 ssl http2;
         listen [::]:443 ssl http2;
 
-        server_name fleetdm.example.com;
+        server_name fleet.example.com;
 
-        ssl_certificate /etc/letsencrypt/live/fleetdm.example.com/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/fleetdm.example.com/privkey.pem;
-        ssl_trusted_certificate /etc/letsencrypt/live/fleetdm.example.com/fullchain.pem;
+        ssl_certificate /etc/letsencrypt/live/fleet.example.com/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/fleet.example.com/privkey.pem;
+        ssl_trusted_certificate /etc/letsencrypt/live/fleet.example.com/fullchain.pem;
 
         ssl_stapling on;
         ssl_stapling_verify on;
@@ -127,7 +118,7 @@ server {
         listen 80;
         listen [::]:80;
 
-        server_name  fleetdm.example.com;
+        server_name  fleet.example.com;
 
         return 301 https://$host$request_uri;
 }
@@ -135,7 +126,7 @@ server {
 
 
 ```bash
-ln -s /etc/nginx/siteas-available/fleetdm.example.com /etc/nginx/sites-enabled/
+ln -s /etc/nginx/sites-available/fleet.example.com /etc/nginx/sites-enabled/
 ```
 
 {{< alert "circle-info" >}}
@@ -162,25 +153,25 @@ useradd --system --gid="fleet" --create-home  --home-dir="/var/lib/fleet" --shel
 Download the binary:
 
 ```bash
-wget -O "fleet_linux.tar.gz" 'https://github.com/fleetdm/fleet/releases/download/fleet-v4.62.1/fleet_v4.62.1_linux.tar.gz'
+wget 'https://github.com/fleetdm/fleet/releases/download/fleet-v4.62.1/fleet_v4.62.1_linux.tar.gz'
 ```
 
 Extract the archive:
 
 ```bash
-tar -xvf fleet_linux.tar.gz 
+tar -xvf "fleet_*_linux.tar.gz"
 ```
 
 Install the binary:
 
 ```bash
-install fleet_linux/fleet /usr/local/bin/
+install fleet_*_linux/fleet /usr/local/bin/
 ```
 
 Remove the leftover files:
 
 ```bash
-rm -r fleet_linux*
+rm -r fleet_*_linux*
 ```
 
 ## Config
@@ -188,13 +179,13 @@ rm -r fleet_linux*
 Create the directory:
 
 ```bash
-install -o fleet -g fleet -d /etc/fleetdm
+install -o fleet -g fleet -d /etc/fleet
 ```
   
 Dump the config:
 
 ```bash
-sudo -u fleet fleet config_dump > /etc/fleetdm/config.yaml
+sudo -u fleet fleet config_dump > /etc/fleet/config.yaml
 ```
 
 ## systemd
@@ -212,7 +203,7 @@ After=network.target
 User=fleet
 Group=fleet
 LimitNOFILE=8192
-ExecStart=/usr/local/bin/fleet serve --config /etc/fleetdm/config.yaml
+ExecStart=/usr/local/bin/fleet serve --config /etc/fleet/config.yaml
 
 [Install]
 WantedBy=multi-user.target
@@ -225,7 +216,7 @@ systemctl daemon-reload
 ## Prepare
 
 ```bash
-sudo -u fleet /usr/local/bin/fleet prepare db --config /etc/fleetdm/config.yaml
+sudo -u fleet /usr/local/bin/fleet prepare db --config /etc/fleet/config.yaml
 ```
 
 ## Start
