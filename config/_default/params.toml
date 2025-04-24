@@ -5,7 +5,7 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://jpanther.github.io/congo/docs/configuration/#theme-parameters
 
-colorScheme = "teal"
+colorScheme = "congo"
 defaultAppearance = "dark"   # valid options: light or dark
 autoSwitchAppearance = false
 
@@ -32,7 +32,7 @@ showAppearanceSwitcher = false
 showScrollToTop = true
 
 [homepage]
-layout = "hero"   # valid options: page, profile, custom
+layout = "profile"   # valid options: page, profile, custom
 showRecent = true
 recentLimit = 10
 
